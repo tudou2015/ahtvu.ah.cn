@@ -1,0 +1,19 @@
+{
+  "name": "ahtvu.ah.cn",
+  "version": "1.0.0",
+  "description": "安徽广播电视大学网站",
+  "main": "app.js",
+  "dependencies": {
+    "art-template": "^3.0.3",
+    "async": "^2.0.0-rc.6",
+    "body-parser": "^1.15.0",
+    "compression": "^1.6.1",
+    "express": "^4.13.4",
+    "moment": "^2.13.0",
+    "request": "^2.69.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "xLeonard"
+}
