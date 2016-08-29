@@ -1,0 +1,21 @@
+<div class="news-tab-content" style="display:none;">
+    <div class="news-tab-first">
+        <img src="{{data.first.image}}" width="171px" height="105px" class="first-pic" />
+        <div class="details">
+            <h3>{{data.first.title}}</h3>
+            <p>{{data.first.text}}
+                <a href="data.first.href" class="tab-first-more"><span>了解详细</span></a>
+            </p>
+        </div>
+    </div>
+    <ul class="news-tab-list clearfix">
+        {{if data.list.length > 0 }}
+        {{each data.list as item i}}
+            <li><a href="{{item.href}}" target="_blank" title="{{item.ori_title}}">{{item.title}}</a><span>{{item.date | dateFormat:'YYYY-MM-DD'}}</span></li>
+        {{/each}}
+        {{else}}
+            <!-- NO DATA -->
+        {{/if}}
+    </ul>
+    <a href="{{data.category.href}}" class="more"><span>查看更多</span></a>
+</div>

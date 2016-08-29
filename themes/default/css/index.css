@@ -169,7 +169,6 @@ body {
 }
 
 .news-tab-first img.first-pic+ .details .tab-first-more {
-    float: left;
     display: block;
 }
 

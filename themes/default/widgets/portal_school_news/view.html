@@ -1,0 +1,12 @@
+<div class="news-tab-content" style="display:none;">
+    <ul class="news-tab-list  news-school-list clearfix">
+        {{if data.list.length > 0 }}
+        {{each data.list as item i}}
+        <li><a href="javascript:(0);">{{item.title}}</a><span>{{item.date | dateFormat:'YYYY-MM-DD'}}</span></li>
+        {{/each}}
+        {{else}}
+            <!-- NO DATA -->
+        {{/if}}
+    </ul>
+    <a href="{{data.category.href}}" class="more"><span>查看更多</span></a>
+</div>
