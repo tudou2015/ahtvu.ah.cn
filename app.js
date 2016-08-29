@@ -16,6 +16,10 @@ app.set('views', path.join(__dirname, 'themes', 'default', 'skins'));
 
 template.config('extname', '.html');
 
+//helper
+template.helper('dateFormat', utils.dateFormat);
+template.helper('subString', utils.subString);
+
 app.engine('.html', template.__express);
 
 //parse json
