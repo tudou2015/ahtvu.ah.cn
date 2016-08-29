@@ -17,7 +17,7 @@ var config = {
     cms: {
         host: '192.168.1.230',              // 内网 cms 接口地址
         port: 80,                           // 内网 cms 接口地址的端口
-        site: "",     // 站点ID
+        site: "8-dnag6m9znkhvyqnm-q-w",     // 站点ID
         _origin: '',
         origin: function () {
 

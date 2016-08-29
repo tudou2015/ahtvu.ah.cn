@@ -15,12 +15,12 @@ var widget = {
 
             //get current site info TODO
             req.context.site = {
-                id: '-03mad6k37ziv45667sh0q',
-                title: '河北成人高等教育在线',
+                id: '8-dnag6m9znkhvyqnm-q-w',
+                title: '安徽广播电视大学',
                 logo: '',
-                domain: 'www.hbcjzx.cn',
-                key_words: '河北成人高等教育在线 河北继续教育在线',
-                description: '河北成人高等教育在线',
+                domain: 'www.ahtvu.ah.cn',
+                key_words: '安徽广播电视大学 广播电视大学',
+                description: '安徽广播电视大学',
                 theme: 'default'
             };
 
@@ -66,7 +66,7 @@ var widget = {
                     utils.request({
                         url: 'open/get_widgets',
                         method: 'POST',
-                        qs: { ids: widget_ids }
+                        qs: { siteId: req.context.site.id, ids: widget_ids }
                     }, function (result) {
 
                         if (result.code != 200) throw new Error();
