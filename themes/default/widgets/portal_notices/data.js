@@ -40,13 +40,8 @@ module.exports = function (req, res, utils) {
                 data.first = {
                     image: e.image_url,
                     title: utils.subString(e.title, 30),
-<<<<<<< HEAD
-                    text: (e.image_url ? utils.subString(e.text, 120) : utils.subString(e.text, 150)),
-                    href: utils.urlFormat(util.format('/portal/detail?id=%s', e.id))
-=======
                     text: (e.image_url ? utils.subString(e.text, 90) : utils.subString(e.text, 120)),
                     href: utils.urlFormat(util.format('/detail?id=%s', e.id))
->>>>>>> origin/master
                 };
 
                 return false;
