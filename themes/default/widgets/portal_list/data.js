@@ -9,8 +9,7 @@ module.exports = function (req, res, utils) {
         method: 'POST',
         qs: {
             siteId: req.app.site.id,
-            categoryId: 'otppag6m44tniccoabr87q',
-            pageSize: 16
+            categoryId: req.query.id
         }
     }, function (result) {
 
@@ -27,14 +26,12 @@ module.exports = function (req, res, utils) {
 
         result.body = JSON.parse(result.body);
 
-        data.category = { href: util.format('/category?id=%s', result.body.category.id) };
+        data.category = result.body.category;
         result.body.data.forEach(function (e) {
 
             data.list.push({
-                ori_title: e.title,
-                title: utils.subString(e.title, 30),
-                date: e.date_published,
-                href: utils.urlFormat(util.format('/detail?id=%s', e.id))
+                title: e.title,
+                href: utils.urlFormat(util.format('/detail?id=%s', e.id)),
             });
 
         }, this);

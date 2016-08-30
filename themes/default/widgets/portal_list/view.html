@@ -1,0 +1,32 @@
+<div class="title clearfix">
+    <h3>学校新闻</h3>
+    <div class="location">当前位置&nbsp;>&nbsp;<a href="">学校首页&nbsp;>&nbsp;</a><span>学校新闻</span></div>
+</div>
+<div class="list-box">
+    <ul>
+        {{if data.list.length > 0}} {{each data.list as item i}}
+        <li>
+            <a href="{{item.href}}" target="_blank" title="{{item.title}}">{{item.title}}</a>
+            <span>[{{item.date_created | dateFormat:'YYYY-MM-DD'}}]</span>
+        </li>
+        {{/each}} {{else}}
+        <li>
+            <!-- NO DATA -->
+        </li>
+        {{/if}}
+    </ul>
+</div>
+
+<div class="paging clearfix">
+    <ul>
+        <li>
+            <a href="#" class="home-page">
+                <首页</a>
+        </li>
+        <li><span>1</span></li>
+        <li><a href="javascript:(0);">2</a></li>
+        <li><a href="javascript:(0);">3</a></li>
+        <li><a href="javascript:(0);">4</a></li>
+        <li><a href="#" class="last-page">末页></a></li>
+    </ul>
+</div>

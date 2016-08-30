@@ -28,7 +28,7 @@ module.exports = function (req, res, utils) {
 
         result.body = JSON.parse(result.body);
 
-        data.category = { href: util.format('/portal/category?id=%s', result.body.category.id) };
+        data.category = { href: util.format('/category?id=%s', result.body.category.id) };
         result.body.data.forEach(function (e) {
 
             //设置第一个显示的新闻                    
