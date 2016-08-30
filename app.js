@@ -9,7 +9,7 @@ var express = require('express'),
 
 var app = express();
 
-app.set('port', 8081);
+app.set('port', 3000);
 app.set('x-powered-by', false);
 app.set('view engine', 'html');
 app.set('views', path.join(__dirname, 'themes', 'default', 'skins'));

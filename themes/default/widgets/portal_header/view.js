@@ -1,13 +1,12 @@
 $(function () {
 
-    jQuery.getJSON("http://192.168.1.231:2345/?callback=?", function (msg) {
-        $('.online_num').text(msg.online + 1);
+    jQuery.getJSON("http://218.22.21.242:2345/?callback=?", function (msg) {
         $('.today_num').text(msg.today + 1);
         $('.total_num').text(msg.total + 1);
     });
 
-    $.getScript('http://192.168.1.231:2345/socket.io/socket.io.js', function () {
-        $.getScript('http://192.168.1.231:2345/boot.js');
+    $.getScript('http://218.22.21.242:2345/socket.io/socket.io.js', function () {
+        $.getScript('http://218.22.21.242:2345/boot.js');
     });
 
     var get_current_time = function (time) {

@@ -1,8 +1,8 @@
 const util = require('util');
 
 var config = {
-    host: 'www.ahtvu1.ah.cn',          // 外网真实地址
-    port: 8081,                     // 外网真实地址的端口
+    host: '218.22.21.242',          // 外网真实地址
+    port: 50009,                    // 外网真实地址的端口
     _origin: '',
     origin: function () {
 
@@ -15,7 +15,7 @@ var config = {
         return this._origin;
     },
     cms: {
-        host: '192.168.1.230',              // 内网 cms 接口地址
+        host: '10.1.11.122',                // 内网 cms 接口地址
         port: 80,                           // 内网 cms 接口地址的端口
         site: "8-dnag6m9znkhvyqnm-q-w",     // 站点ID
         _origin: '',
