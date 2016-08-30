@@ -9,12 +9,14 @@ module.exports = function (req, res, utils) {
         method: 'POST',
         qs: {
             siteId: req.app.site.id,
-            categoryId: req.query.id
+            categoryId: req.query.id,
+            page: req.query.page || 1
         }
     }, function (result) {
 
         var data = {
             category: {},
+            paging: {},
             list: []
         };
 
@@ -27,6 +29,8 @@ module.exports = function (req, res, utils) {
         result.body = JSON.parse(result.body);
 
         data.category = result.body.category;
+        data.paging = JSON.stringify(result.body.paging);
+
         result.body.data.forEach(function (e) {
 
             data.list.push({

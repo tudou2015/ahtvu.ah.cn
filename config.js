@@ -1,7 +1,7 @@
 const util = require('util');
 
 var config = {
-    host: 'www.ahtvu.ah.cn',          // 外网真实地址
+    host: 'www.ahtvu1.ah.cn',          // 外网真实地址
     port: 8081,                     // 外网真实地址的端口
     _origin: '',
     origin: function () {

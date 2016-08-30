@@ -250,3 +250,32 @@ body .grid {
 .top-link a:first-child {
     border-right: 0px;
 }
+
+/*paging*/
+body .x-paging-right {
+        margin-right: 25px;
+}
+body .x-paging-right li.x-paging-active a {
+    background: #2994f7;
+    color: #fff;
+}
+body .x-paging-right li a,
+.x-paging-right li span {
+    position: relative;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    color: #2994f7;
+    text-decoration: none;
+    line-height: 1.42857143;
+}
+
+body .x-paging-right li a:hover {
+    background: #2994f7;
+    color: #fff;
+}
+
+body  .x-paging-right li a {
+    margin: 0px 3px;
+    padding: 5px 10px;
+    border-radius: 0px;
+}

@@ -754,7 +754,8 @@ body {
     color: #0075e2;
     font-size: 24px;
     text-align: center;
-    margin: 55px 0px 37px 0px;
+    margin: 55px 25px 37px 25px;
+    line-height: 160%;
 }
 
 .article-details .detail-tools {
