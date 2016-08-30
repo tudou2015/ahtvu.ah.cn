@@ -40,7 +40,7 @@ module.exports = function (req, res, utils) {
                 data.first = {
                     image: e.image_url,
                     title: utils.subString(e.title, 30),
-                    text: (e.image_url ? utils.subString(e.text, 120) : utils.subString(e.text, 150)),
+                    text: (e.image_url ? utils.subString(e.text, 90) : utils.subString(e.text, 120)),
                     href: utils.urlFormat(util.format('/detail?id=%s', e.id))
                 };
 
