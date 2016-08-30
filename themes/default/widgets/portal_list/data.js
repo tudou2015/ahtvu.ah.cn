@@ -35,7 +35,7 @@ module.exports = function (req, res, utils) {
 
             data.list.push({
                 title: e.title,
-                href: utils.urlFormat(util.format('/detail?id=%s', e.id)),
+                href: utils.urlFormat(util.format('/portal/detail?id=%s', e.id)),
             });
 
         }, this);
