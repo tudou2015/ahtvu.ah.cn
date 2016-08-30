@@ -43,4 +43,16 @@ router.get('/detail', function (req, res, next) {
     next();
 });
 
+//info
+router.get('/info', function (req, res, next) {
+
+    //set render html with widget
+    res.context = {};
+
+    res.context._r_widget = true
+    res.context._r_widget_skin = 'info.html';
+
+    next();
+});
+
 module.exports = router;
