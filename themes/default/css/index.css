@@ -55,7 +55,7 @@ body {
 
 
 /*content*/
-
+.minTop-inner { font-size:14px; }
 .index-padding {
     padding-right: 8px;
 }
