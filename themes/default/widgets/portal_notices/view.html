@@ -8,14 +8,14 @@
             </p>
         </div>
     </div>
+    {{if data.list.length > 0 }}
     <ul class="news-tab-list clearfix">
-        {{if data.list.length > 0 }}
         {{each data.list as item i}}
             <li><a href="{{item.href}}" target="_blank" title="{{item.ori_title}}">{{item.title}}</a><span>{{item.date | dateFormat:'YYYY-MM-DD'}}</span></li>
         {{/each}}
-        {{else}}
-            <!-- NO DATA -->
-        {{/if}}
     </ul>
     <a href="{{data.category.href}}" class="more"><span>查看更多</span></a>
+    {{else}}
+    <span class="no-data">暂无数据</span> 
+    {{/if}}
 </div>
