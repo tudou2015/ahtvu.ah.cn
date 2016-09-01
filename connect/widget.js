@@ -105,6 +105,7 @@ var widget = {
 
                             //add current widget name to result
                             var result = {
+                                site: req.app.site,
                                 _widget_name: _w_real.name,
                                 _widget_path: util.format('widgets/%s', _w_real.name)
                             };
@@ -126,6 +127,7 @@ var widget = {
                                 //get data from data.js
                                 require(_w_js)(req, res, utils).then(function (r) {
 
+                                    r.site = req.app.site;
                                     r._widget_name = result._widget_name;
                                     r._widget_path = result._widget_path;
 
