@@ -3,26 +3,17 @@
         <div id="index_b_hero">
             <div class="hero-wrap">
                 <ul class="heros clearfix">
+                    {{if data.list.length > 0 }}
+                    {{each data.list as item i}}
                     <li class="hero">
-                        <a href="javascript:(0);" target="_blank" title="">
-                            <img src="images/dynamic/1.jpg" class="thumb" alt="" width="1200" height="342" />
+                        <a href="{{item.href}}" target="_blank" title="{{item.ori_title}}">
+                            <img src="{{item.image}}" class="thumb" alt="{{item.title}}" width="1200" height="342" />
                         </a>
                     </li>
-                    <li class="hero">
-                        <a href="javascript:(0);" target="_blank" title="">
-                            <img src="images/dynamic/2.jpg" class="thumb" alt="" width="1200" height="342" />
-                        </a>
-                    </li>
-                    <li class="hero">
-                        <a href="javascript:(0);" target="_blank" title="">
-                            <img src="images/dynamic/3.jpg" class="thumb" alt="" width="1200" height="342" />
-                        </a>
-                    </li>
-                    <li class="hero">
-                        <a href="javascript:(0);" target="_blank" title="">
-                            <img src="images/dynamic/4.jpg" class="thumb" alt="" width="1200" height="342" />
-                        </a>
-                    </li>
+                    {{/each}}
+                    {{else}}
+                    <span class="no-data">暂无数据</span> 
+                    {{/if}}
                 </ul>
             </div>
             <div class="helper">
@@ -30,8 +21,8 @@
                 </div>
                 <div class="mask-right">
                 </div>
-                <a href="#" class="prev icon-arrow-a-left"></a>
-                <a href="#" class="next icon-arrow-a-right"></a>
+                <a href="javascript:void(0);" class="prev icon-arrow-a-left"></a>
+                <a href="javascript:void(0);" class="next icon-arrow-a-right"></a>
             </div>
         </div>
     </div>

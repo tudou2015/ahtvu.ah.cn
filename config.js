@@ -1,8 +1,8 @@
 const util = require('util');
 
 var config = {
-    host: '218.22.21.242',          // 外网真实地址
-    port: 50009,                    // 外网真实地址的端口
+    host: 'www.ahtvu1.ah.cn',          // 外网真实地址
+    port: 3000,                    // 外网真实地址的端口
     _origin: '',
     origin: function () {
 

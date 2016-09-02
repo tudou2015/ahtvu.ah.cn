@@ -4,15 +4,15 @@
 </div>
 <div class="list-box">
     <ul>
-        {{if data.list.length > 0}} {{each data.list as item i}}
+        {{if data.list.length > 0}} 
+        {{each data.list as item i}}
         <li>
             <a href="{{item.href}}" target="_blank" title="{{item.title}}">{{item.title}}</a>
             <span>[{{item.date_created | dateFormat:'YYYY-MM-DD'}}]</span>
         </li>
-        {{/each}} {{else}}
-        <li>
-            <!-- NO DATA -->
-        </li>
+        {{/each}} 
+        {{else}}
+        <div class="no-content"></div>
         {{/if}}
     </ul>
 </div>

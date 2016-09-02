@@ -9,14 +9,12 @@ module.exports = function (req, res, utils) {
         method: 'POST',
         qs: {
             siteId: req.app.site.id,
-            categoryId: req.query.id,
-            page: req.query.page || 1
+            categoryId: 'p5m3ahwmb5va-ppr5hdhfw'
         }
     }, function (result) {
 
         var data = {
             category: {},
-            paging: {},
             list: []
         };
 
@@ -29,13 +27,15 @@ module.exports = function (req, res, utils) {
         result.body = JSON.parse(result.body);
 
         data.category = result.body.category;
-        data.paging = JSON.stringify(result.body.paging);
 
         result.body.data.forEach(function (e) {
 
+            var props = JSON.parse(e.props);
+
             data.list.push({
                 title: e.title,
-                href: utils.urlFormat(util.format('/detail?id=%s', e.id)),
+                image: e.image_url,
+                href: props.href || 'javascript:void(0);',
             });
 
         }, this);

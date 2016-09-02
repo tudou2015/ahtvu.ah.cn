@@ -493,9 +493,9 @@ body {
 
 /*no data*/
 .no-data { font-size: 20px; color: #999; display: block; margin: 155px 350px;}
+.no-content { width:239px; height:232px; background:url(../images/no-content.png) no-repeat; margin: 140px auto;}
 
 /*footer*/
-
 .footer {
     background: url(../images/footer.jpg) repeat-x 0px 0px;
     padding: 24px 0px 28px 0px;
