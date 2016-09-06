@@ -8,15 +8,24 @@ $(function () {
         $(this).parents('.news-tab').children('.news-tab-content:eq(' + index + ')').show().siblings('.news-tab-content').hide();
     });
 
-    // nav
-    $(".nav li").on('click', function () {
-        $(".nav li a").removeClass('act');
-        $("a", $(this)).addClass("act");
-    });
-
     // 栏目
     $(".column li").on('click', function () {
         $(".column li a").removeClass('act');
         $("a", $(this)).addClass("act");
     });
-})
+
+    //导航nav
+    var li = $('.nav li');
+
+    li.mouseover(function () {
+
+        $(this).find('a:first').addClass("act");
+        $(this).find('.sub-nav:first').show();
+    });
+
+    li.mouseleave(function () {
+
+        $(this).find('a:first').removeClass("act");
+        $(this).find('.sub-nav:first').hide();
+    });
+});
