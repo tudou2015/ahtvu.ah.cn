@@ -62,18 +62,7 @@ body {
 
 .news-tab-title,
 .index-right-news .title {
-    background: -ms-linear-gradient(top, #fff, #ededed);
-    /* IE 10 */
-    background: -moz-linear-gradient(top, #fff, #ededed);
-    /*火狐*/
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ededed));
-    /*谷歌*/
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ededed));
-    /* Safari 4-5, Chrome 1-9*/
-    background: -webkit-linear-gradient(top, #fff, #ededed);
-    /*Safari5.1 Chrome 10+*/
-    background: -o-linear-gradient(top, #fff, #ededed);
-    /*Opera 11.10+*/
+    background: url(../images/index-icon.png) repeat-x 0px -555px;
 }
 
 .news-tab-title ul li {
@@ -96,12 +85,10 @@ body {
 
 .news-tab-title ul li.cur,
 .index-right-news .title .cur,
-.news-tab-title ul li a:hover {
+.news-tab-title ul li a:hover,
+.index-right-news .title ul li a:hover {
     color: #fff;
-    background: -moz-linear-gradient(top, #2487e3, #3196f4);
-    background: -webkit-gradient(linear, 0 29%, 100% 50%, from(#2487e3), to(#3196f4));
-    background: -webkit-linear-gradient(top, #2487e3, #3196f4);
-    background: -o-linear-gradient(left, #2487e3, #3196f4);
+    background: url(../images/index-icon.png) repeat-x 0px -620px;
 }
 
 .news-tab-title ul li.cur em,
@@ -182,7 +169,6 @@ body {
 }
 
 .news-tab-first img.first-pic+ .details .tab-first-more {
-    float: left;
     display: block;
 }
 
@@ -811,7 +797,6 @@ body {
 
 .footer {
     background: url(../images/footer.jpg) repeat-x 0px 0px;
-    height: 205px;
     padding: 24px 0px 28px 0px;
     margin-top: 14px;
 }

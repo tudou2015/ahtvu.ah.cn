@@ -247,10 +247,6 @@ body .grid {
     margin-right: 5px;
 }
 
-.top-link a:first-child {
-    border-right: 0px;
-}
-
 /*paging*/
 body .x-paging-right {
         margin-right: 25px;
