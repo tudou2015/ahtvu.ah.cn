@@ -2,6 +2,7 @@ body {
     background: #f4f4f4;
     font-family: "Microsoft YaHei";
 }
+.minTop-inner { font-size:14px; }
 
 .top-search input {
     font-family: "Microsoft YaHei";
@@ -37,6 +38,7 @@ body {
     height: 39px;
     text-align: center;
     line-height: 39px;
+    font-size:14px;
 }
 
 .top-search i {
