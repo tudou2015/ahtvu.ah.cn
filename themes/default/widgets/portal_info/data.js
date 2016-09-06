@@ -13,14 +13,30 @@ module.exports = function (req, res, utils) {
         }
     }, function (result) {
 
-        var data = [];
+        var data = {
+            category: {},
+            title: '',
+            content: ''
+        };
+
         if (result.code != 200) {
 
             deferred.resolve(data);
             return;
         }
 
-        deferred.resolve(JSON.parse(result.body));
+        result.body = JSON.parse(result.body);
+
+        if (result.body.code < 0) {
+            deferred.resolve(data);
+            return;
+        }
+
+        data.category = result.body.post.category;
+        data.title = result.body.post.title;
+        data.content = result.body.post.content;
+
+        deferred.resolve(data);
     });
 
     return deferred.promise;
