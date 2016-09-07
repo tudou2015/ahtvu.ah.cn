@@ -1,6 +1,8 @@
 <div class="news-tab-content">
     <div class="news-tab-first">
+        {{if data.first.image}}
         <img src="{{data.first.image}}" width="171px" height="105px" class="first-pic" />
+        {{/if}}
         <div class="details">
             <h3>{{data.first.title}}</h3>
             <p>{{data.first.text}}
@@ -19,13 +21,3 @@
     <span class="no-data">暂无数据</span> 
     {{/if}}
 </div>
-
-<!--tab-3 start-->
-<!--<div class="news-tab-content" style="display:none;">
-    <ul class="news-tab-list  news-school-list clearfix">
-        {{each data as item i }}
-        <li><a href="javascript:(0);">{{item.title}}</a><span>{{item.date | dateFormat:'YYYY-MM-DD'}}</span></li>
-        {{/each}}
-    </ul>
-    <a href="javascript:(0);" class="more"><span>查看更多</span></a>
-</div>-->

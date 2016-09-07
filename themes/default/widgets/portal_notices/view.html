@@ -1,6 +1,8 @@
 <div class="news-tab-content" style="display:none;">
     <div class="news-tab-first">
+        {{if data.first.image}}
         <img src="{{data.first.image}}" width="171px" height="105px" class="first-pic" />
+        {{/if}}
         <div class="details">
             <h3>{{data.first.title}}</h3>
             <p>{{data.first.text}}
