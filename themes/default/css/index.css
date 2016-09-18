@@ -1252,3 +1252,7 @@ body {
 .link-entry li a:hover {
     text-decoration: underline;
 }
+
+/*暂无数据*/
+.no-data { display: block; padding: 30% 0 0 42%; font-size: 14px; color:#999;}
+.no-content { background: url(../images/no-content.png) no-repeat; width: 239px; height:232px; margin: 100px auto 0;}
