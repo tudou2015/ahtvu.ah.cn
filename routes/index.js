@@ -55,4 +55,28 @@ router.get('/info', function (req, res, next) {
     next();
 });
 
+//student
+router.get('/student', function (req, res, next) {
+
+    //set render html with widget
+    res.context = {};
+
+    res.context._r_widget = true
+    res.context._r_widget_skin = 'student.html';
+
+    next();
+});
+
+//teacher
+router.get('/teacher', function (req, res, next) {
+
+    //set render html with widget
+    res.context = {};
+
+    res.context._r_widget = true
+    res.context._r_widget_skin = 'teacher.html';
+
+    next();
+});
+
 module.exports = router;

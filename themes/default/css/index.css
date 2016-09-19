@@ -1256,3 +1256,12 @@ body {
 /*暂无数据*/
 .no-data { display: block; padding: 30% 0 0 42%; font-size: 14px; color:#999;}
 .no-content { background: url(../images/no-content.png) no-repeat; width: 239px; height:232px; margin: 100px auto 0;}
+
+/*学生-教师 空间*/
+.space-box { padding: 20px; font-size: 14px; }
+.space-box h4 {margin: 10px 0; font-weight: bold;}
+.space-box strong { font-weight: bold;}
+ul.space-list {    margin-bottom: 10px; padding-bottom: 15px; border-bottom: 1px dashed #ddd;}
+ul.space-list li{ float: left; background: #ededed; margin: 5px 5px 0 0; padding: 10px; }
+ul.space-list li a { color:#333; }
+ul.space-list li a:hover { color:#2e72d7; }
