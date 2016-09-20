@@ -41,7 +41,7 @@ module.exports = function (req, res, utils) {
                     image: e.image_url,
                     title: utils.subString(e.title, 30),
                     text: (e.image_url ? utils.subString(e.text, 90) : utils.subString(e.text, 120)),
-                    href: utils.urlFormat(util.format('/detail?id=%s', e.id))
+                    href: utils.urlFormat(util.format('/portal/detail?id=%s', e.id))
                 };
 
                 return false;
