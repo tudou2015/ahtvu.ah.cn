@@ -513,7 +513,7 @@ body {
 .sub-leftimg {
     float: left;
     overflow: hidden;
-    border: 1px solid #32a8f3;
+    border: 1px solid #ddd;
     width: 272px;
     height: 131px;
     margin-right: 48px;
@@ -1081,7 +1081,6 @@ body {
     line-height: 35px;
     color: #000;
     margin: 0px 30px;
-    text-indent: 2em;
 }
 
 .bdshare-button-style0-16 {
