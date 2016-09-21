@@ -25,7 +25,7 @@ body {
     width: 411px;
     height: 120px;
 }
-
+.top-right { width:530px;}
 .top-search a {
     background: #2994f7;
     color: #fff;
@@ -508,6 +508,9 @@ body {
     z-index: 1001;
     background: #fff;
     padding: 27px 0px 40px 0px;
+    -moz-box-shadow: 0px 1px 10px rgba(11, 3, 6, 0.6);
+    -webkit-box-shadow: 0px 1px 10px rgba(11, 3, 6, 0.6);
+    box-shadow: 0px 1px 10px rgba(11, 3, 6, 0.6);
 }
 
 .sub-leftimg {
@@ -885,7 +888,7 @@ body {
 }
 
 .news-tab-resources {
-    padding: 26px 25px;
+    padding: 20px;
 }
 
 
