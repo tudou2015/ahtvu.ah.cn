@@ -809,14 +809,10 @@ body {
     margin-bottom: 30px;
 }
 
-.footer-link ul {
-    padding: 0px 30px;
-}
-
 .footer-link li {
     float: left;
     line-height: 34px;
-    padding: 0px 18px;
+    padding: 0px 14px;
 }
 
 .footer-link li a {
