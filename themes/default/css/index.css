@@ -740,6 +740,7 @@ body {
     margin-top: 29px;
     margin-left: 20px;
 }
+.nav-ggzcfw ul li:hover p{color: #2994f7;}
 
 .nav-xtjs ul li p {
     float: left;

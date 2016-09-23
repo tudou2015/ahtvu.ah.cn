@@ -79,17 +79,4 @@ router.get('/teacher', function (req, res, next) {
     next();
 });
 
-//system navigation
-router.get('/teacher', function (req, res, next) {
-
-    //set render html with widget
-    res.context = {};
-
-    res.context._r_widget = true
-    res.context._r_widget_skin = 'teacher.html';
-
-    next();
-});
-
-
 module.exports = router;
