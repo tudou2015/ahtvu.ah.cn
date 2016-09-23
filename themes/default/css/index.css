@@ -140,6 +140,9 @@ body {
     -moz-binding: url("ellipsis.xml#ellipsis");
 }
 
+.news-tab-first .details h3 a{color:#343434;}
+.news-tab-first .details h3 a:hover {color:#327ff3;}
+
 .news-tab-first .details p {
     font-size: 15px;
     color: #4a4a4a;
