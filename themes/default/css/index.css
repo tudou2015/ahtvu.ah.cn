@@ -2,6 +2,9 @@ body {
     background: #f4f4f4;
     font-family: "Microsoft YaHei";
 }
+strong, b {
+    font-weight: bold;
+}
 
 .top-search input {
     font-family: "Microsoft YaHei";
