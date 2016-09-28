@@ -28,4 +28,12 @@ $(function () {
         $(this).find('a:first').removeClass("act");
         $(this).find('.sub-nav:first').hide();
     });
+
+    // xtdt-tab
+    $('.xtdt-tab-title li').click(function () {
+        var index = $(this).index();
+        $('.xtdt-tab-title li').removeClass('cur');
+        $(this).addClass('cur');
+        $(this).parents('.xtdt-box').children('.list-box:eq(' + index + ')').show().siblings('.list-box').hide();
+    });
 });

@@ -79,4 +79,40 @@ router.get('/teacher', function (req, res, next) {
     next();
 });
 
+//xtgk
+router.get('/xtgk', function (req, res, next) {
+
+    //set render html with widget
+    res.context = {};
+
+    res.context._r_widget = true
+    res.context._r_widget_skin = 'xtgk.html';
+
+    next();
+});
+
+//xtwj
+router.get('/xtwj', function (req, res, next) {
+
+    //set render html with widget
+    res.context = {};
+
+    res.context._r_widget = true
+    res.context._r_widget_skin = 'xtwj.html';
+
+    next();
+});
+
+//xtdt
+router.get('/xtdt', function (req, res, next) {
+
+    //set render html with widget
+    res.context = {};
+
+    res.context._r_widget = true
+    res.context._r_widget_skin = 'xtdt.html';
+
+    next();
+});
+
 module.exports = router;
