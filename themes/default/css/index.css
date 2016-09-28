@@ -1291,3 +1291,9 @@ ul.space-list li a:hover { color:#2e72d7; }
 .xtdt-tab-title ul li.cur { background-color: #2994f7;}
 .xtdt-tab-title ul li a { color: #000; padding: 11px 39px;}
 .xtdt-tab-title ul li.cur a { color: #fff;}
+.article-list .detail-title {
+    color: #0075e2;
+    font-size: 24px;
+    text-align: center;
+    margin: 55px 0px 37px 0px;
+}
