@@ -1,4 +1,4 @@
-<div class="list-box">
+<div class="list-box" style="display:none;">
     <ul>
         {{if data.list.length > 0}} {{each data.list as item i}}
         <li>
@@ -11,5 +11,5 @@
     </ul>
 </div>
 <div class="paging" data-paging="{{data.paging}}"></div>
-<script type="text/javascript" src="/js/jquery.paging.js"></script>
+<script type="text/javascript" src="js/jquery.paging.js"></script>
 <script type="text/javascript" src="{{_widget_path}}/view.js"></script>

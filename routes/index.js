@@ -115,4 +115,16 @@ router.get('/xtdt', function (req, res, next) {
     next();
 });
 
+//xtwjdetail
+router.get('/xtwjdetail', function (req, res, next) {
+
+    //set render html with widget
+    res.context = {};
+
+    res.context._r_widget = true
+    res.context._r_widget_skin = 'xtwjpost.html';
+
+    next();
+});
+
 module.exports = router;
