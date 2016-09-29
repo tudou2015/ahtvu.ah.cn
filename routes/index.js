@@ -55,7 +55,7 @@ router.get('/info', function (req, res, next) {
     next();
 });
 
-//student
+//学生空间
 router.get('/student', function (req, res, next) {
 
     //set render html with widget
@@ -67,7 +67,7 @@ router.get('/student', function (req, res, next) {
     next();
 });
 
-//teacher
+//教师空间
 router.get('/teacher', function (req, res, next) {
 
     //set render html with widget
@@ -79,7 +79,7 @@ router.get('/teacher', function (req, res, next) {
     next();
 });
 
-//xtgk
+//系统概况
 router.get('/xtgk', function (req, res, next) {
 
     //set render html with widget
@@ -91,7 +91,7 @@ router.get('/xtgk', function (req, res, next) {
     next();
 });
 
-//xtwj
+//系统文件
 router.get('/xtwj', function (req, res, next) {
 
     //set render html with widget
@@ -103,7 +103,7 @@ router.get('/xtwj', function (req, res, next) {
     next();
 });
 
-//xtdt
+//系统动态
 router.get('/xtdt', function (req, res, next) {
 
     //set render html with widget
@@ -115,7 +115,7 @@ router.get('/xtdt', function (req, res, next) {
     next();
 });
 
-//xtwjdetail
+//系统文件详情
 router.get('/xtwjdetail', function (req, res, next) {
 
     //set render html with widget
@@ -123,6 +123,18 @@ router.get('/xtwjdetail', function (req, res, next) {
 
     res.context._r_widget = true
     res.context._r_widget_skin = 'xtwjpost.html';
+
+    next();
+});
+
+//学校领导
+router.get('/xxld', function (req, res, next) {
+
+    //set render html with widget
+    res.context = {};
+
+    res.context._r_widget = true
+    res.context._r_widget_skin = 'xxld.html';
 
     next();
 });
