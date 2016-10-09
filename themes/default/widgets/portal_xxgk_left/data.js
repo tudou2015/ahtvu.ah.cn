@@ -31,7 +31,7 @@ module.exports = function (req, res, utils) {
                 id:e.id,
                 title: e.title,
                 url:e.url,
-                href: utils.urlFormat(util.format('xxgk?id=%s', e.id)),
+                href: util.format('xxgk?id=%s', e.id),
             });
 
         }, this);
