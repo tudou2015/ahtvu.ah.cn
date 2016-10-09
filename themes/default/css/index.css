@@ -1302,3 +1302,13 @@ ul.space-list li a:hover { color:#2e72d7; }
 .xxld-right h3 { font-size: 20px; color: #2994f7; padding: 15px; border-bottom: 1px solid #ddd; }
 .xxld-right h3 span { float: right; font-size: 18px; }
 .xxld-right p { font-size: 14px; padding: 15px; line-height: 33px; height: 97px; }
+
+/*电大系统导航*/
+.system-box { padding: 20px; font-size: 14px; }
+.system-box h4 {margin: 10px 0; font-weight: bold; font-size: 15px;}
+.system-box h4 img {vertical-align: middle; margin-right:5px;}
+.system-box strong { font-weight: bold;}
+ul.system-list {    margin-bottom: 10px; padding-bottom: 15px; border-bottom: 1px dashed #ddd;}
+ul.system-list li{ float: left; background: #ededed; margin: 5px 5px 0 0; padding: 5px; }
+ul.system-list li a { color:#333; }
+ul.system-list li a:hover { color:#2e72d7; }

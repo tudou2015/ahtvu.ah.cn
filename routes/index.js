@@ -175,4 +175,16 @@ router.get('/subject', function (req, res, next) {
     next();
 });
 
+//电大系统导航
+router.get('/system', function (req, res, next) {
+
+    //set render html with widget
+    res.context = {};
+
+    res.context._r_widget = true
+    res.context._r_widget_skin = 'system.html';
+
+    next();
+});
+
 module.exports = router;
