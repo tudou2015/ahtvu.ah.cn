@@ -1271,11 +1271,10 @@ ul.space-list {    margin-bottom: 10px; padding-bottom: 15px; border-bottom: 1px
 ul.space-list li{ float: left; background: #ededed; margin: 5px 5px 0 0; padding: 10px; }
 ul.space-list li a { color:#333; }
 ul.space-list li a:hover { color:#2e72d7; }
-.ddyw-style { font-weight: bold; color: #2994f7;}
 
 /*系统建设*/
 .xtjs-menu { padding-top: 0 !important;}
-.xtjs-title { background-color: #2994f7; color:#fff;}
+.xtjs-title, .ddyw-style { background-color: #2994f7; color:#fff;}
 .xtdt-tab-title { margin: 20px 20px 10px; }
 .xtdt-tab-title ul li {
     float: left;

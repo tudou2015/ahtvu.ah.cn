@@ -1,7 +1,7 @@
 const util = require('util');
 
 var config = {
-    host: 'www.ahtvu1.ah.cn',          // 外网真实地址
+    host: 'localhost',          // 外网真实地址
     port: 3000,                    // 外网真实地址的端口
     _origin: '',
     origin: function () {
@@ -15,8 +15,8 @@ var config = {
         return this._origin;
     },
     cms: {
-        host: '192.168.1.230',                // 内网 cms 接口地址
-        port: 80,                           // 内网 cms 接口地址的端口
+        host: '192.168.1.245',                // 内网 cms 接口地址
+        port: 5657,                           // 内网 cms 接口地址的端口
         site: "8-dnag6m9znkhvyqnm-q-w",     // 站点ID
         _origin: '',
         origin: function () {

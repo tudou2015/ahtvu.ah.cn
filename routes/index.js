@@ -79,6 +79,18 @@ router.get('/teacher', function (req, res, next) {
     next();
 });
 
+//学校概况
+router.get('/xxgk', function (req, res, next) {
+
+    //set render html with widget
+    res.context = {};
+
+    res.context._r_widget = true
+    res.context._r_widget_skin = 'xxgk.html';
+
+    next();
+});
+
 //系统概况
 router.get('/xtgk', function (req, res, next) {
 

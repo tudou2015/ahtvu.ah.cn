@@ -1,0 +1,7 @@
+<ul class="xtjs-menu">
+    <li class="xtjs-title">学校概况</li>
+    {{each data.list as item i}}
+    <li><a href="{{item.href}}" data-id="{{item.id}}">{{item.title}}</a></li>
+    {{/each}}
+</ul>
+<script type="text/javascript" src="{{_widget_path}}/view.js"></script>
