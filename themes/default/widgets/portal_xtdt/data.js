@@ -9,7 +9,7 @@ module.exports = function (req, res, utils) {
         method: 'POST',
         qs: {
             siteId: req.app.site.id,
-            categoryId: 'yu8cay6mri9butxxpyo9qw',
+            categoryId: req.query.id,
             page: req.query.page || 1
         }
     }, function (result) {
@@ -36,7 +36,7 @@ module.exports = function (req, res, utils) {
             data.list.push({
                 title: e.title,
                 date: e.date_published,
-                href: utils.urlFormat(util.format('/portal/detail?id=%s', e.id)),
+                href: utils.urlFormat(util.format('/portal/xtdtdetail?id=%s', e.id)),
             });
 
         }, this);

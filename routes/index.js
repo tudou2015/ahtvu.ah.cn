@@ -103,6 +103,18 @@ router.get('/xtwj', function (req, res, next) {
     next();
 });
 
+//系统文件详情
+router.get('/xtwjdetail', function (req, res, next) {
+
+    //set render html with widget
+    res.context = {};
+
+    res.context._r_widget = true
+    res.context._r_widget_skin = 'xtwjpost.html';
+
+    next();
+});
+
 //系统动态
 router.get('/xtdt', function (req, res, next) {
 
@@ -115,14 +127,14 @@ router.get('/xtdt', function (req, res, next) {
     next();
 });
 
-//系统文件详情
-router.get('/xtwjdetail', function (req, res, next) {
+//系统动态详情
+router.get('/xtdtdetail', function (req, res, next) {
 
     //set render html with widget
     res.context = {};
 
     res.context._r_widget = true
-    res.context._r_widget_skin = 'xtwjpost.html';
+    res.context._r_widget_skin = 'xtdtpost.html';
 
     next();
 });
