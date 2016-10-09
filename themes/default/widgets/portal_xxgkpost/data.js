@@ -35,6 +35,7 @@ module.exports = function (req, res, utils) {
         data.id = result.body.post.id;
         data.title = result.body.post.title;
         data.content = result.body.post.content;
+        data.category = { title: result.body.post.category.title };
 
         deferred.resolve(data);
     });
