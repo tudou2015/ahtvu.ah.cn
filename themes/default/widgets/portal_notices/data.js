@@ -35,12 +35,12 @@ module.exports = function (req, res, utils) {
             if (!data.first) {
 
                 e.text ? e.text : (e.text = e.title);
-                e.image_url ? (e.image_url = util.format('%s&width=171&height=105', e.image_url)) : '';
+                e.image_url ? (e.image_url = util.format('%s&width=147&height=90', e.image_url)) : '';
 
                 data.first = {
                     image: e.image_url,
                     title: utils.subString(e.title, 30),
-                    text: (e.image_url ? utils.subString(e.text, 90) : utils.subString(e.text, 120)),
+                    text: (e.image_url ? utils.subString(e.text, 80) : utils.subString(e.text, 86)),
                     href: utils.urlFormat(util.format('/portal/detail?id=%s', e.id))
                 };
 

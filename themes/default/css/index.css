@@ -128,6 +128,7 @@ strong, b {
 
 .news-tab-first .details {
     padding: 4px 0px;
+    border-bottom: 1px dashed #bababa;
 }
 
 .news-tab-first .details h3 {
@@ -143,7 +144,7 @@ strong, b {
     -moz-binding: url("ellipsis.xml#ellipsis");
 }
 
-.news-tab-first .details h3 a{color:#343434;}
+.news-tab-first .details h3 a{color:#343434; font-weight: bold;}
 .news-tab-first .details h3 a:hover {color:#327ff3;}
 
 .news-tab-first .details p {
