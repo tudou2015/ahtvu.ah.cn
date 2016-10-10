@@ -1296,9 +1296,9 @@ ul.space-list li a:hover { color:#2e72d7; }
 /*学校领导*/
 .xxld-box { padding: 25px; }
 .xxld-inner { margin-bottom: 12px; }
-.xxld-pic { width: 180px; height: 180px; float: left; }
+.xxld-pic { width: 150px; height: 180px; float: left; }
 .xxld-pic img { width: 100%; height: 100%;}
-.xxld-right { border: 1px solid #ddd; margin-left: 192px; }
+.xxld-right { border: 1px solid #ddd; margin-left: 162px; }
 .xxld-right h3 { font-size: 20px; color: #2994f7; padding: 15px; border-bottom: 1px solid #ddd; }
 .xxld-right h3 span { float: right; font-size: 18px; }
 .xxld-right p { font-size: 14px; padding: 15px; line-height: 33px; height: 97px; }
@@ -1309,6 +1309,6 @@ ul.space-list li a:hover { color:#2e72d7; }
 .system-box h4 img {vertical-align: middle; margin-right:5px;}
 .system-box strong { font-weight: bold;}
 ul.system-list {    margin-bottom: 10px; padding-bottom: 15px; border-bottom: 1px dashed #ddd;}
-ul.system-list li{ float: left; background: #ededed; margin: 5px 5px 0 0; padding: 5px; }
+ul.system-list li{ float: left; background: #ededed; margin: 5px 5px 0 0; padding: 5px 10px; }
 ul.system-list li a { color:#333; }
 ul.system-list li a:hover { color:#2e72d7; }

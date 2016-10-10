@@ -187,4 +187,16 @@ router.get('/system', function (req, res, next) {
     next();
 });
 
+//网站地图
+router.get('/sitemaps', function (req, res, next) {
+
+    //set render html with widget
+    res.context = {};
+
+    res.context._r_widget = true
+    res.context._r_widget_skin = 'sitemaps.html';
+
+    next();
+});
+
 module.exports = router;
