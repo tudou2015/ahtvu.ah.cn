@@ -1268,10 +1268,17 @@ strong, b {
 .space-box { padding: 20px; font-size: 14px; }
 .space-box h4 {margin: 10px 0; font-weight: bold;}
 .space-box strong { font-weight: bold;}
+.space-box .space-top { padding: 20px; background-color:#f4f4f4; margin:-20px -20px 20px -20px; font-size: 16px;}
+.space-box .space-top span { color:#1283ed; }
 ul.space-list {    margin-bottom: 10px; padding-bottom: 15px; border-bottom: 1px dashed #ddd;}
 ul.space-list li{ float: left; background: #ededed; margin: 5px 5px 0 0; padding: 10px; }
 ul.space-list li a { color:#333; }
 ul.space-list li a:hover { color:#2e72d7; }
+ul.space-list li.space-btn { padding:0; }
+ul.space-list li.space-btn .space-img-left { width:8px; height: 36px; display: inline-block; background: url(../images/space-icon-left.png) no-repeat; }
+ul.space-list li.space-btn .space-img-left img, ul.space-list li.space-btn .space-img-right img { display: block; }
+ul.space-list li.space-btn a { color:#fff; background: url(../images/space-icon-m.png) repeat-x; display: inline-block; margin:0 -4px; height: 36px; line-height: 36px; vertical-align: top; }
+ul.space-list li.space-btn .space-img-right {width:28px; height: 36px;display: inline-block; background: url(../images/space-icon-r.png) no-repeat; }
 
 /*系统建设*/
 .xtjs-menu { padding-top: 0 !important;}
