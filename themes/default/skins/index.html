@@ -1,37 +1,44 @@
 <widget id="header"></widget>
 <widget id="banner"></widget>
 <div class="grid wrapper">
-    <div class="col-2-3 index-padding" style="padding:0;">
-        <div class="news-tab" style="margin-right:10px;">
-            <div class="news-tab-title clearfix">
-                <ul>
-                    <li class="tabs-li1 cur"><a href="javascript:void(0);">学校新闻</a><em>&nbsp;</em></li>
-                    <li class="tabs-li2"><a href="javascript:void(0);">通知公告</a><em>&nbsp;</em></li>
-                    <li class="tabs-li2"><a href="javascript:void(0);">分校之窗</a><em>&nbsp;</em></li>
-                    <li class="tabs-li2"><a href="javascript:void(0);">平台应用</a><em>&nbsp;</em></li>
-                    <li class="tabs-li2"><a href="javascript:void(0);">资源展示</a><em>&nbsp;</em></li>
-                </ul>
-            </div>
-            <widget id="news_box"></widget>
-            <widget id="notice_box"></widget>
-            <widget id="school_news_box"></widget>
-            <widget id="platform_box"></widget>
-            <widget id="resources_box"></widget>
-        </div>
-        <a href="http://lxyz.ahtvu.ah.cn/" class="icon-link" style="margin-right:10px;" target="_blank">
-            <img src="images/icon-link.jpg" width="792px" height="98px" />
-        </a>
-    </div>
-    <div class="col-1-3 index-right-padding" style="padding:0;">
-        <div class="index-right-news">
-            <widget id="wrap_right_top"></widget>
-        </div>
-        <div class="fast-entry">
-            <widget id="wrap_right_middle"></widget>
-        </div>
-        <div class="link-entry">
-            <widget id="wrap_right_bottom"></widget>
-        </div>
-    </div>
+	<div class="col-2-3 index-padding" style="padding:0;">
+		<div class="news-tab" style="margin-right:10px;">
+			<div class="news-tab-title clearfix">
+				<ul>
+					<li class="tabs-li1 cur"><a href="javascript:void(0);">学校新闻</a><em>&nbsp;</em></li>
+					<li class="tabs-li2"><a href="javascript:void(0);">通知公告</a><em>&nbsp;</em></li>
+					<li class="tabs-li2"><a href="javascript:void(0);">分校之窗</a><em>&nbsp;</em></li>
+					<li class="tabs-li2"><a href="javascript:void(0);">平台应用</a><em>&nbsp;</em></li>
+					<li class="tabs-li2"><a href="javascript:void(0);">资源展示</a><em>&nbsp;</em></li>
+				</ul>
+			</div>
+			<div class="news-tab-content">
+				<widget id="frist_news"></widget>
+				<div class="clearfix" style="margin-top:5px;">
+					<widget id="school_news"></widget>
+					<widget id="school_dynamic"></widget>
+				</div>
+				<a href="news" class="more"><span>查看更多</span></a>
+			</div>
+			<widget id="notice_box"></widget>
+			<widget id="school_news_box"></widget>
+			<widget id="platform_box"></widget>
+			<widget id="resources_box"></widget>
+		</div>
+		<a href="http://lxyz.ahtvu.ah.cn/" class="icon-link" style="margin-right:10px;" target="_blank">
+			<img src="images/icon-link.jpg" width="792px" height="98px" />
+		</a>
+	</div>
+	<div class="col-1-3 index-right-padding" style="padding:0;">
+		<div class="index-right-news">
+			<widget id="wrap_right_top"></widget>
+		</div>
+		<div class="fast-entry">
+			<widget id="wrap_right_middle"></widget>
+		</div>
+		<div class="link-entry">
+			<widget id="wrap_right_bottom"></widget>
+		</div>
+	</div>
 </div>
 <widget id="footer"></widget>

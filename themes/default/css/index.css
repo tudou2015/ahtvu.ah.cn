@@ -172,7 +172,6 @@ strong, b {
     border: 1px solid #dfdede;
     border-radius: 2px;
     float: right;
-    margin-right: 25px;
     line-height: 24px;
 }
 
@@ -225,7 +224,7 @@ strong, b {
 
 .news-tab-list {
     margin-right: -30px;
-    padding: 0px 23px;
+    padding: 0 0 0 23px;
     margin-top: 8px;
 }
 
@@ -253,7 +252,7 @@ strong, b {
     line-height: 24px;
     text-align: center;
     float: right;
-    margin: 11px 47px 0px 0px;
+    margin: 11px 23px 0px 0px;
 }
 
 .news-tab .more span {
@@ -1319,3 +1318,8 @@ ul.system-list {    margin-bottom: 10px; padding-bottom: 15px; border-bottom: 1p
 ul.system-list li{ float: left; background: #ededed; margin: 5px 5px 0 0; padding: 5px 10px; }
 ul.system-list li a { color:#333; }
 ul.system-list li a:hover { color:#2e72d7; }
+
+/*首页学校新闻处调整*/
+.news-left { float:left; width:350px; }
+.news-left li, .news-right li { width:350px; }
+.news-right { float:right; width:350px; margin-right: 23px; }

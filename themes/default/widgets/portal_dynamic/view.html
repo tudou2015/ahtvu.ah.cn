@@ -1,0 +1,6 @@
+<ul class="news-tab-list clearfix news-right">
+	{{if data.list.length > 0 }} {{each data.list as item i}}
+	<li><a href="{{item.href}}" target="_blank" title="{{item.ori_title}}">{{item.title}}</a><span>{{item.date | dateFormat:'YYYY-MM-DD'}}</span></li>
+	{{/each}} {{else}}
+	<span class="no-data" style="padding: 20% 0 0 42%;">暂无数据</span> {{/if}}
+</ul>

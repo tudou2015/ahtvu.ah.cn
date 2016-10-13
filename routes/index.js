@@ -91,6 +91,18 @@ router.get('/xxgk', function (req, res, next) {
     next();
 });
 
+//学校新闻
+router.get('/news', function (req, res, next) {
+
+    //set render html with widget
+    res.context = {};
+
+    res.context._r_widget = true
+    res.context._r_widget_skin = 'news.html';
+
+    next();
+});
+
 //系统概况
 router.get('/xtgk', function (req, res, next) {
 
