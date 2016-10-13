@@ -35,7 +35,7 @@ module.exports = function (req, res, utils) {
                 ori_title: e.title,
                 title: utils.subString(e.title, 25),
                 date: e.date_published,
-                href: utils.urlFormat(util.format('/portal/detail?id=%s', e.id))
+                href: utils.urlFormat(util.format('/portal/newspost?id=%s', e.id))
             });
 
         }, this);

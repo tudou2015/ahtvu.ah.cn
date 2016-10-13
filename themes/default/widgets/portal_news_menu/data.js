@@ -9,7 +9,7 @@ module.exports = function (req, res, utils) {
         method: 'POST',
         qs: {
             siteId: req.app.site.id,
-            parentId:'6g3pag6mr79pjuqwzlkaxw'
+            parentId:'7c-maj6mmytmrc47cc9gdq'
         }
     }, function (result) {
         var data = {
@@ -26,12 +26,12 @@ module.exports = function (req, res, utils) {
         result.body = JSON.parse(result.body);
 
         result.body.data.forEach(function (e) {
-
+            
             data.list.push({
                 id:e.id,
                 title: e.title,
                 url:e.url,
-                href: util.format('xxgk?id=%s', e.id),
+                href: util.format('news?id=%s', e.id),
             });
 
         }, this);
