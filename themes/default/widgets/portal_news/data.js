@@ -10,6 +10,7 @@ module.exports = function (req, res, utils) {
         qs: {
             siteId: req.app.site.id,
             categoryId: '6g3pag6mr79pjuqwzlkaxw',
+            withChildren: true,
             pageSize: 11
         }
     }, function (result) {

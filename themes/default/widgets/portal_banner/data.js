@@ -10,7 +10,8 @@ module.exports = function (req, res, utils) {
         qs: {
             siteId: req.app.site.id,
             categoryId: 'p5m3ahwmb5va-ppr5hdhfw',
-            sort: 'sortOrder'
+            withChildren: false,
+            sort: 'sortOrder' 
         }
     }, function (result) {
 

@@ -10,6 +10,7 @@ module.exports = function (req, res, utils) {
         qs: {
             siteId: req.app.site.id,
             categoryId: req.query.id,
+            withChildren: true,
             page: req.query.page || 1
         }
     }, function (result) {
