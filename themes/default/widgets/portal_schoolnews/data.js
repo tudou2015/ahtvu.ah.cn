@@ -11,7 +11,7 @@ module.exports = function (req, res, utils) {
             siteId: req.app.site.id,
             categoryId: '6g3pag6mr79pjuqwzlkaxw',
             withChildren: true,
-            pageSize: 5
+            pageSize: 6
         }
     }, function (result) {
 
@@ -41,7 +41,12 @@ module.exports = function (req, res, utils) {
 
         }, this);
 
-        deferred.resolve({ data: data });
+        var mylist = data.list;
+
+        mylist.splice(0, 1);
+
+        deferred.resolve({ data: mylist});
+
     });
 
     return deferred.promise;
