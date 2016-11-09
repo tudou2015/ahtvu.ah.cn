@@ -13,13 +13,18 @@ var widget = {
     __init: function () {
         return function (req, res, next) {
 
-            if (req.app.site) { next(); return; }
+            var domain = req.hostname,
+                tmp = req.path.substr(1).split('/')[0];
+
+            if (tmp.length >= 0) domain = tmp;
 
             request({
                 uri: 'open/get_site_info',
                 baseUrl: util.format('%s/', config.cms.origin()),
                 method: 'POST',
-                qs: { domain: 'www.ahtvu.ah.cn' },
+                qs: {
+                    domain: domain
+                },
                 useQuerystring: true
             }, function (error, response, body) {
 
@@ -51,7 +56,10 @@ var widget = {
         return function (req, res, next) {
 
             //if need render html with widget
-            if (!res.context || !res.context._r_widget) { next(); return; }
+            if (!res.context || !res.context._r_widget) {
+                next();
+                return;
+            }
 
             var skin = path.join(req.app.paths.skins, res.context._r_widget_skin);
 
@@ -68,7 +76,10 @@ var widget = {
 
                 while ((temp = reg.exec(data)) !== null) {
 
-                    widgets.push({ holder: temp[0], id: temp[1] });
+                    widgets.push({
+                        holder: temp[0],
+                        id: temp[1]
+                    });
 
                     widget_ids.push(temp[1]);
                 }
@@ -77,7 +88,10 @@ var widget = {
                 utils.request({
                     url: 'open/get_widgets',
                     method: 'POST',
-                    qs: { siteId: req.app.site.id, ids: widget_ids }
+                    qs: {
+                        siteId: req.app.site.id,
+                        ids: widget_ids
+                    }
                 }, function (result) {
 
                     if (result.code != 200) throw new Error();

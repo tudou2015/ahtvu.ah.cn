@@ -1,0 +1,19 @@
+<div class="news-box-right">
+    <div class="slide">
+        <div class="FocusPic">
+            <div class="content" id="main-slide">
+                <div class="changeDiv">
+                    {{each data.imgNew as item i}}
+                    <a href="{{item.href}}" target="_blank" title="{{item.title}}"><img src="{{item.image}}" alt="{{item.title}}" width="345" height="213" /></a>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript"> 
+$(function(){
+	new slide("#main-slide","cur",345,213,1);//焦点图
+})
+function $jquery(id){return document.getElementById(id)};
+</script>

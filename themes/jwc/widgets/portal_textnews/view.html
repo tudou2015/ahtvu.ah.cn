@@ -1,0 +1,17 @@
+<div class="news-box-left">
+    <div class="news-first">
+        {{if data.first.image}}
+        <img src="{{data.first.image}}" width="120" height="75" alt=""> {{/if}}
+        <div class="news-first-infor">
+            <h3>{{data.first.title}}</h3>
+            <p>{{data.first.text}}
+                <a class="first-details" href="{{data.first.href}}" title="" target="_blank">[ 全文 ]</a>
+            </p>
+        </div>
+    </div>
+    <ul class="news-list">
+        {{each data.list as item i}}
+        <li class="clearfix"><a href="{{item.href}}" title="{{item.ori_title}}">{{item.title}}</a><span>{{item.date | dateFormat:'YYYY-MM-DD'}}</span></li>
+        {{/each}}
+    </ul>
+</div>

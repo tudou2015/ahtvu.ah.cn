@@ -1,0 +1,28 @@
+<div class="office-news">
+    <div class="office-title">
+        <h3>通知公告</h3>
+        <a href="{{data.category.href}}" class="office-more">MORE</a>
+    </div>
+    <div class="notice-news">
+        <ul>
+            {{if data.list.length > 0 }}
+            {{each data.list as item i}}
+            <li>
+                <div class="time-line">
+                    <span class="time-date">{{item.date | dateFormat:'DD'}}</span>
+                    <br/>
+                    <span class="time-years">{{item.date | dateFormat:'YYYY-MM'}}</span>
+                </div>
+                <div class="detail">
+                    <h3 title="{{item.ori_title}}">{{item.title}}</h3>
+                    <p>{{item.summary}}</p>
+                    <a href="{{item.href}}" target="_blank">[全文]</a>
+                </div>
+            </li>
+            {{/each}}
+            {{else}}
+            <span class="no-data">暂无数据</span> 
+            {{/if}}
+        </ul>
+    </div>
+</div>

@@ -1,6 +1,7 @@
 var express = require('express'),
     path = require('path'),
     http = require('http'),
+    fs = require('fs'),
     parser = require('body-parser'),
     template = require('art-template'),
     compression = require('compression'),
@@ -12,7 +13,11 @@ var app = express();
 app.set('port', 3000);
 app.set('x-powered-by', false);
 app.set('view engine', 'html');
-app.set('views', path.join(__dirname, 'themes', 'default', 'skins'));
+
+fs.readdirSync('./themes').forEach(function (e) {
+
+    app.set('views', path.join(__dirname, 'themes', e, 'skins'));
+});
 
 template.config('extname', '.html');
 
@@ -26,19 +31,29 @@ app.engine('.html', template.__express);
 app.use(parser.json());
 
 //parse request body
-app.use(parser.urlencoded({ extended: false }));
+app.use(parser.urlencoded({
+    extended: false
+}));
 
 //gzip middleware
-app.use(compression({ level: 9 }));
+app.use(compression({
+    level: 9
+}));
 
 //set static file path
-app.use(express.static(path.join(__dirname, 'themes', 'default'), { maxAge: 24 * 60 * 60 * 1000 }));
+app.use(express.static(path.join(__dirname, 'themes'), {
+    maxAge: 24 * 60 * 60 * 1000
+}));
 
 //widget middleware init
 app.use(widget.__init());
 
 //load routes
-app.use('/', require('./routes/index'));
+fs.readdirSync('./routes').forEach(function (e) {
+
+    e = e.replace('.js', '');
+    app.use('/' + e, require('./routes/' + e));
+}, this);
 
 //widget middleware resolve function
 app.use(widget.__middleware());
@@ -48,7 +63,9 @@ app.use(function (err, req, res, next) {
     console.error(err.stack);
 
     res.status(err.status || 500);
-    res.render('error.html', { message: err.message });
+    res.render('error.html', {
+        message: err.message
+    });
 });
 
 //listen app to port
