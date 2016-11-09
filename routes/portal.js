@@ -1,13 +1,9 @@
 var express = require('express'),
-    router = express.Router(),
-    config = require('../config.js'),
-    utils = require('../utils/utils'),
-    async = require('async'),
-    moment = require('moment');
+    router = express.Router();
 
 const util = require('util');
 
-//首页
+//portal
 router.get('/', function (req, res, next) {
 
     //set render html with widget

@@ -1,0 +1,27 @@
+<style type="text/css">
+    .details-box {
+        padding: 0 20px;
+    }
+    
+    .details-box table tr td {
+        border: 1px solid #ddd !important;
+        padding: 8px !important;
+    }
+    
+    .details-box table tr td p {
+        margin: 0;
+        text-indent: 0;
+    }
+    
+    .details-box table {
+        margin: 0 auto;
+    }
+</style>
+<div class="title clearfix">
+    <h3>{{category.title}}</h3>
+    <div class="location">当前位置&nbsp;>&nbsp;<a href="/">学校首页&nbsp;>&nbsp;</a><span>{{category.title}}</span></div>
+</div>
+<div class="details-box clearfix">
+    <h2 class="detail-title">{{title}}</h2>
+    <p>{{#content}}</p>
+</div>
