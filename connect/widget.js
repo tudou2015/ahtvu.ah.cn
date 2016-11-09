@@ -16,7 +16,8 @@ var widget = {
             var domain = req.hostname,
                 tmp = req.path.substr(1).split('/')[0];
 
-            if (tmp.length >= 0) domain = tmp;
+            if (tmp.length > 0) domain = tmp;
+            if (tmp.indexOf('.') > -1) return;
 
             request({
                 uri: 'open/get_site_info',
@@ -36,6 +37,9 @@ var widget = {
 
                 //get current site info
                 body = JSON.parse(body);
+
+                if (body.code < 0) return;
+
                 req.app.site = body.data;
 
                 //set the theme,widget,skins paths
