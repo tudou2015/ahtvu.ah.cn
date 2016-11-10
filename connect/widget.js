@@ -19,6 +19,17 @@ var widget = {
             if (tmp.length > 0) domain = tmp;
             if (tmp.indexOf('.') > -1) return;
 
+            if (!req.app.caches) req.app.caches = {};
+
+            //get site from caches
+            if (domain && req.app.caches[domain]) {
+
+                req.app.site = req.app.caches[domain];
+
+                next();
+                return;
+            }
+
             request({
                 uri: 'open/get_site_info',
                 baseUrl: util.format('%s/', config.cms.origin()),
@@ -31,25 +42,31 @@ var widget = {
 
                 if (!!error) {
 
-                    //TODO
+                    console.log('can not find any site info');
                     return;
                 }
 
                 //get current site info
                 body = JSON.parse(body);
 
-                if (body.code < 0) return;
+                if (body.code < 0) {
+
+                    console.log(body.msg);
+                    return;
+                }
 
                 req.app.site = body.data;
 
                 //set the theme,widget,skins paths
                 var theme = path.join(__dirname, '../', 'themes', req.app.site.theme || 'default');
 
-                req.app.paths = {
+                req.app.site.paths = {
                     theme: theme,
                     skins: path.join(theme, 'skins'),
                     widget: path.join(theme, 'widgets')
                 };
+
+                req.app.caches[domain] = req.app.site;
 
                 next();
             });
@@ -65,7 +82,7 @@ var widget = {
                 return;
             }
 
-            var skin = path.join(req.app.paths.skins, res.context._r_widget_skin);
+            var skin = path.join(req.app.site.paths.skins, res.context._r_widget_skin);
 
             //read the skin file
             fs.readFile(skin, 'utf8', (err, data) => {
@@ -117,7 +134,7 @@ var widget = {
 
                         runs.push(function (callback) {
 
-                            var _w_path = path.join(req.app.paths.widget, _w_real.name),
+                            var _w_path = path.join(req.app.site.paths.widget, _w_real.name),
                                 _w_js = path.join(_w_path, 'data.js'),
                                 _w_html = path.join(_w_path, 'view');
 
