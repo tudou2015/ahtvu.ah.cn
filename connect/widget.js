@@ -84,6 +84,7 @@ var widget = {
 
             //if need render html with widget
             if (!res.context || !res.context._r_widget) {
+                
                 next();
                 return;
             }
