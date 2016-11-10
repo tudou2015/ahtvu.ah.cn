@@ -10,14 +10,18 @@ const util = require('util');
 const reg = new RegExp(/<widget id="(\w*)"\s?><\/widget>/gmi);
 
 var widget = {
-    __init: function () {
-        return function (req, res, next) {
+    __init: function() {
+        return function(req, res, next) {
 
             var domain = req.hostname,
                 tmp = req.path.substr(1).split('/')[0];
 
             if (tmp.length > 0) domain = tmp;
-            if (tmp.indexOf('.') > -1) return;
+            if (tmp.indexOf('.') > -1) {
+
+                next();
+                return;
+            }
 
             if (!req.app.caches) req.app.caches = {};
 
@@ -38,11 +42,12 @@ var widget = {
                     domain: domain
                 },
                 useQuerystring: true
-            }, function (error, response, body) {
+            }, function(error, response, body) {
 
                 if (!!error) {
 
                     console.log('can not find any site info');
+                    next();
                     return;
                 }
 
@@ -52,6 +57,7 @@ var widget = {
                 if (body.code < 0) {
 
                     console.log(body.msg);
+                    next();
                     return;
                 }
 
@@ -73,8 +79,8 @@ var widget = {
         }
     },
 
-    __middleware: function () {
-        return function (req, res, next) {
+    __middleware: function() {
+        return function(req, res, next) {
 
             //if need render html with widget
             if (!res.context || !res.context._r_widget) {
@@ -113,7 +119,7 @@ var widget = {
                         siteId: req.app.site.id,
                         ids: widget_ids
                     }
-                }, function (result) {
+                }, function(result) {
 
                     if (result.code != 200) throw new Error();
 
@@ -122,9 +128,9 @@ var widget = {
                     if (body.code != 1) throw new Error();
 
                     //execute widget's data.js & template with data
-                    widgets.forEach(function (e) {
+                    widgets.forEach(function(e) {
 
-                        var _w_real = body.widgets.filter(function (a) {
+                        var _w_real = body.widgets.filter(function(a) {
                             return a.container_id == e.id;
                         });
 
@@ -132,7 +138,7 @@ var widget = {
 
                         _w_real = _w_real[0];
 
-                        runs.push(function (callback) {
+                        runs.push(function(callback) {
 
                             var _w_path = path.join(req.app.site.paths.widget, _w_real.name),
                                 _w_js = path.join(_w_path, 'data.js'),
@@ -160,7 +166,7 @@ var widget = {
                             try {
 
                                 //get data from data.js
-                                require(_w_js)(req, res, utils).then(function (r) {
+                                require(_w_js)(req, res, utils).then(function(r) {
 
                                     r.site = req.app.site;
                                     r._widget_name = result._widget_name;
@@ -169,7 +175,7 @@ var widget = {
                                     //template html & replace 
                                     data = data.replace(e.holder, template.renderFile(_w_html, r));
                                     callback();
-                                }).catch(function (error) {
+                                }).catch(function(error) {
 
                                     console.log(error.stack);
                                     callback();
@@ -184,7 +190,7 @@ var widget = {
 
                     }, this);
 
-                    async.parallel(runs, function () {
+                    async.parallel(runs, function() {
                         res.send(template(skin, data)({}));
                     });
                 });
