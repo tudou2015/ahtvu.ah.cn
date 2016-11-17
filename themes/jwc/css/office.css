@@ -147,46 +147,15 @@ body {
 }
 
 /*footer*/
-
 .footer {
     background: url(../images/footer.jpg) repeat-x 0px 0px;
-    padding: 24px 0px 28px 0px;
-    margin-top: 14px;
+    height: 91px;
+    color:#8f9297;
 }
-
-.footer-link {
-    border-bottom: 1px dashed #616264;
-    margin-bottom: 30px;
-}
-
-.footer-link ul {
-    padding: 0px 30px;
-}
-
-.footer-link li {
-    float: left;
-    line-height: 34px;
-    padding: 0px 13px;
-}
-
-.footer-link li a {
-    color: #fff;
-    font-size: 15px;
-}
-
-.footer-link li a:hover {
-    text-decoration: underline;
-}
-
-.footer-detail {
-    text-align: center;
-    color: #737374;
-    line-height: 29px;
-}
-
+.footer .footer-inner { height: 91px; line-height: 91px;}
+.footer .footer-inner .footer-right { float: right; padding-right:12px; }
 
 /*office-news*/
-
 .office-title {
     background: url(../images/title-bg.jpg) repeat-x 0px 0px;
     height: 31px;
@@ -301,57 +270,44 @@ body {
 .office-service {
     margin-top: 12px;
 }
-
-.service-news {
+.service-manage ul {
     background: #fff;
-    border: 1px solid #e3e3e3;
-    border-top: none;
+    border:1px solid #e3e3e3;
+    margin:10px 0;
 }
-
-.service-news ul {
-    padding: 9px 11px;
-}
-
-.service-news ul li {
+.service-manage ul li {
     width: 177px;
     height: 95px;
     float: left;
     text-align: center;
-    line-height: 31px;
-    border-right: 1px solid #d3d2d2;
-    border-bottom: 1px solid #d3d2d2;
-    background: #f2f9ff;
+    line-height: 95px;
+    margin: 0 10px;
 }
 
-.service-news ul li i {
-    color: #a0a0a0;
+.service-manage ul li i {
+    color: #fff;
     font-size: 36px;
     font-weight: normal;
-    margin-left: 5px;
+    background: #ddd;
+    border-radius: 50%;
+    padding: 14px 16px;
+    width: 60px;
+    height: 60px;
 }
 
-.service-news ul li a {
+.service-manage ul li span {vertical-align: top;}
+
+.service-manage ul li i.icon-zhengcefagui { background: #80d843; }
+.service-manage ul li i.icon-jierupingtai { background: #53a3e2; }
+.service-manage ul li i.icon-beiwanglu { background: #f7a247; }
+.service-manage ul li i.icon-download { background: #4ad087; padding: 13px 16px 16px; }
+.service-manage ul li i.icon-lianjie { background: #a0a4ff; }
+.service-manage ul li i.icon-lianxiwomen { background: #ffc148; }
+
+.service-manage ul li a {
     display: block;
     font-size: 16px;
     color: #434343;
-    padding: 13px 0px;
-}
-
-.service-news ul li a:hover {
-    color: #fff;
-    background: #50a7ea;
-}
-
-.service-news ul li a:hover i {
-    color: #fff;
-}
-
-.service-news .border-left {
-    border-left: 1px solid #d3d2d2;
-}
-
-.service-news .border-top {
-    border-top: 1px solid #d3d2d2;
 }
 
 .office-pic-news .office-title h3 {

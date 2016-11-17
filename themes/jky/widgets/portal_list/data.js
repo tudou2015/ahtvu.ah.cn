@@ -36,7 +36,7 @@ module.exports = function (req, res, utils) {
             data.list.push({
                 title: e.title,
                 date: e.date_published,
-                href: utils.urlFormat(util.format('/detail?id=%s', e.id)),
+                href: util.format('detail?id=%s', e.id),
             });
 
         }, this);

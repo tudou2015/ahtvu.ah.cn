@@ -36,7 +36,7 @@ module.exports = function (req, res, utils) {
                 title: utils.subString(e.title, 30),
                 date: e.date_published,
                 summary: e.summary,
-                href: utils.urlFormat(util.format('/detail?id=%s', e.id))
+                href: util.format('detail?id=%s', e.id)
             });
 
         }, this);
