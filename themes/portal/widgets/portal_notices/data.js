@@ -29,7 +29,7 @@ module.exports = function (req, res, utils) {
 
         result.body = JSON.parse(result.body);
 
-        data.category = { href: util.format('/portal/category?id=%s', result.body.category.id) };
+        data.category = { href: util.format('category?id=%s', result.body.category.id) };
         result.body.data.forEach(function (e) {
 
             //设置第一个显示的新闻                    
@@ -42,7 +42,7 @@ module.exports = function (req, res, utils) {
                     image: e.image_url,
                     title: utils.subString(e.title, 30),
                     text: (e.image_url ? utils.subString(e.text, 80) : utils.subString(e.text, 86)),
-                    href: utils.urlFormat(util.format('/portal/detail?id=%s', e.id))
+                    href: util.format('detail?id=%s', e.id)
                 };
 
                 return false;
@@ -52,7 +52,7 @@ module.exports = function (req, res, utils) {
                 ori_title: e.title,
                 title: utils.subString(e.title, 30),
                 date: e.date_published,
-                href: utils.urlFormat(util.format('/portal/detail?id=%s', e.id))
+                href: util.format('detail?id=%s', e.id)
             });
 
         }, this);

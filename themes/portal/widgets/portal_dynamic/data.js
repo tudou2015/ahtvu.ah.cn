@@ -29,14 +29,14 @@ module.exports = function (req, res, utils) {
 
         result.body = JSON.parse(result.body);
 
-        data.category = { href: util.format('/portal/category?id=%s', result.body.category.id) };
+        data.category = { href: util.format('category?id=%s', result.body.category.id) };
         result.body.data.forEach(function (e) {
 
             data.list.push({
                 ori_title: e.title,
                 title: utils.subString(e.title, 25),
                 date: e.date_published,
-                href: utils.urlFormat(util.format('/portal/detail?id=%s', e.id))
+                href: util.format('detail?id=%s', e.id)
             });
 
         }, this);

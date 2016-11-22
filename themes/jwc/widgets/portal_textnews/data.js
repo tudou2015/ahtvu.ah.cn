@@ -27,7 +27,7 @@ module.exports = function (req, res, utils) {
         };
 
         result.body = JSON.parse(result.body);
-        data.category = { href: util.format('/category?id=%s', result.body.category.id) };
+        data.category = { href: util.format('category?id=%s', result.body.category.id) };
 
         result.body.data.forEach(function (e) {
 
@@ -41,7 +41,7 @@ module.exports = function (req, res, utils) {
                     image: e.image_url,
                     title: utils.subString(e.title, 25),
                     text: (e.image_url ? utils.subString(e.text, 27) : utils.subString(e.text, 50)),
-                    href: utils.urlFormat(util.format('/detail?id=%s', e.id))
+                    href: util.format('detail?id=%s', e.id)
                 };
 
                 return false;
@@ -51,7 +51,7 @@ module.exports = function (req, res, utils) {
                 ori_title: e.title,
                 title: utils.subString(e.title, 25),
                 date: e.date_published,
-                href: utils.urlFormat(util.format('/detail?id=%s', e.id))
+                href: util.format('detail?id=%s', e.id)
             });
  
         }, this);

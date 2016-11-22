@@ -3,7 +3,7 @@ const util = require('util');
 module.exports = function (req, res, utils) {
 
     var deferred = Promise.defer();
-
+   
     utils.request({
         url: 'open/get_post_info',
         method: 'POST',

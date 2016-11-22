@@ -569,6 +569,7 @@ body {
 
 
 /*article-list*/
+article-list-center { margin-bottom:20px}
 
 .article-list {
     background: #fff;
@@ -726,3 +727,16 @@ body {
 /*暂无数据*/
 .no-data { display: block; padding: 30% 0 20% 42%; font-size: 14px; color:#999;}
 .no-content { background: url(../images/no-content.png) no-repeat; width: 239px; height:232px; margin: 100px auto 0;}
+
+/*学校领导*/
+.xxld-box { padding: 25px; }
+.xxld-inner { margin-bottom: 12px; }
+.xxld-pic { width: 150px; height: 180px; float: left; }
+.xxld-pic img { width: 100%; height: 100%;}
+.xxld-right { border: 1px solid #ddd; margin-left: 162px; }
+.xxld-right h3 { font-size: 20px; color: #2994f7; padding: 15px; border-bottom: 1px solid #ddd; }
+.xxld-right h3 span { float: right; font-size: 18px; }
+.xxld-right p { font-size: 14px; padding: 15px; line-height: 33px; height: 97px; }
+
+.left-menu { padding-top: 0 !important;}
+.left-menu-title { background-color: #2994f7; color:#fff;}

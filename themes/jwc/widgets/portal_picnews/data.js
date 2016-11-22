@@ -34,7 +34,7 @@ module.exports = function (req, res, utils) {
             data.list.push({
                 title: e.title,
                 image: e.image_url,
-                href: utils.urlFormat(util.format('detail?id=%s', e.id))
+                href: util.format('detail?id=%s', e.id)
             });
 
             var imageAll = e.image_url;
@@ -42,7 +42,7 @@ module.exports = function (req, res, utils) {
                 data.imgNew.push({
                     title: e.title,
                     image: e.image_url,
-                    href: utils.urlFormat(util.format('detail?id=%s', e.id))
+                    href: util.format('detail?id=%s', e.id)
                 });
             }
         }, this);
