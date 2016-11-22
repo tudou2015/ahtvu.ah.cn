@@ -9,7 +9,7 @@ module.exports = function (req, res, utils) {
         method: 'POST',
         qs: {
             siteId: req.app.site.id,
-            categoryId: 'rxdualmmuzhhun3zcevraa',
+            categoryId: 'mlvualmmcblkcfupbk8spw',
             pageSize: 3
         }
     }, function (result) {
@@ -27,14 +27,14 @@ module.exports = function (req, res, utils) {
         };
 
         result.body = JSON.parse(result.body);
-        data.category = { href: util.format('/category?id=%s', result.body.category.id) };
+        data.category = { href: util.format('category?id=%s', result.body.category.id) };
 
         result.body.data.forEach(function (e) {
 
             data.list.push({
                 title: e.title,
                 image: e.image_url,
-                href: utils.urlFormat(util.format('/detail?id=%s', e.id))
+                href: util.format('detail?id=%s', e.id)
             });
 
             var imageAll = e.image_url;
@@ -42,7 +42,7 @@ module.exports = function (req, res, utils) {
                 data.imgNew.push({
                     title: e.title,
                     image: e.image_url,
-                    href: utils.urlFormat(util.format('/detail?id=%s', e.id))
+                    href: util.format('detail?id=%s', e.id)
                 });
             }
         }, this);

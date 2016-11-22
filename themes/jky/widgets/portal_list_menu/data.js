@@ -5,19 +5,16 @@ module.exports = function (req, res, utils) {
     var deferred = Promise.defer();
 
     utils.request({
-        url: 'open/get_posts_by_category',
+        url: 'open/get_same_level_categories',
         method: 'POST',
         qs: {
             siteId: req.app.site.id,
-            categoryId: 'mcdualmmsrjflyotwbdx3w',
-            pageSize: 6
+            categoryId: req.query.id
         }
     }, function (result) {
-
         var data = {
-            category: {},
-            list: [],
-            first: undefined
+            id: {},
+            list: []
         };
 
         if (result.code != 200) {
@@ -28,15 +25,15 @@ module.exports = function (req, res, utils) {
 
         result.body = JSON.parse(result.body);
 
-        data.category = { href: util.format('/category?id=%s', result.body.category.id) };
-        result.body.data.forEach(function (e) {
+        data.parent = result.body.parent.title;
+
+        result.body.categories.forEach(function (e) {
 
             data.list.push({
-                ori_title: e.title,
-                title: utils.subString(e.title, 30),
-                date: e.date_published,
-                summary: e.summary,
-                href: utils.urlFormat(util.format('/detail?id=%s', e.id))
+                id: e.id,
+                title: e.title,
+                url: e.url,
+                href: util.format('category?id=%s', e.id)
             });
 
         }, this);

@@ -16,7 +16,8 @@ module.exports = function (req, res, utils) {
         var data = {
             category: {},
             title: '',
-            content: ''
+            content: '',
+            id:''
         };
 
         if (result.code != 200) {
@@ -35,6 +36,7 @@ module.exports = function (req, res, utils) {
         data.category = result.body.post.category;
         data.title = result.body.post.title;
         data.content = result.body.post.content;
+        data.id = result.body.post.id;
 
         deferred.resolve(data);
     });

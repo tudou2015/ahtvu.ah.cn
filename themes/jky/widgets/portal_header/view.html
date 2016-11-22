@@ -24,9 +24,9 @@
 <body>
     <div class="minTop">
         <div class="minTop-inner grid width-inner">
-            <div class="curtime float-left">您好,欢迎来到安徽广播电视大学！今天是：2016年8月2日 周二&nbsp;&nbsp;15:17:38</div>
+            <div class="curtime float-left">您好,欢迎来到安徽广播电视大学-教育科学学院 公共基础部！今天是：<span id="current_time" data-ticks="{{time.ticks}}">{{time.value}}</span></div>
             <div class="minTop-pageViews push-right">
-                今日浏览：<span>989</span> 总访问量：<span>15451</span>
+                今日浏览：<span class="today_num">loading</span> 总访问量：<span class="total_num">loading</span>
             </div>
         </div>
     </div>
@@ -40,23 +40,30 @@
     <div class="college-nav">
         <div class="grid clearfix">
             <ul class=" nav">
-                <li><a href="/" class="act">主页</a></li>
-                <li><a href="info?id=pe77aicmnipl8ncm4z9dba">学院概况</a></li>
+                <li><a href="/jky" class="act">本站首页</a></li>
+                <li><a href="info?id=758jacam179jxllfcr5zkq">学院概况</a></li>
                 <li>
                     <a href="javascript:(0);">教学系部</a>
                     <ul>
-                        <li><a href="javascript:(0);">教育系</a></li>
-                        <li><a href="javascript:(0);">英语系</a></li>
-                        <li><a href="javascript:(0);">思政教研室</a></li>
-                        <li><a href="javascript:(0);">基础教研室</a></li>
+                        <li><a href="category?id=kybtamaml7pjroyh-d-ltw">教育系</a></li>
+                        <li><a href="category?id=6jntamamt6hg1kaw3dok1q">英语系</a></li>
+                        <li><a href="category?id=7lftamamhkddlwba63m4ew">思政教研室</a></li>
+                        <li><a href="category?id=w9-tamamdo9fqofwbqsfrg">基础教研室</a></li>
                     </ul>
                 </li>
-                <li><a href="javascript:(0);">师资队伍</a></li>
-                <li><a href="http://www.openedu.ah.cn/">电大在线</a></li>
-                <li><a href="javascript:(0);">教学视角</a></li>
-                <li><a href="category?id=wmedaycmlqxhbfwbysdanw">网考辅导</a></li>
-                <li><a href="javascript:(0);">思政专栏</a></li>
-                <li><a href="javascript:(0);">联系我们</a></li>
+                <li><a href="category?id=noedacamp6jkfquc5pysaq">师资队伍</a></li>
+                <li>
+                    <a href="http://www.openedu.ah.cn/">电大在线</a>
+                    <ul>
+                        <li><a href="category?id=nt3tamami6tegzyobml44q">安徽电大在线</a></li>
+                        <li><a href="category?id=levtamam871i-d85j-qn8w">国开电大在线</a></li>
+                    </ul>
+                </li>
+                <li><a href="category?id=mtocacamb55f5utxcsccyg">教学视角</a></li>
+                <li><a href="category?id=ccugacamxzpfejqyxywiyq">网考辅导</a></li>
+                <li><a href="category?id=ofwcacamurvm9ortaoaakg">思政专栏</a></li>
+                <li><a href="info?id=dieracamr5xbl-uee6lrwa">联系我们</a></li>
             </ul>
         </div>
     </div>
+    <script type="text/javascript" src="{{_widget_path}}/view.js"></script>
