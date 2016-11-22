@@ -9,7 +9,7 @@ module.exports = function (req, res, utils) {
         method: 'POST',
         qs: {
             siteId: req.app.site.id,
-            categoryId: 'zhnualmmwkbcpl-ztgfniq',
+            categoryId: 'pwlualmmdlhneunpwyxssg',
             pageSize: 6
         }
     }, function (result) {
@@ -28,7 +28,7 @@ module.exports = function (req, res, utils) {
 
         result.body = JSON.parse(result.body);
 
-        data.category = { href: util.format('/category?id=%s', result.body.category.id) };
+        data.category = { href: util.format('category?id=%s', result.body.category.id) };
         result.body.data.forEach(function (e) {
 
             data.list.push({
@@ -36,7 +36,7 @@ module.exports = function (req, res, utils) {
                 title: utils.subString(e.title, 30),
                 date: e.date_published,
                 summary: e.summary,
-                href: utils.urlFormat(util.format('/detail?id=%s', e.id))
+                href: util.format('detail?id=%s', e.id)
             });
 
         }, this);

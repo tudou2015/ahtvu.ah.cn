@@ -87,7 +87,7 @@ ul.nav>li>ul>li a:hover { display:block; color:#ffff00;}
     margin-bottom: 14px;
 }
 .news-box {
-    height: 250px;
+    height: 255px;
 }
 
 /*college-news-left*/
@@ -543,6 +543,7 @@ ul.nav>li>ul>li a:hover { display:block; color:#ffff00;}
     color: #1383eb;
 }
 
+.service-manage { width: 1200px;}
 .service-manage ul {
     background: #fff;
     border:1px solid #e3e3e3;

@@ -586,11 +586,11 @@ strong, b {
 }
 
 .nav-jgsz-middle {
-    width: 590px;
+    width:530px;
 }
 
 .nav-jgsz-right {
-    width: 268px;
+    width: 330px;
 }
 
 .nav-jgsz-right .right-right {
@@ -1276,7 +1276,7 @@ ul.space-list li a:hover { color:#2e72d7; }
 ul.space-list li.space-btn { padding:0; }
 ul.space-list li.space-btn .space-img-left { width:8px; height: 36px; display: inline-block; background: url(../images/space-icon-left.png) no-repeat; }
 ul.space-list li.space-btn .space-img-left img, ul.space-list li.space-btn .space-img-right img { display: block; }
-ul.space-list li.space-btn a { color:#fff; background: url(../images/space-icon-m.png) repeat-x; display: inline-block; margin:0 -4px; height: 36px; line-height: 36px; vertical-align: top; }
+ul.space-list li.space-btn a { color:#fff; background: url(../images/space-icon-m.png) repeat-x; display: inline-block; margin:0 -5px; height: 36px; line-height: 36px; vertical-align: top; }
 ul.space-list li.space-btn .space-img-right {width:28px; height: 36px;display: inline-block; background: url(../images/space-icon-r.png) no-repeat; }
 
 /*系统建设*/
