@@ -240,6 +240,8 @@ ul.nav>li>ul>li a:hover { display:block; color:#ffff00;}
 }
 .footer .footer-inner { height: 91px; line-height: 91px;}
 .footer .footer-inner .footer-right { float: right; }
+.footer .footer-inner .footer-right a {color:#8f9297;}
+.footer .footer-inner .footer-right a:hover {color:#f8f8f8;}
 
 /*news-box*/
 

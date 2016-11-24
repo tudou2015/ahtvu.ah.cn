@@ -154,6 +154,8 @@ body {
 }
 .footer .footer-inner { height: 91px; line-height: 91px;}
 .footer .footer-inner .footer-right { float: right; padding-right:12px; }
+.footer .footer-inner .footer-right a {color:#8f9297;}
+.footer .footer-inner .footer-right a:hover {color:#f8f8f8;}
 
 /*office-news*/
 .office-title {
