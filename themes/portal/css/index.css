@@ -1323,3 +1323,8 @@ ul.system-list li a:hover { color:#2e72d7; }
 .news-left { float:left; width:350px; }
 .news-left li, .news-right li { width:350px; }
 .news-right { float:right; width:350px; margin-right: 23px; }
+
+/*详情页中表格样式*/
+.details-box table tr td { border: 1px solid #ddd !important; padding: 8px !important;}   
+.details-box table tr td p { margin: 0; text-indent: 0;}
+.details-box table { margin: 0 auto;}
