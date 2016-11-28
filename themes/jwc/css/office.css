@@ -744,3 +744,18 @@ article-list-center { margin-bottom:20px}
 .left-menu-title { background-color: #2994f7; color:#fff;}
 
 .article-list-center { margin: 0 0 20px; }
+
+/*详情页中表格样式*/
+.details-box table tr td {
+    border: 1px solid #ddd !important;
+    padding: 8px !important;
+}
+    
+.details-box table tr td p {
+    margin: 0;
+    text-indent: 0;
+}
+
+.details-box table {
+    margin: 0 auto;
+}

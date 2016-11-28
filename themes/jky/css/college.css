@@ -473,7 +473,7 @@ ul.nav>li>ul>li a:hover { display:block; color:#ffff00;}
 
 /*article-details*/
 
-.article-details .detail-title {
+.detail-title, .article-details .detail-title {
     color: #0075e2;
     font-size: 24px;
     text-align: center;
@@ -516,6 +516,22 @@ ul.nav>li>ul>li a:hover { display:block; color:#ffff00;}
 
 .detail-time em {
     color: #1383eb;
+}
+
+.details-box .detail-info { padding:0 20px; line-height: 200%;}
+
+.details-box table tr td {
+    border: 1px solid #ddd !important;
+    padding: 8px !important;
+}
+    
+.details-box table tr td p {
+    margin: 0;
+    text-indent: 0;
+}
+
+.details-box table {
+    margin: 0 auto;
 }
 
 /*首页快速导航*/
