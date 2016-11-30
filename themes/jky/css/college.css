@@ -54,7 +54,7 @@ body {
 
 .college-logo {
     background: url(../images/college-logo.png) no-repeat 0px 0px;
-    width: 895px;
+    width: 1078px;
     height: 142px;
 }
 
@@ -65,7 +65,7 @@ body {
 }
 
 .college-top-inner {
-    background: url(../images/college-top-inner.png) no-repeat top right;
+    background: url(../images/college-top-inner.png) no-repeat bottom right;
     height: 142px;
 }
 
