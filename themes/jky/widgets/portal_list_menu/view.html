@@ -4,10 +4,10 @@
         <li><a href="{{if item.title == '学院概况'}}info?id=758jacam179jxllfcr5zkq
         {{else if item.title == '联系我们'}}info?id=dieracamr5xbl-uee6lrwa
         {{else if item.title =='教学系部'}}category?id=kybtamaml7pjroyh-d-ltw
-        {{else if item.title == '电大在线'}}category?id=nt3tamami6tegzyobml44q
+        {{else if item.title == '电大在线'}}http://www.openedu.ah.cn/
         {{else if item.title == '快速导航'}}category?id=1btsamamflzj8cy0g-ywxw
         {{else}}{{item.href}}
-        {{/if}}" data-id="{{item.id}}">{{item.title}}</a></li>
+        {{/if}}" data-id="{{item.id}}" target="_blank">{{item.title}}</a></li>
     {{/each}}
 </ul>
 <script type="text/javascript" src="{{_widget_path}}/view.js"></script>
