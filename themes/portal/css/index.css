@@ -6,16 +6,7 @@ strong, b {
     font-weight: bold;
 }
 
-.top-search input {
-    font-family: "Microsoft YaHei";
-    float: left;
-    width: 214px;
-    height: 35px;
-    line-height: 35px;
-    border: 1px solid #dddddd;
-    padding-left: 33px;
-    margin-right: 1px;
-}
+
 
 .top {
     background: url(../images/top.jpg) no-repeat 0px 0px;
@@ -29,7 +20,18 @@ strong, b {
     height: 120px;
 }
 .top-right { width:530px;}
-.top-search a {
+.top-search input[name='search'] {
+    font-family: "Microsoft YaHei";
+    float: left;
+    width: 167px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #dddddd;
+    padding-left: 33px;
+    margin-right: 1px;
+}
+.top-search .search-btn {
+    font-family: "Microsoft YaHei";
     background: #2994f7;
     color: #fff;
     position: absolute;
@@ -41,6 +43,7 @@ strong, b {
     text-align: center;
     line-height: 39px;
     font-size:14px;
+    border: 1px solid #dddddd;
 }
 
 .top-search i {
@@ -138,7 +141,6 @@ strong, b {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    text-overflow: ellipsis;
     -ms-text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
     -moz-binding: url("ellipsis.xml#ellipsis");
@@ -204,7 +206,6 @@ strong, b {
     padding-left: 8px;
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis;
     text-overflow: ellipsis;
     /* IE/Safari */
     -ms-text-overflow: ellipsis;
@@ -1328,3 +1329,12 @@ ul.system-list li a:hover { color:#2e72d7; }
 .details-box table tr td { border: 1px solid #ddd !important; padding: 8px !important;}   
 .details-box table tr td p { margin: 0; text-indent: 0;}
 .details-box table { margin: 0 auto;}
+
+/*搜索相关结果*/
+ul.search-list { margin:20px;}
+ul.search-list li { margin-bottom: 15px; padding: 10px 0 20px; font-size: 16px; color: #515251; border-bottom: 1px dashed #ddd; }
+ul.search-list h4 { font-weight: bold; margin-bottom: 15px; }
+ul.search-list h4 span { float:right; font-weight: normal; }
+ul.search-list h4 a {color:#515251; width:680px; display: block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+ul.search-list h4 a:hover { color:#0075e2; }
+ul.search-list p { line-height: 180%; font-weight: normal; font-size:14px; }

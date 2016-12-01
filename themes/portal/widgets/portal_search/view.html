@@ -1,0 +1,23 @@
+<div class="searchlist-box">
+    <div class="title clearfix">
+        <h3>搜索结果</h3>
+        <div class="location">当前位置&nbsp;>&nbsp;<a href="/">学校首页&nbsp;>&nbsp;</a><span>搜索结果</span></div>
+    </div>
+    <ul class="search-list clearfix">
+        {{if data.list.length > 0}} 
+        {{each data.list as item i}}
+        <li>
+            <h4><span>[{{item.date | dateFormat:'YYYY-MM-DD'}}]</span><a href="{{item.href}}" target="_blank" title="{{item.ori_title}}">{{#item.title}}</a></h4>
+            <p>{{#item.text}}</p>
+        </li>
+        {{/each}} 
+        {{else}}
+        <div class="no-content"></div>
+        {{/if}}
+    </ul>
+</div>
+
+<div class="paging" data-paging="{{data.paging}}"></div>
+
+<script type="text/javascript" src="js/jquery.paging.js"></script>
+<script type="text/javascript" src="{{_widget_path}}/view.js"></script>

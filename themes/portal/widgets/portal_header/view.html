@@ -41,11 +41,13 @@
                 <div class="top-link float-left clearfix">
                     <a href="student" target="_blank"><i class="iconfont icon icon-xuesheng" style="vertical-align: top;"></i>学生空间</a><a href="teacher" target="_blank"><i class="iconfont icon icon-peixunkecheng" style="vertical-align: middle;"></i>教师空间</a>
                 </div>
-                <div class="top-search push-right">
-                    <i class="iconfont icon icon-sousuo">&nbsp;</i>
-                    <input type="text" placeholder="请输入搜索内容" style="color: rgb(163, 163, 163);">
-                    <a href="javascript:void(0);">搜索</a>
-                </div>
+                <form name="search-form" id="searchForm" action="search" method="get">
+                    <div class="top-search push-right">
+                        <i class="iconfont icon icon-sousuo">&nbsp;</i>
+                        <input type="text" name="search" placeholder="请输入关键字搜索" style="color: rgb(163, 163, 163);"/>
+                        <input type="submit" id="sub" value="搜索" class="search-btn"/>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

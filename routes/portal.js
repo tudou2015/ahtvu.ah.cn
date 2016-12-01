@@ -208,4 +208,16 @@ router.get('/sitemaps', function (req, res, next) {
     next();
 });
 
+//搜索列表
+router.get('/search', function (req, res, next) {
+
+    //set render html with widget
+    res.context = {};
+
+    res.context._r_widget = true
+    res.context._r_widget_skin = 'search.html';
+
+    next();
+});
+
 module.exports = router;

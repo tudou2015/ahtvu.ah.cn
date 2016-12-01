@@ -55,4 +55,5 @@ $(function () {
 
         $('#current_time').data('ticks', date.ticks).html(time);
     }, 1000);
+
 });

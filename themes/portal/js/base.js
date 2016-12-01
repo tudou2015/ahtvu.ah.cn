@@ -36,4 +36,15 @@ $(function () {
         $(this).addClass('cur');
         $(this).parents('.xtdt-box').children('.list-box:eq(' + index + ')').show().siblings('.list-box').hide();
     });
+
+    $('#sub').on('click', function () {
+
+        var keyword = $("input[name='search']").val();
+
+        if (keyword == '' || keyword == null) {
+            alert('请输入关键字！');
+            $("input[name='search']").focus();
+            return false;
+        }
+    })
 });
