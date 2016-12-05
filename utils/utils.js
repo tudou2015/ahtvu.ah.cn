@@ -2,8 +2,6 @@ var moment = require('moment'),
     config = require('../config.js'),
     request = require('request');
 
-//request = request.defaults({ proxy: 'http://127.0.0.1:8888' });
-
 const util = require('util');
 
 module.exports = {
@@ -34,21 +32,6 @@ module.exports = {
 
             return 'error date';
         }
-    },
-
-    /**
-     * format url
-     * @param path url 路径； eg. post/detail?siteId=xxxxx => http://host:port/post/detail?siteId=xxxxx
-     * @return string
-     * @author leonard
-     */
-    urlFormat: function (path) {
-
-        if (!config.host) return util.format('%s%s', (path.indexOf('/') != 0 ? '/' : ''), path);
-
-        if (path.indexOf('/') != 0) path = util.format('/%s', path);
-
-        return util.format('%s%s', config.origin(), path);
     },
 
     /**
@@ -94,11 +77,19 @@ module.exports = {
 
                 console.error('request but an error was occurred: %s', error.stack);
 
-                callback && callback.apply(this, [{ code: response.statusCode || -1, response: response, body: body }]);
+                callback && callback.apply(this, [{
+                    code: response.statusCode || -1,
+                    response: response,
+                    body: body
+                }]);
                 return;
             }
 
-            callback && callback.apply(this, [{ code: response.statusCode, response: response, body: body }]);
+            callback && callback.apply(this, [{
+                code: response.statusCode,
+                response: response,
+                body: body
+            }]);
         });
     }
 };
