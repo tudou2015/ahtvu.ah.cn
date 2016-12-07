@@ -405,7 +405,7 @@ strong, b {
 }
 
 .right-news-list a:hover {
-    color: #e30000;
+    color: #327ff3;
     text-decoration: underline;
 }
 
@@ -615,6 +615,7 @@ strong, b {
     float: none;
     line-height: 36px;
     height: 36px;
+    font-size: 14px;
 }
 
 .nav .sub-nav-listbox ul li a {
@@ -1338,3 +1339,26 @@ ul.search-list h4 span { float:right; font-weight: normal; }
 ul.search-list h4 a {color:#515251; width:680px; display: block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
 ul.search-list h4 a:hover { color:#0075e2; }
 ul.search-list p { line-height: 180%; font-weight: normal; font-size:14px; }
+
+/*首页幻灯*/
+#slideshow{position:relative;height: 342px;width: 1200px;margin: 0 auto 15px;}
+#slideshow a{ float:left; display: inline;}
+#slideshow .img{position: absolute;width: 1200px;height: 342px;overflow: hidden}
+#slideshow .img span{position: absolute;width: 19999px;display: block}
+#slideshow .btns{z-index: 10;position: absolute;width: 1200px}
+#slideshow .btns b{position: absolute;width: 100px;display: block;height: 14px;overflow: hidden;top: 320px;left: 50%}
+#slideshow .btns b i{width: 10px;background: #414140;float: left;height: 10px;font-size: 0px;overflow: hidden;cursor: pointer;margin-right: 6px;-webkit-border-radius: 7px;-moz-border-radius: 7px;border-radius: 7px}
+#slideshow .btns b i:hover{background: #a7a7a6}
+#slideshow .btns b i.on{background: #2994f7;cursor: default}
+#slideshow .btns b i.on:hover{background: #2994f7;cursor: default}
+#slideshow .btns s{position: absolute;width: 50px;display: none;height: 65px;overflow: hidden;top: 132px;cursor: pointer}
+#slideshow .btns s i{position: absolute;width: 50px;background: url(../images/btn_slideshow.png);height: 130px;_filter: progid: dximagetransform.microsoft.alphaimageloader(enabled=true, sizingmethod=scale, src="../images/btn_slideshow.png");_background: none;}
+#slideshow .btns s.prev{left: 0px}
+#slideshow .btns s.prev i{top: -65px}
+#slideshow .btns s.next{right: 0px}
+.slideshow-hover#slideshow .btns s{display: block}
+#slideshow .s_paging{opacity: 0.5;filter: alpha(opacity=50);-moz-opacity: 0.5;-khtml-opacity: 0.5;height: 342px;position: absolute;background: #000;overflow: hidden}
+#slideshow .wtit .info,.wtit .tit{float: left;}
+#slideshow .wtit .info{padding: 35px 0 0 20px;color: #989898;}
+#slideshow .wtit .info span{margin: 0 8px;}
+#slideshow .no-content {position: absolute; padding: 0; left: 42%; margin: 60px auto 0;}

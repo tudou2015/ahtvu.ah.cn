@@ -1,29 +1,17 @@
-<div class="banner">
-    <div id="main">
-        <div id="index_b_hero">
-            <div class="hero-wrap">
-                <ul class="heros clearfix">
-                    {{if data.list.length > 0 }}
-                    {{each data.list as item i}}
-                    <li class="hero">
-                        <a href="{{item.href}}" target="_blank" title="{{item.ori_title}}">
-                            <img src="{{item.image}}" class="thumb" alt="{{item.title}}" width="1200" height="342" />
-                        </a>
-                    </li>
-                    {{/each}}
-                    {{else}}
-                    <span class="no-data">暂无数据</span> 
-                    {{/if}}
-                </ul>
-            </div>
-            <div class="helper">
-                <div class="mask-left">
-                </div>
-                <div class="mask-right">
-                </div>
-                <a href="javascript:void(0);" class="prev icon-arrow-a-left"></a>
-                <a href="javascript:void(0);" class="next icon-arrow-a-right"></a>
-            </div>
-        </div>
+
+<div id="slideshow" rel="auto-play">
+    <div class="img">
+        {{if data.list.length > 0 }}
+        <span>
+            {{each data.list as item i}}
+            <a href="{{item.href}}" target="_blank" title="{{item.ori_title}}"><img src="{{item.image}}" alt="{{item.title}}"/></a>
+            {{/each}}
+        </span>
+        {{else}}
+            <p class="no-content"></p> 
+            {{/if}}
+        <div class="s_paging pattern"></div>
+        <div class="s_paging subpattern"></div>
     </div>
 </div>
+<script src="js/jquery.slider.js"></script>

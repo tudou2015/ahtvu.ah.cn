@@ -5,18 +5,15 @@ module.exports = function (req, res, utils) {
     var deferred = Promise.defer();
 
     utils.request({
-        url: 'open/get_posts_by_category',
+        url: 'open/get_same_level_categories',
         method: 'POST',
         qs: {
             siteId: req.app.site.id,
-            categoryId: 'p5m3ahwmb5va-ppr5hdhfw',
-            withChildren: false,
-            sort: 'sortOrder'
+            categoryId: req.query.id
         }
     }, function (result) {
-
         var data = {
-            category: {},
+            id: {},
             list: []
         };
 
@@ -28,16 +25,15 @@ module.exports = function (req, res, utils) {
 
         result.body = JSON.parse(result.body);
 
-        data.category = result.body.category;
+        data.parent = result.body.parent.title;
 
-        result.body.data.forEach(function (e) {
-
-            var props = JSON.parse(e.props);
+        result.body.categories.forEach(function (e) {
 
             data.list.push({
+                id: e.id,
                 title: e.title,
-                image: e.image_url,
-                href: props.href || 'javascript:void(0);',
+                url: e.url,
+                href: util.format('category?id=%s', e.id)
             });
 
         }, this);

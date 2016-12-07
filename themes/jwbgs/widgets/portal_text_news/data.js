@@ -9,9 +9,8 @@ module.exports = function (req, res, utils) {
         method: 'POST',
         qs: {
             siteId: req.app.site.id,
-            categoryId: '6g3pag6mr79pjuqwzlkaxw',
-            withChildren: true,
-            pageSize: 11
+            categoryId: 'susdanwmf4pckzxn7w24jw',
+            pageSize: 5
         }
     }, function (result) {
 
@@ -28,20 +27,20 @@ module.exports = function (req, res, utils) {
         };
 
         result.body = JSON.parse(result.body);
-
         data.category = { href: util.format('category?id=%s', result.body.category.id) };
+
         result.body.data.forEach(function (e) {
 
             //设置第一个显示的新闻                    
             if (!data.first) {
 
                 e.text ? e.text : (e.text = e.title);
-                e.image_url ? (e.image_url = util.format('%s&width=147&height=90', e.image_url)) : '';
+                e.image_url ? (e.image_url = util.format('%s&width=171&height=105', e.image_url)) : '';
 
                 data.first = {
                     image: e.image_url,
-                    title: utils.subString(e.title, 25),
-                    text: (e.image_url ? utils.subString(e.text, 80) : utils.subString(e.text, 86)),
+                    title: utils.subString(e.title, 13),
+                    text: (e.image_url ? utils.subString(e.text, 27) : utils.subString(e.text, 50)),
                     href: util.format('detail?id=%s', e.id)
                 };
 
@@ -52,9 +51,9 @@ module.exports = function (req, res, utils) {
                 ori_title: e.title,
                 title: utils.subString(e.title, 25),
                 date: e.date_published,
-                href: util.format('/portal/detail?id=%s', e.id)
+                href: util.format('detail?id=%s', e.id)
             });
-
+ 
         }, this);
 
         deferred.resolve({ data: data });

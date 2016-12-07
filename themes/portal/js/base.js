@@ -41,7 +41,7 @@ $(function () {
 
         var keyword = $("input[name='search']").val();
 
-        if (keyword == '' || keyword == null) {
+        if (!keyword) {
             alert('请输入关键字！');
             $("input[name='search']").focus();
             return false;
