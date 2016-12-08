@@ -561,10 +561,10 @@ ul.nav>li>ul>li a:hover { display:block; color:#ffff00;}
     height: 60px;
 }
 .quick-nav-box ul li span {vertical-align: top; margin-left:10px;}
-.quick-nav-box ul li i.icon-gonggao { background: #80d843; }
-.quick-nav-box ul li i.icon-xiazai { background: #53a3e2; }
-.quick-nav-box ul li i.icon-lianjie { background: #f7a247; font-size: 46px; padding: 9px 11px; }
-.quick-nav-box ul li i.icon-zhuanti { background: #a0a4ff; }
+.quick-nav-box ul li i.icon-TZGG { background: #80d843; }
+.quick-nav-box ul li i.icon-XZZQ { background: #53a3e2; }
+.quick-nav-box ul li i.icon-XGLJ { background: #f7a247; font-size: 46px; padding: 9px 11px; }
+.quick-nav-box ul li i.icon-ZTHD { background: #a0a4ff; }
 .quick-nav-box ul li a {
     display: block;
     font-size: 16px;

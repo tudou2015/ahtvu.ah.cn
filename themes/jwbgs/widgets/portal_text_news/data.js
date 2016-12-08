@@ -35,7 +35,7 @@ module.exports = function (req, res, utils) {
             if (!data.first) {
 
                 e.text ? e.text : (e.text = e.title);
-                e.image_url ? (e.image_url = util.format('%s&width=171&height=105', e.image_url)) : '';
+                e.image_url ? (e.image_url = util.format('%s&width=120&height=75', e.image_url)) : '';
 
                 data.first = {
                     image: e.image_url,

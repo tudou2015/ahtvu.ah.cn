@@ -1,28 +1,12 @@
 <div class="quick-nav-box clearfix">
 	<ul class="clearfix">
+		{{each data.list as item i}}
 		<li>
-			<a href="category?id=jevsamamebbnsfrhwchj1a">
-				<i class="iconfont icon-gonggao"></i>
-                <span>通知公告</span>
+			<a href="{{item.href}}">
+				<i class="iconfont icon-{{item.url}}"></i>
+                <span>{{item.title}}</span>
 			</a>
 		</li>
-		<li>
-			<a href="category?id=yxfsamammqtinkztt9o5ew">
-				<i class="iconfont icon-xiazai"></i>
-				<span>下载专区</span>
-			</a>
-		</li>
-		<li>
-			<a href="category?id=1btsamamflzj8cy0g-ywxw">
-				<i class="iconfont icon-lianjie"></i>
-				<span>相关链接</span>
-			</a>
-		</li>
-        <li>
-			<a href="category?id=29bsamamorxhtuhyxx4w2w">
-				<i class="iconfont icon-zhuanti"></i>
-				<span>专题活动</span>
-			</a>
-		</li>
+		{{/each}}
 	</ul>
 </div>
