@@ -30,7 +30,7 @@
     <!--以上是 minTop -->
     <div class="college-top">
         <div class="grid college-top-inner">
-            <a href="javascript:(0);" class="college-logo float-left">&nbsp;</a>
+            <a href="javascript:void(0);" class="college-logo float-left">&nbsp;</a>
         </div>
     </div>
     <!-- 以上是top -->
@@ -44,7 +44,7 @@
                         {{if item.children.length > 0}}
                         <ul>
                             {{each item.children as child i}}
-                                <li><a href="#" target="_blank">{{child.title}}</a></li>
+                                <li><a href="{{child.href}}" target="_blank">{{child.title}}</a></li>
                             {{/each}}
                         </ul>
                         {{/if}}

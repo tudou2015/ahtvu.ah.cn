@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{site.title}} - 安徽广播电视大学</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="{{site.key_words || site.title}}" />
+    <meta name="description" content="{{site.description || site.title}}" />
+    <link rel="icon" href="images/title.ico" type="image/x-ico" />
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/grid.css">
+    <link rel="stylesheet" type="text/css" href="fonts/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/college.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/jquery.sgallery.js"></script>
+</head>
+
+<body>
+    <div class="minTop">
+        <div class="minTop-inner grid width-inner">
+            <div class="curtime float-left">您好,欢迎来到安徽广播电视大学 - {{site.title}}！今天是：<span id="current_time" data-ticks="{{time.ticks}}">{{time.value}}</span></div>
+            <div class="minTop-pageViews push-right">
+                今日浏览：<span class="today_num">loading</span> 总访问量：<span class="total_num">loading</span>
+            </div>
+        </div>
+    </div>
+    <!--以上是 minTop -->
+    <div class="college-top">
+        <div class="grid college-top-inner">
+            <a href="javascript:void(0);" class="college-logo float-left">&nbsp;</a>
+        </div>
+    </div>
+    <!-- 以上是top -->
+    <div class="college-nav">
+        <div class="grid clearfix">
+            <ul class=" nav">
+                <li><a href="/wfxy" class="act">部门首页</a></li>
+                {{each data.list as item i}}
+                    <li>
+                        <a href="{{if item.title == '学院概况'}}info?id=iudmanem1lra3pnzmdb4jw{{else if item.title =='联系我们'}}info?id=pkpmanemdrbpqyjmq8p5pw{{else}}{{item.href}}{{/if}}" target="_blank">{{item.title}}</a>
+                        {{if item.children.length > 0}}
+                        <ul>
+                            {{each item.children as child i}}
+                                <li><a href="#" target="_blank">{{child.title}}</a></li>
+                            {{/each}}
+                        </ul>
+                        {{/if}}
+                    </li>
+                    
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript" src="{{_widget_path}}/view.js"></script>

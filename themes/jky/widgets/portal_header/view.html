@@ -33,36 +33,26 @@
     <!--以上是 minTop -->
     <div class="college-top">
         <div class="grid college-top-inner">
-            <a href="javascript:(0);" class="college-logo float-left">&nbsp;</a>
+            <a href="javascript:void(0);" class="college-logo float-left">&nbsp;</a>
         </div>
     </div>
     <!-- 以上是top -->
     <div class="college-nav">
         <div class="grid clearfix">
             <ul class=" nav">
-                <li><a href="/jky" class="act">本站首页</a></li>
-                <li><a href="info?id=758jacam179jxllfcr5zkq">学院概况</a></li>
-                <li>
-                    <a href="javascript:void(0);">教学系部</a>
-                    <ul>
-                        <li><a href="category?id=kybtamaml7pjroyh-d-ltw">教育系</a></li>
-                        <li><a href="category?id=6jntamamt6hg1kaw3dok1q">英语系</a></li>
-                        <li><a href="category?id=7lftamamhkddlwba63m4ew">思政教学部</a></li>
-                        <li><a href="category?id=w9-tamamdo9fqofwbqsfrg">基础教研室</a></li>
-                    </ul>
-                </li>
-                <li><a href="category?id=noedacamp6jkfquc5pysaq">师资队伍</a></li>
-                <li>
-                    <a href="javascript:void(0);">电大在线</a>
-                    <ul>
-                        <li><a href="http://www.openedu.ah.cn/" target="_blank">安徽电大在线</a></li>
-                        <li><a href="http://www.ouchn.cn/" target="_blank">国开电大在线</a></li>
-                    </ul>
-                </li>
-                <li><a href="category?id=mtocacamb55f5utxcsccyg">教学视角</a></li>
-                <li><a href="category?id=ccugacamxzpfejqyxywiyq">网考辅导</a></li>
-                <li><a href="category?id=ofwcacamurvm9ortaoaakg">思政专栏</a></li>
-                <li><a href="info?id=dieracamr5xbl-uee6lrwa">联系我们</a></li>
+                <li><a href="/jwbgs" class="act">部门首页</a></li>
+                {{each data.list as item i}}
+                    <li>
+                        <a href="{{item.href}}" target="_blank">{{item.title}}</a>
+                        {{if item.children.length > 0}}
+                        <ul>
+                            {{each item.children as child i}}
+                                <li><a href="{{child.href}}" target="_blank">{{child.title}}</a></li>
+                            {{/each}}
+                        </ul>
+                        {{/if}}
+                    </li>
+                {{/each}}
             </ul>
         </div>
     </div>

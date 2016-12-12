@@ -5,11 +5,12 @@ module.exports = function (req, res, utils) {
     var deferred = Promise.defer();
 
     utils.request({
-        url: 'open/get_same_level_categories',
+        url: 'open/get_categories_by_parent',
         method: 'POST',
         qs: {
             siteId: req.app.site.id,
-            categoryId: '3ugradamibvmehdn7ntm5w'
+            parentId: 'wc8radamvpve3ynmxge1yg',
+            sort: 'sortOrder'
         }
     }, function (result) {
         var data = {
@@ -25,7 +26,7 @@ module.exports = function (req, res, utils) {
 
         result.body = JSON.parse(result.body);
 
-        result.body.categories.forEach(function (e) {
+        result.body.data.forEach(function (e) {
 
             data.list.push({
                 id: e.id,
