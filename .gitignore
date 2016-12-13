@@ -245,3 +245,4 @@ ModelManifest.xml
 .fake/
 
 node_modules/
+.vscode
