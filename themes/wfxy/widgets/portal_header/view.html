@@ -40,11 +40,11 @@
                 <li><a href="/wfxy" class="act">部门首页</a></li>
                 {{each data.list as item i}}
                     <li>
-                        <a href="{{if item.title == '学院概况'}}info?id=iudmanem1lra3pnzmdb4jw{{else if item.title =='联系我们'}}info?id=pkpmanemdrbpqyjmq8p5pw{{else}}{{item.href}}{{/if}}" target="_blank">{{item.title}}</a>
+                        <a href="{{item.href}}" target="_blank">{{item.title}}</a>
                         {{if item.children.length > 0}}
                         <ul>
                             {{each item.children as child i}}
-                                <li><a href="#" target="_blank">{{child.title}}</a></li>
+                                <li><a href="{{child.href}}" target="_blank">{{child.title}}</a></li>
                             {{/each}}
                         </ul>
                         {{/if}}

@@ -47,6 +47,7 @@ body {
     background: #fff;
     border: 1px solid #dadada;
     border-top: none;
+    height: 260px;
 }
 
 
@@ -87,7 +88,7 @@ ul.nav>li>ul>li a:hover { display:block; color:#ffff00;}
     margin-bottom: 14px;
 }
 .news-box {
-    height: 255px;
+    height: 260px;
 }
 
 /*college-news-left*/
@@ -105,35 +106,18 @@ ul.nav>li>ul>li a:hover { display:block; color:#ffff00;}
     padding: 8px 16px 0px 16px;
 }
 
-.college-news-box li a {
+.college-news-box ul li a, .college-news-box .news-list li a {
     color: #3c3c3c;
-    background: url(../images/index-icon.png) no-repeat 0px -203px;
+    background: url(../images/index-icon.png) no-repeat 0px -206px;
     padding-left: 14px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    -ms-text-overflow: ellipsis;
-    -o-text-overflow: ellipsis;
     -moz-binding: url("ellipsis.xml#ellipsis");
-    width: 65%;
+    width: 76%;
     display: block;
     float: left;
     font-size: 14px;
-}
-
-.college-news-box .news-list li a {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    -ms-text-overflow: ellipsis;
-    -o-text-overflow: ellipsis;
-    -moz-binding: url("ellipsis.xml#ellipsis");
-    width: 65%;
-    display: block;
-    background: url(../images/index-icon.png) no-repeat 0px -203px;
-    float: left;
 }
 
 .college-news-box li a:hover,
@@ -142,7 +126,7 @@ ul.nav>li>ul>li a:hover { display:block; color:#ffff00;}
 }
 
 .college-time {
-    color: #3c3c3c;
+    color: #909090;
     float: right;
 }
 
@@ -269,6 +253,7 @@ ul.nav>li>ul>li a:hover { display:block; color:#ffff00;}
     color: #222;
     font-size: 16px;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .college-news-box .news-first-infor p {
@@ -279,6 +264,7 @@ ul.nav>li>ul>li a:hover { display:block; color:#ffff00;}
 
 .college-news-box .news-box-left .news-list li {
     line-height: 37px;
+    border-bottom:1px dashed #ddd;
 }
 
 .college-news-box .news-list {
