@@ -1,7 +1,7 @@
 <input type="hidden" id="current_category" value="{{data.category.id}}"/> 
 <div class="title clearfix">
     <h3>{{data.category.title}}</h3>
-    <div class="location">当前位置&nbsp;>&nbsp;<a href="/jwc">部门首页&nbsp;>&nbsp;</a><span>{{data.category.title}}</span></div>
+    <div class="location">当前位置&nbsp;>&nbsp;<a href="/gh">本站首页&nbsp;>&nbsp;</a><span>{{data.category.title}}</span></div>
 </div>
 <div class="list-box">
     <ul>
@@ -13,11 +13,11 @@
         </li>
         {{/each}} 
         {{else}}
-        <div class="no-content"></div>
+        <div class="no-content">
+        </div>
         {{/if}}
     </ul>
 </div>
-
 <div class="paging" data-paging="{{data.paging}}"></div>
 </div>
 <script type="text/javascript" src="js/jquery.paging.js"></script>

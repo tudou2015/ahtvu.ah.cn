@@ -1,0 +1,54 @@
+<div class="activity-box">
+    <div class="college-title">
+        <h3>活动剪影</h3>
+        <a href="{{data.category.href}}" class="college-more">MORE</a>
+    </div>
+    <div class="activity-list college-activity">
+        <div class="bd">
+            
+            <div class="inner-box inner-one">
+                <div class="in-bd">
+                    <div class="tempWrap">
+                        <ul class="clearfix">
+                            {{each data.list as item i}}
+                            <li class="clone">
+                                <a href="{{item.href}}" target="_blank" title="{{item.ori_title}}">
+                                    <img src="{{item.image}}">
+                                    <p>{{item.title}}</p>
+                                </a>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+                <a class="in-prev abgmove" href="javascript:void(0);"></a>
+                <a class="in-next abgmove" href="javascript:void(0);"></a>
+            </div>
+           
+        </div>
+    </div>
+</div>
+<script>
+    $(function() {
+      /* 集中展示区内层 */
+      $(".inner-one").slide({
+        mainCell: ".in-bd ul",
+        effect: "leftLoop",
+        vis: 5,
+        prevCell: ".in-prev",
+        nextCell: ".in-next",
+        scroll: 1,
+        autoPlay: true,
+        pnLoop: true
+      });
+      /* 集中展示区外层 */
+      $(".out-slide").slide({
+        titCell: ".hd li",
+        mainCell: ".bd",
+        effect: "fade",
+        autoPlay: false,
+        delayTime: 2000
+      });
+
+    });
+  </script>

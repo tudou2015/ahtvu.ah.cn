@@ -1,0 +1,20 @@
+<div class="college-notice">
+    <div class="college-title">
+        <h3>通知公告</h3>
+        <a href="{{data.category.href}}" class="college-more">MORE</a>
+    </div>
+    <div class="college-news-notice college-news-box">
+        <ul>
+            {{if data.list.length > 0 }} {{each data.list as item i}}
+            <li class="clearfix">
+                <div class="college-time">
+                    <span class="month">{{item.date | dateFormat:'MM'}}月</span>
+                    <span class="day">{{item.date | dateFormat:'DD'}}</span>
+                </div>
+                <a href="{{item.href}}" target="_blank" title="{{item.ori_title}}">{{item.title}}</a>
+            </li>
+            {{/each}} {{else}}
+            <span class="no-data">暂无数据</span> {{/if}}
+        </ul>
+    </div>
+</div>
