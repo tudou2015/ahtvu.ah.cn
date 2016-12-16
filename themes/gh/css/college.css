@@ -515,7 +515,7 @@ ul.nav>li>ul>li a:hover { display:block; color:#ffff00;}
     color: #ee0000;
 }
 
-.details-box .detail-info { padding:0 20px; line-height: 200%;}
+.details-box .detail-info { line-height: 200%; font-size: 16px; }
 
 .details-box table tr td {
     border: 1px solid #ddd !important;
