@@ -1,0 +1,13 @@
+<input type="hidden" id="current_info" value="{{id}}"/> 
+<div class="title clearfix">
+    <h3>{{category.title}}</h3>
+    <div class="location">当前位置&nbsp;>&nbsp;<a href="/jky">本站首页&nbsp;>&nbsp;</a><span>{{category.title}}</span></div>
+</div>
+<div class="details-box clearfix">
+    {{if title =='' || content == ''}}
+    <div class="no-content"></div>
+    {{else}}
+    <h2 class="detail-title">{{title}}</h2>
+    <div class="detail-info">{{#content}}</div>
+    {{/if}}
+</div>

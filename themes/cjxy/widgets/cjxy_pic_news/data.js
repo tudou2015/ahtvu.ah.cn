@@ -9,15 +9,15 @@ module.exports = function (req, res, utils) {
         method: 'POST',
         qs: {
             siteId: req.app.site.id,
-            categoryId: 'pwlualmmdlhneunpwyxssg',
-            pageSize: 6
+            categoryId: 'tmkaaogmo7rntad6dh0ofq',
+            pageSize: 3
         }
     }, function (result) {
 
         var data = {
             category: {},
             list: [],
-            first: undefined
+            imgNew:[]
         };
 
         if (result.code != 200) {
@@ -27,26 +27,27 @@ module.exports = function (req, res, utils) {
         };
 
         result.body = JSON.parse(result.body);
+        data.category = { href: util.format('category?id=%s', result.body.category.id) };
 
-        data.category = {
-            href: util.format('category?id=%s', result.body.category.id),
-            title: result.body.category.title
-        };
         result.body.data.forEach(function (e) {
 
             data.list.push({
-                ori_title: e.title,
-                title: utils.subString(e.title, 30),
-                date: e.date_published,
-                summary: e.summary,
+                title: e.title,
+                image: e.image_url,
                 href: util.format('detail?id=%s', e.id)
             });
 
+            var imageAll = e.image_url;
+            if (imageAll) {
+                data.imgNew.push({
+                    title: e.title,
+                    image: e.image_url,
+                    href: util.format('detail?id=%s', e.id)
+                });
+            }
         }, this);
 
-        deferred.resolve({
-            data: data
-        });
+        deferred.resolve({ data: data });
     });
 
     return deferred.promise;

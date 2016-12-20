@@ -9,15 +9,15 @@ module.exports = function (req, res, utils) {
         method: 'POST',
         qs: {
             siteId: req.app.site.id,
-            categoryId: 'pwlualmmdlhneunpwyxssg',
-            pageSize: 6
+            categoryId: req.query.id,
+            page: req.query.page || 1
         }
     }, function (result) {
 
         var data = {
             category: {},
-            list: [],
-            first: undefined
+            paging: {},
+            list: []
         };
 
         if (result.code != 200) {
@@ -28,25 +28,20 @@ module.exports = function (req, res, utils) {
 
         result.body = JSON.parse(result.body);
 
-        data.category = {
-            href: util.format('category?id=%s', result.body.category.id),
-            title: result.body.category.title
-        };
+        data.category = result.body.category;
+        data.paging = JSON.stringify(result.body.paging);
+
         result.body.data.forEach(function (e) {
 
             data.list.push({
-                ori_title: e.title,
-                title: utils.subString(e.title, 30),
+                title: e.title,
                 date: e.date_published,
-                summary: e.summary,
-                href: util.format('detail?id=%s', e.id)
+                href: util.format('detail?id=%s', e.id),
             });
 
         }, this);
 
-        deferred.resolve({
-            data: data
-        });
+        deferred.resolve({ data: data });
     });
 
     return deferred.promise;

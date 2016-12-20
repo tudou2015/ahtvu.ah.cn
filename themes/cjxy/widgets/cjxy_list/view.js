@@ -7,5 +7,4 @@ $(function () {
     options.show_left_info = false;
 
     $('.paging').paging(options);
-
 });
