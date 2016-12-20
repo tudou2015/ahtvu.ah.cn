@@ -1,9 +1,7 @@
 <ul class="left-menu">
     <li class="left-menu-title">{{data.parent}}</li>
     {{each data.list as item i}}
-        <li><a href="{{if item.title == '处室概况'}}info?id=iudmanem1lra3pnzmdb4jw
-        {{else if item.title == '联系我们'}}info?id=pkpmanemdrbpqyjmq8p5pw
-        {{else}}{{item.href}}{{/if}}" data-id="{{item.id}}" target="_blank">{{item.title}}</a></li>
-    {{/each}}
+        <li><a href="{{item.href}}" data-id="{{item.id}}" target="_blank">{{item.title}}</a></li>
+    {{/each}}                                                                                        
 </ul>
 <script type="text/javascript" src="{{_widget_path}}/view.js"></script>
