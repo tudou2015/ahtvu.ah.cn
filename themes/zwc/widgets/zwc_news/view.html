@@ -1,0 +1,46 @@
+<div class="college-news-line1">
+    <div class="college-title">
+        <h3>{{data.category.title}}</h3>
+        <a href="{{data.category.href}}" class="college-more">MORE</a>
+    </div>
+    <div class="college-news-box">
+        <div class="news-box">
+            <div class="news-box-right" style="margin-left: 15px;">
+                <div class="slide">
+                    <div class="FocusPic">
+                        <div class="content" id="main-slide">
+                            <div class="changeDiv">
+                                {{each data.imgNew as pic i}}
+                                <a href="{{pic.href}}" target="_blank" title="{{pic.title}}"><img src="{{pic.image}}" alt="{{pic.title}}" width="338" height="232" /></a>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="news-box-left">
+                <div class="news-first">
+                    {{if data.first.image}}
+                    <img src="{{data.first.image}}" width="120" height="75" alt=""> {{/if}}
+                    <div class="news-first-infor">
+                        <h3>{{data.first.title}}</h3>
+                        <p>{{data.first.text}}
+                            <a class="first-details" href="{{data.first.href}}" title="" target="_blank">[ 全文 ]</a>
+                        </p>
+                    </div>
+                </div>
+                <ul class="news-list">
+                    {{each data.list as item i}}
+                    <li class="clearfix"><a href="{{item.href}}" title="{{item.ori_title}}">{{item.title}}</a><span class="college-time">{{item.date | dateFormat:'YYYY-MM-DD'}}</span></li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript"> 
+$(function(){
+	new slide("#main-slide","cur",338,232,1);//焦点图
+})
+function $jquery(id){return document.getElementById(id)};
+</script>
