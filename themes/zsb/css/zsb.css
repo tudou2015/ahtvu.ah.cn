@@ -53,7 +53,7 @@ body {
 /*college-top*/
 
 .college-logo {
-    background: url(../images/xgxy-logo.png) no-repeat 0px 0px;
+    background: url(../images/zsb-logo.png) no-repeat 0px 0px;
     width: 1078px;
     height: 142px;
 }
@@ -202,13 +202,6 @@ ul.nav>li>ul>li a:hover {
 .college-news-notice ul li {
     line-height: 38px;
     border-bottom: 1px dashed #b6b6b6;
-}
-
-
-/*college-right-padding*/
-
-.college-right-padding {
-    padding: 0px;
 }
 
 
@@ -705,7 +698,7 @@ ul.nav>li>ul>li a:hover {
 }
 
 .quick-nav-box ul li {
-    width: 178px;
+    width: 218px;
     height: 95px;
     float: left;
     text-align: center;
@@ -729,38 +722,26 @@ ul.nav>li>ul>li a:hover {
     margin-right: 10px;
 }
 
-.quick-nav-box ul li i.icon-RCZB {
-    background: #80d843;
+.quick-nav-box ul li i.icon-ZHXX {
+    background: #4ad087;
 }
 
-.quick-nav-box ul li i.icon-ZRJS {
-    background: #43d871;
+.quick-nav-box ul li i.icon-ZCFGZSB {
+    background: #4ad0b8;
 }
 
-.quick-nav-box ul li i.icon-zhuanyejs {
-    background: #4ad0ce;
+.quick-nav-box ul li i.icon-ZSPT {
+    background: #59b4ee;
 }
 
-.quick-nav-box ul li i.icon-DDZX {
-    background: url(../images/icon-DDZX.png) no-repeat 0px 0px;
-    display: inline-block;
-    width: 68px;
-    height: 67px;
-    padding: 0px;
-    margin-top: 14px;
+.quick-nav-box ul li i.icon-YQLJZSB {
+    background: #e182ec;
+}.YQLJZSB {
+    background: #e182ec;
 }
 
-.quick-nav-box ul li i.icon-SXSK {
-    background: #a065f2;
-}
-
-.quick-nav-box ul li i.icon-GKXXW {
-    background: url(../images/icon-GKXXW.png) no-repeat 0px 0px;
-    display: inline-block;
-    width: 68px;
-    height: 67px;
-    padding: 0px;
-    margin-top: 14px;
+.quick-nav-box ul li i.icon-XSPT {
+    background: #a0a4ff;
 }
 
 .quick-nav-box ul li a {
