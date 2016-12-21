@@ -1,0 +1,24 @@
+<input type="hidden" id="current_category" value="{{data.category.id}}"/> 
+<div class="title clearfix">
+    <h3>{{data.category.title}}</h3>
+    <div class="location">当前位置&nbsp;>&nbsp;<a href="/xgxy">本站首页&nbsp;>&nbsp;</a><span>{{data.category.title}}</span></div>
+</div>
+<div class="list-box">
+    <ul>
+        {{if data.list.length > 0}} 
+        {{each data.list as item i}}
+        <li>
+            <a href="{{item.href}}" target="_blank" title="{{item.title}}">{{item.title}}</a>
+            <span>[{{item.date | dateFormat:'YYYY-MM-DD'}}]</span>
+        </li>
+        {{/each}} 
+        {{else}}
+        <div class="no-content">
+        </div>
+        {{/if}}
+    </ul>
+</div>
+<div class="paging" data-paging="{{data.paging}}"></div>
+</div>
+<script type="text/javascript" src="js/jquery.paging.js"></script>
+<script type="text/javascript" src="{{_widget_path}}/view.js"></script>

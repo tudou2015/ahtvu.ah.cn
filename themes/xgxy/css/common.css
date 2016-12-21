@@ -1,0 +1,108 @@
+body {
+    font-family: "Microsoft YaHei";
+    font-size: 12px;
+    background: url(../images/background.jpg) no-repeat #fff;
+}
+
+.float-left {
+    float: left;
+}
+
+.clearfix:after {
+    content: "020";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+body .grid {
+    width: 100%;
+    max-width: 1200px;
+    min-width: 748px;
+    /* when using padded grid on ipad in portrait mode, width should be viewport-width - padding = (768 - 20) = 748. actually, it should be even smaller to allow for padding of grid containing element */
+    margin: 0 auto;
+    overflow: initial;
+}
+
+
+/*头部 top*/
+
+
+/*minTop*/
+
+.minTop {
+    height: 37px;
+    line-height: 37px;
+    background: #fff;
+    color: #6e6e6e;
+    font-size: 14px;
+}
+
+.minTop-pageViews span {
+    color: #2357aa;
+}
+
+.top-link {
+    margin-right: 63px;
+}
+
+.top-link a {
+    font-size: 14px;
+    color: #232323;
+    padding: 9px 10px;
+    border: 1px solid #c7c7c7;
+    background: #fff;
+}
+
+.top-right {
+    margin-top: 41px;
+}
+
+.top-link a:hover {
+    color: #fff;
+    background: #d50a20;
+    border: 1px solid #d50a20;
+}
+
+.top-link a i {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.top-link a:first-child {
+    border-right: 0px;
+}
+
+/*paging*/
+body .x-paging-right {
+        margin-right: 25px;
+}
+body .x-paging-right li.x-paging-active a {
+    background: #2994f7;
+    color: #fff;
+}
+body .x-paging-right li a,
+.x-paging-right li span {
+    position: relative;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    color: #2994f7;
+    text-decoration: none;
+    line-height: 1.42857143;
+}
+
+body .x-paging-right li a:hover {
+    background: #2994f7;
+    color: #fff;
+}
+
+body  .x-paging-right li a {
+    margin: 0px 3px;
+    padding: 5px 10px;
+    border-radius: 0px;
+}
