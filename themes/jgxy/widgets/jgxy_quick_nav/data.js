@@ -9,7 +9,7 @@ module.exports = function (req, res, utils) {
         method: 'POST',
         qs: {
             siteId: req.app.site.id,
-            parentId: 'lpmoaoomarfalzduyohxjw',
+            parentId: 'tut0aooma61pnbjn3g-otq',
             sort: 'sortOrder'
         }
     }, function (result) {

@@ -5,6 +5,7 @@
     </div>
     <div class="college-news-box">
         <div class="news-box">
+            {{if data.imgNew.length > 0 || data.list.length > 0}}
             <div class="news-box-right" style="margin-left: 15px;">
                 <div class="slide">
                     <div class="FocusPic">
@@ -35,6 +36,9 @@
                     {{/each}}
                 </ul>
             </div>
+            {{else}}
+            <span class="no-data" style="text-align: center; padding: 120px 0 0 0;">暂无数据</span>
+            {{/if}}
         </div>
     </div>
 </div>

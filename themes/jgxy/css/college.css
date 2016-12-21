@@ -544,7 +544,7 @@ ul.nav>li>ul>li a:hover { display:block; color:#ffff00;}
     margin:10px 0;
 }
 .quick-nav-box ul li {
-    width: 278px;
+    width: 218px;
     height: 95px;
     float: left;
     text-align: center;
@@ -564,10 +564,11 @@ ul.nav>li>ul>li a:hover { display:block; color:#ffff00;}
     margin-right:15px;
 }
 .quick-nav-box ul li span {vertical-align: top; margin-right:10px;}
-.quick-nav-box ul li i.icon-ZCFG { background: #4ad087; }
-.quick-nav-box ul li i.icon-XGLJ { background: #4ad0b8; font-size:45px; padding: 10px 13px; }
-.quick-nav-box ul li i.icon-XZZQ { background: #59b4ee; }
-.quick-nav-box ul li i.icon-LXWM { background: #e182ec; }
+.quick-nav-box ul li i.icon-JGALK { background: #a0d843; }
+.quick-nav-box ul li i.icon-BYLWZD { background: #49da8b; font-size:45px; padding: 10px 13px; }
+.quick-nav-box ul li i.icon-SJHJPT { background: #51dfc5; }
+.quick-nav-box ul li i.icon-KQLB { background: #a0a4ff; }
+.quick-nav-box ul li i.icon-JXSS { background: #dc89f5; }
 .quick-nav-box ul li a {
     display: block;
     font-size: 18px;
