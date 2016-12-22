@@ -544,12 +544,12 @@ ul.nav>li>ul>li a:hover { display:block; color:#ffff00;}
     margin:10px 0;
 }
 .quick-nav-box ul li {
-    width: 218px;
+    width: 225px;
     height: 95px;
     float: left;
     text-align: center;
     line-height: 95px;
-    margin: 0 10px;
+    margin: 0 6px;
 }
 
 .quick-nav-box ul li i {
@@ -561,9 +561,8 @@ ul.nav>li>ul>li a:hover { display:block; color:#ffff00;}
     padding: 14px 16px;
     width: 60px;
     height: 60px;
-    margin-right:15px;
 }
-.quick-nav-box ul li span {vertical-align: top; margin-right:10px;}
+.quick-nav-box ul li span {vertical-align: top; }
 .quick-nav-box ul li i.icon-YJYJ { background: #4ad087; }
 .quick-nav-box ul li i.icon-KYFFZXPX { background: #4ad0b8; font-size:45px; padding: 10px 13px; }
 .quick-nav-box ul li i.icon-YJZD { background: #59b4ee; }
