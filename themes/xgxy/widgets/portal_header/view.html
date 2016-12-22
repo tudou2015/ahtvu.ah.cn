@@ -38,7 +38,7 @@
                 <li><a href="/xgxy" class="act">部门首页</a></li>
                 {{each data.list as item i}}
                 <li>
-                    <a href="{{item.href}}" target="_blank">{{item.title}}</a> {{if item.children.length > 0}}
+                    <a href="{{item.href}}" target="_blank">{{item.title}}</a> {{if item.children.length> 0}}
                     <ul>
                         {{each item.children as child i}}
                         <li>

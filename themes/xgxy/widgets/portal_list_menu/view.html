@@ -1,8 +1,14 @@
 <ul class="left-menu">
+    <li class="left-menu-title">{{data.parent}}</li>
     {{each data.list as item i}}
     <li><a href="{{if item.title == '快速导航'}}category?id=4jsoaegm7z1g9jrl0tq1tw
-        {{else}}{{item.href}}
-        {{/if}}" data-id="{{item.id}}" target="_blank">{{item.title}}</a></li>
+                 {{else if item.title == '学院概况'}}category?id=sn4yaekmxrjdydstn4chaq
+                 {{else if item.title == '人才培养'}}category?id=cbizaekmbbxhj0v7nml5-a
+                 {{else if item.title == '教学管理'}}category?id=kbd-aokm66tjqj1hduvyew
+                 {{else if item.title == '科学研究'}}category?id=cwuzaekmhaljuaigatnheq
+                  {{else if item.title == '学院简介'}}school?id=cwebaekmx7lhzbjktwdhkq
+                 {{else}}{{item.href}}
+                 {{/if}}" data-id="{{item.id}}" target="_blank">{{item.title}}</a></li>
     {{/each}}
 </ul>
 <script type="text/javascript" src="{{_widget_path}}/view.js"></script>

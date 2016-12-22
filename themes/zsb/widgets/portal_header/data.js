@@ -29,11 +29,11 @@ module.exports = function (req, res, utils) {
 
             if (!e.show_in_menu) return;
 
-            var tmp = {
+              var tmp = {
                 id: e.id,
                 title: e.title,
                 url: e.url,
-                href: util.format('category?id=%s', e.id),
+                href: e.children.length > 0 ? 'javascript:void(0);' : util.format('category?id=%s', e.id),
                 children: []
             };
 
