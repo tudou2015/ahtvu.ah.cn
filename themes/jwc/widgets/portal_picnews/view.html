@@ -1,6 +1,7 @@
 <div class="news-box-right">
     <div class="slide">
         <div class="FocusPic">
+            {{if data.imgNew.length > 0}}
             <div class="content" id="main-slide">
                 <div class="changeDiv">
                     {{each data.imgNew as item i}}
@@ -8,6 +9,8 @@
                     {{/each}}
                 </div>
             </div>
+            {{else}}
+            <span class="no-data">暂无数据</span> {{/if}}
         </div>
     </div>
 </div>
