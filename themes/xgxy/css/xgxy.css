@@ -330,6 +330,7 @@ ul.nav>li>ul>li a:hover {
     color: #222;
     font-size: 16px;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .college-news-box .news-first-infor p {

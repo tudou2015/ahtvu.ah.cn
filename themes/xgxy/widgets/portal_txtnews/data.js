@@ -33,14 +33,31 @@ module.exports = function (req, res, utils) {
 
         result.body.data.forEach(function (e) {
 
+            var image = e.image_url;
+
+            if (image) {
+
+                if (image.indexOf('&width') != -1 && image.indexOf('&height') != -1) {
+
+                    image = image.substring(0, image.indexOf('&width'));
+                } else if (image.indexOf('&width') != -1 && image.indexOf('&height') == -1) {
+
+                    image = image.substring(0, image.indexOf('&width'));
+                } else if (image.indexOf('&height') != -1 && image.indexOf('&width') == -1) {
+
+                    image = image.substring(0, image.indexOf('&height'));
+                }
+
+                image = util.format('%s&width=%d&height=%d', image, 120, 75);
+            }
+
             //设置第一个显示的新闻                    
             if (!data.first) {
 
                 e.text ? e.text : (e.text = e.title);
-                e.image_url ? (e.image_url = util.format('%s&width=171&height=105', e.image_url)) : '';
 
                 data.first = {
-                    image: e.image_url,
+                    image: image,
                     title: utils.subString(e.title, 13),
                     text: (e.image_url ? utils.subString(e.text, 27) : utils.subString(e.text, 50)),
                     href: util.format('detail?id=%s', e.id)

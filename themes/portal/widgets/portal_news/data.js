@@ -29,17 +29,36 @@ module.exports = function (req, res, utils) {
 
         result.body = JSON.parse(result.body);
 
-        data.category = { href: util.format('category?id=%s', result.body.category.id) };
+        data.category = {
+            href: util.format('category?id=%s', result.body.category.id)
+        };
         result.body.data.forEach(function (e) {
+
+            var image = e.image_url;
+
+            if (image) {
+
+                if (image.indexOf('&width') != -1 && image.indexOf('&height') != -1) {
+
+                    image = image.substring(0, image.indexOf('&width'));
+                } else if (image.indexOf('&width') != -1 && image.indexOf('&height') == -1) {
+
+                    image = image.substring(0, image.indexOf('&width'));
+                } else if (image.indexOf('&height') != -1 && image.indexOf('&width') == -1) {
+
+                    image = image.substring(0, image.indexOf('&height'));
+                }
+
+                image = util.format('%s&width=%d&height=%d', image, 171, 105);
+            }
 
             //设置第一个显示的新闻                    
             if (!data.first) {
 
                 e.text ? e.text : (e.text = e.title);
-                e.image_url ? (e.image_url = util.format('%s&width=147&height=90', e.image_url)) : '';
 
                 data.first = {
-                    image: e.image_url,
+                    image: image,
                     title: utils.subString(e.title, 25),
                     text: (e.image_url ? utils.subString(e.text, 80) : utils.subString(e.text, 86)),
                     href: util.format('detail?id=%s', e.id)
@@ -57,7 +76,9 @@ module.exports = function (req, res, utils) {
 
         }, this);
 
-        deferred.resolve({ data: data });
+        deferred.resolve({
+            data: data
+        });
     });
 
     return deferred.promise;

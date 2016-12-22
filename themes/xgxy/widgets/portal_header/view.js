@@ -55,4 +55,11 @@ $(function () {
 
         $('#current_time').data('ticks', date.ticks).html(time);
     }, 1000);
+
+     // nav
+    $("ul.nav>li").hover(function () {
+        $(this).children("ul").show(200);
+    }, function () {
+        $(this).children("ul").hide(200);
+    });
 });

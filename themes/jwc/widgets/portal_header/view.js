@@ -55,4 +55,18 @@ $(function () {
 
         $('#current_time').data('ticks', date.ticks).html(time);
     }, 1000);
+
+    var li = $('.nav li');
+
+    li.mouseover(function () {
+
+        $(this).find('a:first').addClass("act");
+        $(this).find('.sub-nav:first').show();
+    });
+
+    li.mouseleave(function () {
+
+        $(this).find('a:first').removeClass("act");
+        $(this).find('.sub-nav:first').hide();
+    });
 });

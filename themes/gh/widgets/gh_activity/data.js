@@ -30,10 +30,28 @@ module.exports = function (req, res, utils) {
         data.category = { href: util.format('category?id=%s', result.body.category.id) };
         result.body.data.forEach(function (e) {
 
+            var image = e.image_url;
+
+            if (image) {
+
+                if (image.indexOf('&width') != -1 && image.indexOf('&height') != -1) {
+
+                    image = image.substring(0, image.indexOf('&width'));
+                } else if (image.indexOf('&width') != -1 && image.indexOf('&height') == -1) {
+
+                    image = image.substring(0, image.indexOf('&width'));
+                } else if (image.indexOf('&height') != -1 && image.indexOf('&width') == -1) {
+
+                    image = image.substring(0, image.indexOf('&height'));
+                }
+
+                image = util.format('%s&width=%d&height=%d', image, 200, 154);
+            }
+
             data.list.push({
                 ori_title: e.title,
                 title: utils.subString(e.title, 30),
-                image:e.image_url,
+                image:image,
                 href: util.format('detail?id=%s', e.id)
             });
 

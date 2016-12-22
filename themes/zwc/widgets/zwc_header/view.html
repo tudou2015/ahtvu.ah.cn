@@ -46,9 +46,7 @@
                         <ul>
                             {{each item.children as child i}}
                                 <li>
-                                    <a href="{{if child.title == '安徽电大在线'}}http://www.openedu.ah.cn
-                                    {{else if child.title == '国开电大在线'}}http://www.ouchn.cn/
-                                    {{else}}{{child.href}}{{/if}}" target="_blank">{{child.title}}
+                                    <a href="{{child.href}}" target="_blank">{{child.title}}
                                     </a>
                                 </li>
                             {{/each}}
