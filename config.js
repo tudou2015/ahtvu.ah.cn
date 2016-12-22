@@ -4,7 +4,6 @@ var config = {
     cms: {
         host: '192.168.1.245', // 内网 cms 接口地址
         port: 5657, // 内网 cms 接口地址的端口
-        site: "8-dnag6m9znkhvyqnm-q-w", // 站点ID
         _origin: '',
         origin: function () {
 
