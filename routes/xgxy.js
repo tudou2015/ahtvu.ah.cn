@@ -39,6 +39,19 @@ router.get('/detail', function (req, res, next) {
     next();
 });
 
+
+//school
+router.get('/school', function (req, res, next) {
+
+    //set render html with widget
+    res.context = {};
+
+    res.context._r_widget = true
+    res.context._r_widget_skin = 'school.html';
+
+    next();
+});
+
 //info
 router.get('/info', function (req, res, next) {
 

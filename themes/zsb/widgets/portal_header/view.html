@@ -39,14 +39,14 @@
                 <li><a href="/zsb" class="act">部门首页</a></li>
                 {{each data.list as item i}}
                 <li>
-                    <a href="{{item.href}}" target="_blank">{{item.title}}</a> {{if item.children.length > 0}}
+                    <a href="{{if item.title == '招生管理'}}category?id=xjkkaeom6ahi3cx5eo48ca
+                         {{else if item.title == '发展规划'}}category?id=nnokaeomd7lj2kjmcm1upw
+                            {{else if item.title == '学生工作'}}category?id=bv8laeomlzlks3zer0ywuq
+                            {{else}}{{item.href}}{{/if}}" target="_blank">{{item.title}}</a> {{if item.children.length > 0}}
                     <ul>
                         {{each item.children as child i}}
                         <li>
-                            <a href="{{if child.title == '安徽电大在线'}}http://www.openedu.ah.cn
-                                    {{else if child.title == '国开电大在线'}}http://www.ouchn.cn/
-                                    {{else}}{{child.href}}{{/if}}" target="_blank">{{child.title}}
-                                    </a>
+                            <a href="{{child.href}}" target="_blank">{{child.title}}</a>
                         </li>
                         {{/each}}
                     </ul>
