@@ -564,10 +564,11 @@ ul.nav>li>ul>li a:hover { display:block; color:#ffff00;}
     margin-right:15px;
 }
 .quick-nav-box ul li span {vertical-align: top; margin-right:10px;}
-.quick-nav-box ul li i.icon-ZCFG { background: #4ad087; }
-.quick-nav-box ul li i.icon-XGLJ { background: #4ad0b8; font-size:45px; padding: 10px 13px; }
-.quick-nav-box ul li i.icon-XZZQ { background: #59b4ee; }
-.quick-nav-box ul li i.icon-LXWM { background: #e182ec; }
+.quick-nav-box ul li i.icon-YJYJ { background: #4ad087; }
+.quick-nav-box ul li i.icon-KYFFZXPX { background: #4ad0b8; font-size:45px; padding: 10px 13px; }
+.quick-nav-box ul li i.icon-YJZD { background: #59b4ee; }
+.quick-nav-box ul li i.icon-JYXW {background: #a0a4ff;}
+.quick-nav-box ul li i.icon-XGLJ { background: #e182ec; }
 .quick-nav-box ul li a {
     display: block;
     font-size: 18px;
