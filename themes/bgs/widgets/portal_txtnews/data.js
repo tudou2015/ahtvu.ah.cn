@@ -32,6 +32,23 @@ module.exports = function (req, res, utils) {
         };
 
         result.body.data.forEach(function (e) {
+            var image = e.image_url;
+
+            if (image) {
+
+                if (image.indexOf('&width') != -1 && image.indexOf('&height') != -1) {
+
+                    image = image.substring(0, image.indexOf('&width'));
+                } else if (image.indexOf('&width') != -1 && image.indexOf('&height') == -1) {
+
+                    image = image.substring(0, image.indexOf('&width'));
+                } else if (image.indexOf('&height') != -1 && image.indexOf('&width') == -1) {
+
+                    image = image.substring(0, image.indexOf('&height'));
+                }
+
+                image = util.format('%s&width=%d&height=%d', image, 120, 75);
+            }
 
             //设置第一个显示的新闻                    
             if (!data.first) {
