@@ -837,9 +837,9 @@ strong, b {
 /*footer-code*/
 
 .footer-code ul li {
-    width: 64px;
+    width: 68px;
     float: left;
-    margin-right: 24px;
+    margin-right: 20px;
 }
 
 .footer-code ul li img {
