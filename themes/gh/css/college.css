@@ -313,7 +313,7 @@ ul.nav>li>ul>li a:hover { display:block; color:#ffff00;}
 .FocusPic .change i.cur {background:#50a7ea;}
 
 /*暂无数据*/
-.no-data { display: block; font-size: 14px; color:#999; text-align: center;}
+.no-data { display: block; font-size: 14px; color:#999; text-align: center; padding-top: 100px;}
 .no-content { background: url(../images/no-content.png) no-repeat; width: 239px; height:232px; margin: 100px auto 0;}
 
 /*column*/
