@@ -60,6 +60,7 @@ module.exports = function (req, res, utils) {
 
                 data.first = {
                     image: image,
+                    ori_title: e.title,
                     title: utils.subString(e.title, 13),
                     text: (e.image_url ? utils.subString(e.text, 27) : utils.subString(e.text, 50)),
                     href: util.format('detail?id=%s', e.id)

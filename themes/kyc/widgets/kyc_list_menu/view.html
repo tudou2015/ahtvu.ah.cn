@@ -1,11 +1,10 @@
 <ul class="left-menu">
     <li class="left-menu-title">{{data.parent}}</li>
     {{each data.list as item i}}
-        <li><a href="{{if item.title == '学院概况'}}info?id=758jacam179jxllfcr5zkq
-        {{else if item.title == '联系我们'}}info?id=dieracamr5xbl-uee6lrwa
-        {{else if item.title =='教学系部'}}category?id=kybtamaml7pjroyh-d-ltw
-        {{else if item.title == '电大在线'}}http://www.openedu.ah.cn/
-        {{else if item.title == '快速导航'}}category?id=1btsamamflzj8cy0g-ywxw
+        <li><a href="{{if item.title == '处室概况'}}category?id=0mxoaosmiklmsiw-eu-1og
+        {{else if item.title == '快速导航'}}category?id=m3jqaosmw6tecqxbiptkwg
+        {{else if item.title == '远教研究'}}research
+        {{else if item.title == '远教站点'}}site
         {{else}}{{item.href}}
         {{/if}}" data-id="{{item.id}}" target="_blank">{{item.title}}</a></li>
     {{/each}}

@@ -2,7 +2,7 @@
 	<ul class="clearfix">
 		{{each data.list as item i}}
 		<li>
-			<a href="{{item.href}}">
+			<a href="{{if item.title == '工资查询'}}http://gz.ahtvu.ah.cn/{{else}}{{item.href}}{{/if}}">
 				<i class="iconfont icon-{{item.url}}"></i>
                 <span>{{item.title}}</span>
 			</a>

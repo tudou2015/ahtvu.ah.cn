@@ -116,7 +116,7 @@ ul.nav>li>ul>li a:hover { display:block; color:#ffff00;}
     -ms-text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
     -moz-binding: url("ellipsis.xml#ellipsis");
-    width: 65%;
+    width: 265px;
     display: block;
     float: left;
     font-size: 14px;
@@ -130,7 +130,7 @@ ul.nav>li>ul>li a:hover { display:block; color:#ffff00;}
     -ms-text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
     -moz-binding: url("ellipsis.xml#ellipsis");
-    width: 65%;
+    width: 295px;
     display: block;
     background: url(../images/index-icon.png) no-repeat 0px -207px;
     float: left;
@@ -580,4 +580,31 @@ ul.nav>li>ul>li a:hover { display:block; color:#ffff00;}
     background: url(../images/index-icon.png) no-repeat 0px -343px;
     color: #636262;
     font-size: 14px;
+}
+
+#tab{position:relative; margin: 15px;}
+#tab .tabList ul li{
+	float:left;
+	background:#e0e0e0;
+	text-align:center;
+    margin-right:1px;
+	position:relative;
+	cursor:pointer;
+    padding: 12px 0;
+    font-size: 16px;
+    width: 180px;
+}
+#tab .tabCon{
+	position:absolute;
+	left:-1px;
+	top:40px;
+	border-top:none;
+	width:100%;
+	height:100px;
+}
+#tab .tabCon .x-paging-right { margin-right:0; }
+#tab .tabCon .list-box li { margin: 0;}
+#tab .tabList li.cur{
+	background:#2993f7;
+    color:#fff;
 }
