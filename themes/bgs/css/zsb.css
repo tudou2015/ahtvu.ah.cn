@@ -53,7 +53,7 @@ body {
 /*college-top*/
 
 .college-logo {
-    background: url(../images/bgs-logo.png) no-repeat 0px 0px;
+    background: url(../images/bgs-logo.png) no-repeat 0px 15px;
     width: 1078px;
     height: 142px;
 }
