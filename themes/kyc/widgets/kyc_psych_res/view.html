@@ -1,0 +1,18 @@
+<div class="list-box">
+    <ul>
+        {{if data.list.length > 0}} 
+        {{each data.list as item i}}
+        <li>
+            <a href="{{item.href}}" target="_blank" title="{{item.title}}">{{item.title}}</a>
+            <span>[{{item.date | dateFormat:'YYYY-MM-DD'}}]</span>
+        </li>
+        {{/each}} 
+        {{else}}
+        <div class="no-content">
+        </div>
+        {{/if}}
+    </ul>
+</div>
+<div class="res_paging" data-paging="{{data.paging}}"></div>
+<script type="text/javascript" src="js/jquery.paging.js"></script>
+<script type="text/javascript" src="{{_widget_path}}/view.js"></script>

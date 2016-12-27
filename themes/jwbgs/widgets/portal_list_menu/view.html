@@ -3,6 +3,7 @@
     {{each data.list as item i}}
         <li><a href="{{if item.title == '处室概况'}}info?id=yxyianwmrq5llhbou0j4ww
         {{else if item.title == '联系我们'}}info?id=qhiianwmhprgxk-78alyba
+        {{else if item.title == '快速导航'}}category?id=3ugradamibvmehdn7ntm5w
         {{else}}{{item.href}}
         {{/if}}" data-id="{{item.id}}" target="_blank">{{item.title}}</a></li>
     {{/each}}
