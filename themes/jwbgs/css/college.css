@@ -116,7 +116,7 @@ ul.nav>li>ul>li a:hover { display:block; color:#ffff00;}
     -ms-text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
     -moz-binding: url("ellipsis.xml#ellipsis");
-    width: 65%;
+    width: 272px;
     display: block;
     float: left;
     font-size: 14px;
@@ -130,7 +130,7 @@ ul.nav>li>ul>li a:hover { display:block; color:#ffff00;}
     -ms-text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
     -moz-binding: url("ellipsis.xml#ellipsis");
-    width: 65%;
+    width: 300px;
     display: block;
     background: url(../images/index-icon.png) no-repeat 0px -203px;
     float: left;
@@ -269,6 +269,7 @@ ul.nav>li>ul>li a:hover { display:block; color:#ffff00;}
     color: #222;
     font-size: 16px;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .college-news-box .news-first-infor p {

@@ -114,7 +114,7 @@ ul.nav>li>ul>li a:hover { display:block; color:#ffff00;}
     white-space: nowrap;
     text-overflow: ellipsis;
     -moz-binding: url("ellipsis.xml#ellipsis");
-    width: 70%;
+    width: 75%;
     display: block;
     float: left;
     font-size: 14px;

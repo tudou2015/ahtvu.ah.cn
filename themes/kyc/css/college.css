@@ -132,6 +132,7 @@ ul.nav>li>ul>li a:hover { display:block; color:#ffff00;}
     -moz-binding: url("ellipsis.xml#ellipsis");
     width: 295px;
     display: block;
+
     background: url(../images/index-icon.png) no-repeat 0px -207px;
     float: left;
 }

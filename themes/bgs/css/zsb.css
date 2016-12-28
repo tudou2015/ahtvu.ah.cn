@@ -162,7 +162,7 @@ ul.nav>li>ul>li a:hover {
     -ms-text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
     -moz-binding: url("ellipsis.xml#ellipsis");
-    width: 65%;
+    width: 272px;
     display: block;
     float: left;
     font-size: 14px;

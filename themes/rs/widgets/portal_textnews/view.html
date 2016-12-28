@@ -12,7 +12,7 @@
     </div>
     <ul class="news-list">
         {{each data.list as item i}}
-        <li class="clearfix"><a href="{{item.href}}" title="{{item.ori_title}}">{{item.title}}</a><span>{{item.date | dateFormat:'YYYY-MM-DD'}}</span></li>
+        <li class="clearfix"><a href="{{item.href}}" title="{{item.ori_title}}">{{item.title}}</a><span class="college-time">{{item.date | dateFormat:'YYYY-MM-DD'}}</span></li>
         {{/each}}
     </ul>
 {{else}}
