@@ -1,5 +1,5 @@
 <div class="news-box-left">
-
+{{if data.first}}
     <div class="news-first">
         {{if data.first.image}}
         <img src="{{data.first.image}}" width="120" height="75" alt=""> {{/if}}
@@ -15,5 +15,7 @@
         <li class="clearfix"><a href="{{item.href}}" title="{{item.ori_title}}">{{item.title}}</a><span>{{item.date | dateFormat:'YYYY-MM-DD'}}</span></li>
         {{/each}}
     </ul>
-
+{{else}}
+<span class="no-data">暂无数据</span>
+{{/if}}
 </div>

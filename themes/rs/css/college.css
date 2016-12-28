@@ -53,7 +53,7 @@ body {
 /*college-top*/
 
 .college-logo {
-    background: url(../images/college-logo.png) no-repeat 0px 0px;
+    background: url(../images/college-logo.png) no-repeat 0px 17px;
     width: 1078px;
     height: 142px;
 }
@@ -567,7 +567,7 @@ ul.nav>li>ul>li a:hover { display:block; color:#ffff00;}
 .quick-nav-box ul li i.icon-ZTHD { background: #a0a4ff; }
 .quick-nav-box ul li a {
     display: block;
-    font-size: 16px;
+    font-size: 18px;
     color: #434343;
 }
 /*列表左侧*/
