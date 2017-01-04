@@ -6,7 +6,7 @@
         <div class="details">
             <h3><a href="{{data.first.href}}" target="_blank">{{data.first.title}}</a></h3>
             <p>{{data.first.text}}
-                <a href="{{data.first.href}}" class="tab-first-more"><span>了解详细</span></a>
+                <a href="{{data.first.href}}" class="tab-first-more" target="_blank"><span>了解详细</span></a>
             </p>
         </div>
     </div>
@@ -16,7 +16,7 @@
             <li><a href="{{item.href}}" target="_blank" title="{{item.ori_title}}">{{item.title}}</a><span>{{item.date | dateFormat:'YYYY-MM-DD'}}</span></li>
         {{/each}}
     </ul>
-    <a href="{{data.category.href}}" class="more"><span>查看更多</span></a>
+    <a href="{{data.category.href}}" class="more" target="_blank"><span>查看更多</span></a>
     {{else}}
     <span class="no-data">暂无数据</span> 
     {{/if}}

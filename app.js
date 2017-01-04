@@ -8,6 +8,14 @@ var express = require('express'),
     utils = require('./utils/utils.js'),
     widget = require('./connect/widget');
 
+var logger = require('tracer').console({
+    transport: function (data) {
+        fs.appendFile('./file.log', data.output + '\n', (err) => {
+            if (err) throw err;
+        });
+    }
+});
+
 var app = express();
 
 app.set('port', 3000);
@@ -71,6 +79,8 @@ app.use(function (err, req, res, next) {
 //listen app to port
 app.listen(app.get('port'), function () {
     console.log('安徽广播电视大学网站 服务启动于 %s 端口', app.get('port'));
+
+    logger.error('安徽广播电视大学网站 服务启动于 %s 端口', app.get('port'));
 });
 
 module.exports = app;

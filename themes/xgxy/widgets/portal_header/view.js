@@ -58,8 +58,8 @@ $(function () {
 
      // nav
     $("ul.nav>li").hover(function () {
-        $(this).children("ul").show(200);
+        $(this).children("ul").stop( true, true ).show(200);
     }, function () {
-        $(this).children("ul").hide(200);
+        $(this).children("ul").stop( true, true ).hide(200);
     });
 });

@@ -2,6 +2,14 @@ var moment = require('moment'),
     config = require('../config.js'),
     request = require('request');
 
+var logger = require('tracer').console({
+    transport: function (data) {
+        fs.appendFile('./file.log', data.output + '\n', (err) => {
+            if (err) throw err;
+        });
+    }
+});
+
 const util = require('util');
 
 module.exports = {
@@ -24,12 +32,13 @@ module.exports = {
 
             //default date format
             if (!format) return date.format('YYYY-MM-DD HH:mm:ss');
-
+           
             return date.format(format);
+
         } catch (error) {
 
             console.error('format date error: %s \r\n', error.stack);
-
+            
             return 'error date';
         }
     },
