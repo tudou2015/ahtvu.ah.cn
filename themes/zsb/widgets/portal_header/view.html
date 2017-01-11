@@ -42,7 +42,11 @@
                     <ul>
                         {{each item.children as child i}}
                         <li>
-                            <a href="{{child.href}}" target="_blank">{{child.title}}</a>
+                            <a href="{{if child.title == '思政园地'}}http://wwww.ahtvu.ah.cn/zsxy/szjy/new/default.asp
+                            {{else if child.title == '学生资助'}}http://xszz.ahtvu.ah.cn/
+                            {{else if child.title == '就业指导'}}http://wwww.ahtvu.ah.cn/jyzd/
+                            {{else if child.title == '心理健康'}}http://wwww.ahtvu.ah.cn/xlw/
+                            {{else}}{{child.href}}{{/if}}" target="_blank">{{child.title}}</a>
                         </li>
                         {{/each}}
                     </ul>
