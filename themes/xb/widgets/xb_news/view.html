@@ -1,0 +1,20 @@
+<div class="content-list-box mb10">
+    <div class="college-title">
+        <h3>{{data.category.title}}</h3>
+        <a href="{{data.category.href}}" class="college-more" target="_blank">MORE</a>
+    </div>
+    <div class="content-list" style="height: 235px;">
+        <ul>
+            {{if data.list.length > 0}}
+            {{each data.list as item i}}
+            <li>
+                <span class="time">{{item.date | dateFormat:'YYYY-MM-DD'}}</span>
+                <a href="{{item.href}}" target="_blank" title="{{item.ori_title}}">{{item.title}}</a>
+            </li>
+            {{/each}}
+            {{else}}
+            <span class="no-data" style="padding: 22% 0 0 45%;">暂无数据</span>
+            {{/if}}
+        </ul>
+    </div>
+</div>
