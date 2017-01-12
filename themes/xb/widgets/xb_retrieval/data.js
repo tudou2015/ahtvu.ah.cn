@@ -1,15 +1,12 @@
 const util = require('util');
-
 module.exports = function (req, res, utils) {
-
     var deferred = Promise.defer();
-
     utils.request({
-        url: 'open/get_posts_by_category',
+        url: 'open/get_first_category',
         method: 'POST',
         qs: {
             siteId: req.app.site.id,
-            categoryId: 'arcpafemnyxjt6eumdrojw'
+            parentId: 'q9b9apemm7terljaxfvrng'
         }
     }, function (result) {
 
@@ -17,7 +14,6 @@ module.exports = function (req, res, utils) {
             category: {},
             list: []
         };
-
         if (result.code != 200) {
 
             deferred.resolve(data);
@@ -25,30 +21,50 @@ module.exports = function (req, res, utils) {
         };
 
         result.body = JSON.parse(result.body);
+
         data.category = {
-            href: util.format('category?id=%s', result.body.category.id),
-            title: result.body.category.title
+            id: result.body.data.id,
+            href: util.format('category?id=%s', result.body.data.id),
+            title: result.body.data.title
         };
 
-        result.body.data.forEach(function (e) {
+        utils.request({
+            url: 'open/get_posts_by_category',
+            method: 'POST',
+            qs: {
+                siteId: req.app.site.id,
+                categoryId: data.category.id,
+                pageSize: 100
+            }
+        }, function (result) {
 
-            var props = JSON.parse(e.props);
+            if (result.code != 200) {
 
-            data.list.push({
-                ori_title: e.title,
-                title: utils.subString(e.title, 25),
-                date: e.date_published,
-                author:props.author || '暂无',
-                image: e.image_url,
-                href: util.format('detail?id=%s', e.id)
+                deferred.resolve(data);
+                return;
+            };
+
+            result.body = JSON.parse(result.body);
+
+            result.body.data.forEach(function (e) {
+
+                var props = JSON.parse(e.props);
+
+                data.list.push({
+                    ori_title: e.title,
+                    title: utils.subString(e.title, 25),
+                    date: e.date_published,
+                    author: props.author || '暂无',
+                    image: e.image_url,
+                    href: util.format('detail?id=%s', e.id)
+                });
+
+            }, this);
+
+            deferred.resolve({
+                data: data
             });
-
-        }, this);
-
-        deferred.resolve({
-            data: data
         });
     });
-
     return deferred.promise;
 }
