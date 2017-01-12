@@ -105,8 +105,8 @@ ul.menu>li>ul>li a:hover { display:block; color:#ffff00;}
 .contact-us .contact-inner,
 .content-left .content-left-top .office-list,
 .content-list { background-color: #fff; border:1px solid #ddd; border-top: none; }
-.contact-us .contact-inner {padding: 14px 14px 25px;}
-.contact-us .contact-inner .tel { margin-top:15px; font-size: 14px; }
+.contact-us .contact-inner {padding: 14px 14px 23px;}
+.contact-us .contact-inner .tel { margin-top:15px; font-size: 16px; color:#5b5b5b; }
 .contact-us .contact-inner .tel em { color: #eb0000;}
 .content-left { width: 310px; float:left;}
 .content-right { width: 566px; float:right;}

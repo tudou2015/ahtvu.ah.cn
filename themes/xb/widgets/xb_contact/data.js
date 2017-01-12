@@ -9,16 +9,14 @@ module.exports = function (req, res, utils) {
         method: 'POST',
         qs: {
             siteId: req.app.site.id,
-            categoryId: 'rcp-apemgjdbt3peomdicw',
-            pageSize: 5
+            categoryId: '9at-apemzjliojbzj6fp-a'
         }
     }, function (result) {
 
         var data = {
             category: {},
             list: [],
-            first: undefined,
-            imgNew: []
+            first: undefined
         };
 
         if (result.code != 200) {
@@ -28,10 +26,7 @@ module.exports = function (req, res, utils) {
         };
 
         result.body = JSON.parse(result.body);
-        data.category = {
-            href: util.format('category?id=%s', result.body.category.id),
-            title: result.body.category.title
-        };
+        data.category = { title: result.body.category.title };
 
         result.body.data.forEach(function (e) {
 
@@ -50,46 +45,30 @@ module.exports = function (req, res, utils) {
                     image = image.substring(0, image.indexOf('&height'));
                 }
 
-                image = util.format('%s&width=%d&height=%d', image, 120, 75);
+                image = util.format('%s&width=%d&height=%d', image, 272, 430);
             }
 
             //设置第一个显示的新闻                    
             if (!data.first) {
 
                 e.text ? e.text : (e.text = e.title);
+                var props = JSON.parse(e.props);
 
                 data.first = {
                     image: image,
-                    title: utils.subString(e.title, 13),
+                    title: utils.subString(e.title, 25),
                     text: (e.image_url ? utils.subString(e.text, 27) : utils.subString(e.text, 50)),
+                    tel: props.tel || '暂无',
+                    summary: e.summary,
                     href: util.format('detail?id=%s', e.id)
                 };
 
                 return false;
             }
-
-            data.list.push({
-                ori_title: e.title,
-                title: utils.subString(e.title, 25),
-                date: e.date_published,
-                image: e.image_url,
-                href: util.format('detail?id=%s', e.id)
-            });
-
-            var imageAll = e.image_url;
-            if (imageAll) {
-                data.imgNew.push({
-                    title: e.title,
-                    image: e.image_url,
-                    href: util.format('detail?id=%s', e.id)
-                });
-            }
-
+ 
         }, this);
 
-        deferred.resolve({
-            data: data
-        });
+        deferred.resolve({ data: data });
     });
 
     return deferred.promise;
