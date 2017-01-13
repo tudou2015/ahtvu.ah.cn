@@ -22,6 +22,13 @@ module.exports = function (req, res, utils) {
 
         result.body = JSON.parse(result.body);
 
+        if (result.body.code < 0) {
+            deferred.resolve({
+                data: data
+            });
+            return;
+        }
+
         data.category = {
             id: result.body.data.id,
             href: util.format('category?id=%s', result.body.data.id),
@@ -54,7 +61,7 @@ module.exports = function (req, res, utils) {
                     ori_title: e.title,
                     title: utils.subString(e.title, 25),
                     date: e.date_published,
-                    author: props.author || '暂无',
+                    author: props.author,
                     image: e.image_url,
                     href: util.format('detail?id=%s', e.id)
                 });

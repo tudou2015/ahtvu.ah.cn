@@ -148,7 +148,7 @@ ul.menu>li>ul>li a:hover { display:block; color:#ffff00;}
 .retrieval-title em { color: #2d9eea;}
 .retrieval-box { position: relative;}
 .retrieval-box #scrolllist { position: absolute; width: 500px; height: 380px; overflow: hidden; }
-.retrieval-box #scrollarrow { position: absolute; right: -12px; }
+.retrieval-box #scrollarrow { position: absolute; right: -4px; }
 
 /*footer*/
 .footer {

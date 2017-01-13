@@ -8,26 +8,26 @@
         <div class="retrieval-title">{{data.category.title}}</div>
         <div class="retrieval-box">
             <ul id="scrolllist">
-                {{each data.list as item i}}
+                {{if data.list.length > 0}} {{each data.list as item i}}
                 <li>
                     <span class="time author-box" title="{{item.author}}">{{item.author}}</span>
                     <a href="{{item.href}}" target="_blank" title="{{item.ori_title}}">{{item.title}}</a>
                 </li>
-                {{/each}}
+                {{/each}} {{else}}
+                <span class="no-data" style="padding:38% 0 0 47%;">暂无数据</span> {{/if}}
             </ul>
             <div id="scrollarrow" style="display:none;">
                 <p>
                     <br>
-                    <img onmousedown="scroll(-3)" onmouseover="scroll(-3)" onmouseout="scroll(0)" src="images/ArrowUp.gif" alt="按下鼠标速度会更快">　
+                    <img onmousedown="scroll(-3)" onmouseover="scroll(-3)" onmouseout="scroll(0)" src="images/ArrowUp.gif" alt="按下鼠标速度会更快">
                     <br>
                     <br>
                     <img onmousedown="scroll(3)" onmouseover="scroll(3)" onmouseout="scroll(0)" src="images/ArrowDown.gif" alt="按下鼠标速度会更快">
                 </p>
             </div>
-            {{else}}
-            <span class="no-data" style="padding:40% 0 0 47%;">暂无数据</span>
-            {{/if}}
         </div>
+        {{else}}
+        <span class="no-data" style="padding:40% 0 0 47%;">暂无数据</span> {{/if}}
     </div>
 </div>
 <script type="text/javascript" src="{{_widget_path}}/view.js"></script>
