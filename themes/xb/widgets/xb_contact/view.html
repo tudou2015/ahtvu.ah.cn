@@ -1,5 +1,5 @@
 <div class="journal-show">
-    {{if data.first.image}}
+    {{if data.first}}
     <div class="show-bg">
         <img src="{{data.first.image}}" alt="{{data.first.title}}" />
     </div>
@@ -12,7 +12,9 @@
     </div>
     <div class="contact-inner">
         <p><img src="images/contact-us.jpg"></p>
+        {{if data.first}}
         <p class="tel">电 话：<em>{{data.first.tel}}</em></p>
         <p class="tel">邮 箱：{{data.first.summary}}</p>
+        {{/if}}
     </div>
 </div>
