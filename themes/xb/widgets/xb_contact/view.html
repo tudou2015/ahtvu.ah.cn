@@ -1,0 +1,20 @@
+<div class="journal-show">
+    {{if data.first}}
+    <div class="show-bg">
+        <img src="{{data.first.image}}" alt="{{data.first.title}}" />
+    </div>
+    {{else}}
+    <span class="no-data" style="padding: 60% 0 0 37%; height: 318px;">暂无封面</span> {{/if}}
+</div>
+<div class="contact-us">
+    <div class="college-title">
+        <h3>{{data.category.title}}</h3>
+    </div>
+    <div class="contact-inner">
+        <p><img src="images/contact-us.jpg"></p>
+        {{if data.first}}
+        <p class="tel">电 话：<em>{{data.first.tel}}</em></p>
+        <p class="tel">邮 箱：{{data.first.summary}}</p>
+        {{/if}}
+    </div>
+</div>

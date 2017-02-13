@@ -13,11 +13,10 @@
     <link rel="stylesheet" type="text/css" href="css/grid.css">
     <link rel="stylesheet" type="text/css" href="fonts/iconfont.css">
     <link rel="stylesheet" type="text/css" href="css/common.css">
-    <link rel="stylesheet" type="text/css" href="css/college.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
 
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.sgallery.js"></script>
-    <script src="js/mytab.js"></script>
 </head>
 
 <body>
@@ -30,19 +29,24 @@
         </div>
     </div>
     <!--以上是 minTop -->
-    <div class="college-top">
-        <div class="grid college-top-inner">
-            <a href="/portal" target="_blank" class="college-logo float-left">&nbsp;</a>
+    <div class="header-top">
+        <div class="grid header-top-inner">
+            <a href="/portal" class="header-logo float-left">&nbsp;</a>
         </div>
     </div>
     <!-- 以上是top -->
-    <div class="college-nav">
+    <!--nav start-->
+    <div class="college-nav nav">
         <div class="grid clearfix">
-            <ul class=" nav">
-                <li><a href="/kyc">部门首页</a></li>
+            <div class="nav-notice">
+                <i class="iconfont icon-broadcast"></i>
+                <marquee width=250 height=50 scrollamount=2 behavior=alternate>安徽省三类学术期刊</marquee>
+            </div>
+            <ul class="menu">
+                <li><a href="/xb" class="act">学报首页</a></li>
                 {{each data.list as item i}}
                     <li>
-                        <a href="{{if item.title=='电大学报'}}/xb{{else}}{{item.href}}{{/if}}" target="_blank">{{item.title}}</a>
+                        <a href="{{if item.title == '欢迎订阅'}}detail?id=fkegaf2m8r1mekgo05y1na{{else}}{{item.href}}{{/if}}" target="_blank">{{item.title}}</a>
                         {{if item.children.length > 0}}
                         <ul>
                             {{each item.children as child i}}
@@ -55,7 +59,9 @@
                         {{/if}}
                     </li>
                 {{/each}}
+                <li><a href="/">学校首页</a></li>
             </ul>
         </div>
     </div>
+    <!--nav end-->
     <script type="text/javascript" src="{{_widget_path}}/view.js"></script>
