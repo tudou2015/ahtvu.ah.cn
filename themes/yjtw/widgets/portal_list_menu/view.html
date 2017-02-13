@@ -1,0 +1,7 @@
+<ul class="left-menu">
+    <li class="left-menu-title">{{data.parent}}</li>
+    {{each data.list as item i}}
+        <li><a href="{{if item.title == '人员概况'}}rygk?id=md2zamgmajzo95u4thm0pa{{else}}{{item.href}}{{/if}}" data-id="{{item.id}}">{{item.title}}</a></li>
+    {{/each}}
+</ul>
+<script type="text/javascript" src="{{_widget_path}}/view.js"></script>

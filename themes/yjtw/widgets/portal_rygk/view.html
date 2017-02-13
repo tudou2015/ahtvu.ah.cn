@@ -1,0 +1,22 @@
+<input type="hidden" id="current_category" value="md2zamgmajzo95u4thm0pa" />
+<div class="title clearfix">
+    <h3>{{data.category.title}}</h3>
+    <div class="location">当前位置&nbsp;>&nbsp;<a href="/jwc" target="_blank">部门首页&nbsp;>&nbsp;</a><span>{{data.category.title}}</span></div>
+</div>
+<div class="xxld-box clearfix">
+    {{if data.list.length > 0}}
+    {{each data.list as item i}}
+    <div class="xxld-inner">
+        <div class="xxld-pic">
+            <img src="{{item.image}}">
+        </div>
+        <div class="xxld-right">
+            <h3><span>Email：{{item.email}}</span><strong>{{item.title}}</strong>　　{{item.summary}}</h3>
+            <p>{{item.text}}</p>
+        </div>
+    </div>
+    {{/each}} 
+    {{else}}
+    <div class="no-content"></div>
+    {{/if}}
+</div>
