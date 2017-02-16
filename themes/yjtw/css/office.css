@@ -11,8 +11,8 @@ body {
 }
 
 .college-title {
-    height: 42px;
-    line-height: 42px;
+    height: 30px;
+    line-height: 30px;
     border-bottom: 1px solid #dadada;
     background: -ms-linear-gradient(top, #fff, #efefef);
     background: -moz-linear-gradient(top, #fff, #efefef);
@@ -26,10 +26,10 @@ body {
 
 .college-title h3 {
     color: #141414;
-    font-size: 18px;
+    font-size: 16px;
     background: url(../images/index-icon.png) no-repeat 0px -344px;
-    height: 42px;
-    padding-left: 30px
+    height: 30px;
+    padding-left: 40px
 }
 
 .college-more {
@@ -49,12 +49,11 @@ body {
     border-top: none;
 }
 
-
 /*college-top*/
 
 .college-logo {
-    background: url(../images/office-logo.png) no-repeat 0px 0px;
-    width: 895px;
+    background: url(../images/office-logo.png) no-repeat 0px 16px;
+    width: 1027px;
     height: 142px;
 }
 
@@ -87,7 +86,7 @@ body {
 .nav-li a {
     color: #fff;
     font-size: 18px;
-    padding: 0px 49px;
+    padding: 0px 43px;
 }
 
 .nav-li a.act,
@@ -142,7 +141,7 @@ body {
 
 .sub-nav-twoshow ul li {
     float: left;
-    margin: 51px 38px 20px 0px;
+    margin: 51px 11px 20px 0px;
     text-align: center;
 }
 
@@ -171,7 +170,7 @@ body {
     height: 31px;
     width: 162px;
     text-align: center;
-    font-size: 14px;
+    font-size: 16px;
     color: #fff;
     line-height: 31px;
 }
@@ -278,7 +277,7 @@ body {
     margin:10px 0;
 }
 .service-manage ul li {
-    width: 177px;
+    width: 217px;
     height: 95px;
     float: left;
     text-align: center;
@@ -419,8 +418,7 @@ body {
 /*news-box*/
 
 .news-box {
-    border: 1px solid #e3e3e3;
-    border-top: none;
+    height: 267px;
 }
 
 .news-box-left {
@@ -505,14 +503,14 @@ body {
 
 .news-box-right {
     float: left;
-    margin-top: 30px;
+    margin-top: 15px;
 }
 .first-details:hover {
     text-decoration: underline;
 }
 
 /*幻灯区*/
-.slide{width: 345px; height: 213px; overflow: hidden; position: relative; border: 1px solid #ddd;}
+.slide{ overflow: hidden; position: relative; border: 1px solid #ddd;}
 .FocusPic{zoom:1;position:relative; overflow:hidden}
 .FocusPic .content{overflow:hidden}
 .FocusPic .changeDiv a{position:absolute;top:0px;left:0px;display:none;}

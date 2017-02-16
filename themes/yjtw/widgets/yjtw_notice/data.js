@@ -9,7 +9,7 @@ module.exports = function (req, res, utils) {
         method: 'POST',
         qs: {
             siteId: req.app.site.id,
-            categoryId: 'xew0ak2miz5g-vsdmjbb7q',
+            categoryId: 'scsbafkmo5zoptyfjul09w',
             pageSize: 3
         }
     }, function (result) {

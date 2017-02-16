@@ -9,15 +9,16 @@ module.exports = function (req, res, utils) {
         method: 'POST',
         qs: {
             siteId: req.app.site.id,
-            categoryId: 'qry0ak2mxq5jcas-sj4r7g',
-            pageSize: 6
+            categoryId: 'iimbafkmdl1jtdcyflwy7a',
+            pageSize: 5
         }
     }, function (result) {
 
         var data = {
             category: {},
             list: [],
-            first: undefined
+            first: undefined,
+            imgNew: []
         };
 
         if (result.code != 200) {
@@ -27,7 +28,10 @@ module.exports = function (req, res, utils) {
         };
 
         result.body = JSON.parse(result.body);
-        data.category = { href: util.format('category?id=%s', result.body.category.id) };
+        data.category = {
+            href: util.format('category?id=%s', result.body.category.id),
+            title: result.body.category.title
+        };
 
         result.body.data.forEach(function (e) {
 
@@ -56,7 +60,7 @@ module.exports = function (req, res, utils) {
 
                 data.first = {
                     image: image,
-                    title: utils.subString(e.title, 25),
+                    title: utils.subString(e.title, 13),
                     text: (e.image_url ? utils.subString(e.text, 27) : utils.subString(e.text, 50)),
                     href: util.format('detail?id=%s', e.id)
                 };
@@ -68,12 +72,24 @@ module.exports = function (req, res, utils) {
                 ori_title: e.title,
                 title: utils.subString(e.title, 25),
                 date: e.date_published,
+                image: e.image_url,
                 href: util.format('detail?id=%s', e.id)
             });
- 
+
+            var imageAll = e.image_url;
+            if (imageAll) {
+                data.imgNew.push({
+                    title: e.title,
+                    image: e.image_url,
+                    href: util.format('detail?id=%s', e.id)
+                });
+            }
+
         }, this);
 
-        deferred.resolve({ data: data });
+        deferred.resolve({
+            data: data
+        });
     });
 
     return deferred.promise;

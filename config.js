@@ -2,7 +2,7 @@ const util = require('util');
 
 var config = {
     cms: {
-        host: '192.168.1.245', // 内网 cms 接口地址
+        host: '10.4.31.45', // 内网 cms 接口地址
         port: 5657, // 内网 cms 接口地址的端口
         _origin: '',
         origin: function () {
