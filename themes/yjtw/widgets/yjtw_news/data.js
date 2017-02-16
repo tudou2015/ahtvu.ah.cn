@@ -10,7 +10,7 @@ module.exports = function (req, res, utils) {
         qs: {
             siteId: req.app.site.id,
             categoryId: 'iimbafkmdl1jtdcyflwy7a',
-            pageSize: 5
+            pageSize: 6
         }
     }, function (result) {
 
@@ -34,7 +34,7 @@ module.exports = function (req, res, utils) {
         };
 
         result.body.data.forEach(function (e) {
-
+           
             var image = e.image_url;
 
             if (image) {
@@ -72,11 +72,11 @@ module.exports = function (req, res, utils) {
                 ori_title: e.title,
                 title: utils.subString(e.title, 25),
                 date: e.date_published,
-                image: e.image_url,
+                image: image,
                 href: util.format('detail?id=%s', e.id)
             });
 
-            var imageAll = e.image_url;
+            var imageAll = image;
             if (imageAll) {
                 data.imgNew.push({
                     title: e.title,

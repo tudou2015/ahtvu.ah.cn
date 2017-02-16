@@ -422,7 +422,7 @@ body {
 }
 
 .news-box-left {
-    margin: 28px 15px 0px 15px;
+    margin: 15px 15px 0px 15px;
     width: 393px;
     float: left;
 }
@@ -514,7 +514,7 @@ body {
 .FocusPic{zoom:1;position:relative; overflow:hidden}
 .FocusPic .content{overflow:hidden}
 .FocusPic .changeDiv a{position:absolute;top:0px;left:0px;display:none;}
-.FocusPic .title-bg,.FocusPic .title{position:absolute;left:0px;bottom:0; text-align:left;width:370px;height:30px;line-height:30px;overflow:hidden}
+.FocusPic .title-bg,.FocusPic .title{position:absolute;left:0px;bottom:0; text-align:left;width:338px;height:30px;line-height:30px;overflow:hidden}
 .FocusPic .title-bg{background:#000;filter:alpha(opacity=50);opacity:0.5;}
 .FocusPic .title a{display:block;padding-left:15px;color:#fff; font-size:14px;width: 262px;
     text-overflow: ellipsis;
@@ -524,6 +524,44 @@ body {
 .FocusPic .change i {background:#666;color:#FFF;cursor:pointer;line-height:15px;margin-right:2px;padding:2px 6px; font-style:normal; height:15px;display:inline-block;display:-moz-inline-stack;zoom:1;*display:inline;}
 .FocusPic .change i.cur {background:#50a7ea;}
 
+/*首页快速导航*/
+.quick-nav-box { width: 1200px;}
+.quick-nav-box ul {
+    background: #fff;
+    border:1px solid #e3e3e3;
+    margin:10px 0;
+}
+.quick-nav-box ul li {
+    width: 218px;
+    height: 95px;
+    float: left;
+    text-align: center;
+    line-height: 95px;
+    margin: 0 10px;
+}
+
+.quick-nav-box ul li i {
+    color: #fff;
+    font-size: 36px;
+    font-weight: normal;
+    background: #ddd;
+    border-radius: 50%;
+    padding: 14px 16px;
+    width: 60px;
+    height: 60px;
+    margin-right:15px;
+}
+.quick-nav-box ul li span {vertical-align: top; margin-right:10px;}
+.quick-nav-box ul li i.icon-ZCFG { background: #4ad087; }
+.quick-nav-box ul li i.icon-FWPT { background:#53a3e2;}
+.quick-nav-box ul li i.icon-XGLJ { background: #4ad0b8; font-size:45px; padding: 10px 13px; }
+.quick-nav-box ul li i.icon-XZZQ { background: #f7a247; }
+.quick-nav-box ul li i.icon-LXWM { background: #e182ec; }
+.quick-nav-box ul li a {
+    display: block;
+    font-size: 18px;
+    color: #434343;
+}
 /*column*/
 
 .berkeley-container,
