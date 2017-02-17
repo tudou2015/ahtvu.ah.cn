@@ -510,7 +510,7 @@ body {
 }
 
 /*幻灯区*/
-.slide{ overflow: hidden; position: relative; border: 1px solid #ddd;}
+.slide{ overflow: hidden; position: relative; border: 1px solid #ddd; width:338px; height: 232px;}
 .FocusPic{zoom:1;position:relative; overflow:hidden}
 .FocusPic .content{overflow:hidden}
 .FocusPic .changeDiv a{position:absolute;top:0px;left:0px;display:none;}
