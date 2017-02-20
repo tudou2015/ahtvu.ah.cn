@@ -1,0 +1,772 @@
+/*college common style css*/
+
+body {
+    background: #f4f4f4;
+}
+
+[class*='col-'] {
+    float: left;
+    min-height: 1px;
+    padding-right: 8px;
+}
+
+.college-title {
+    height: 42px;
+    line-height: 42px;
+    border-bottom: 1px solid #dadada;
+    background: -ms-linear-gradient(top, #fff, #efefef);
+    background: -moz-linear-gradient(top, #fff, #efefef);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#efefef));
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#efefef));
+    background: -webkit-linear-gradient(top, #fff, #efefef);
+    background: -o-linear-gradient(top, #fff, #efefef);
+    position: relative;
+    border: 1px solid #dadada;
+}
+
+.college-title h3 {
+    color: #141414;
+    font-size: 18px;
+    background: url(../images/index-icon.png) no-repeat 0px -136px;
+    height: 42px;
+    padding-left: 30px
+}
+
+.college-more {
+    position: absolute;
+    right: 15px;
+    top: 0px;
+    color: #929292;
+}
+
+.college-more:hover {
+    color: #2275c3;
+}
+
+.college-news-box {
+    background: #fff;
+    border: 1px solid #dadada;
+    border-top: none;
+}
+
+
+/*college-top*/
+
+.college-logo {
+    background: url(../images/bwc-logo.png) no-repeat 0px 15px;
+    width: 1078px;
+    height: 142px;
+}
+
+.college-top {
+    background: url(../images/college-top.jpg) no-repeat 0px 0px;
+    width: 100%;
+    height: 142px;
+}
+
+.college-top-inner {
+    background: url(../images/college-top-inner.png) no-repeat bottom right;
+    height: 142px;
+}
+
+
+/*college-nav*/
+
+.college-nav {
+    background: url(../images/college-nav.jpg) repeat-x 0px 0px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.nav>li {
+    float: left;
+    margin: 0 2px;
+    width: 116px;
+    text-align: center;
+    line-height: 50px;
+    position: relative;
+}
+
+.nav>li>a {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+}
+
+.nav>li>a:hover,
+.nav>li>a.current {
+    background-color: #0069ca;
+    color: #ffff00;
+}
+
+ul.nav>li>ul {
+    display: none;
+    z-index: 200;
+    position: absolute;
+    width: 100%;
+}
+
+ul.nav>li>ul>li {
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid #bcdfff;
+    background: rgba(0, 105, 202, 0.6)
+}
+
+ul.nav>li>ul>li a {
+    color: #fff;
+    font-size: 16px;
+}
+
+ul.nav>li>ul>li a:hover {
+    display: block;
+    color: #ffff00;
+}
+
+
+/*college-news-line1*/
+
+.college-news-line1 {
+    height: 295px;
+    margin-bottom: 14px;
+}
+
+.news-box {
+    height: 255px;
+}
+
+
+/*college-news-left*/
+
+.college-news-left {
+    height: 261px;
+}
+
+.college-news-left ul li {
+    line-height: 40px;
+    border-bottom: 1px dashed #b6b6b6;
+}
+
+.college-news-left ul {
+    padding: 8px 16px 0px 16px;
+}
+
+.college-news-box li a {
+    color: #3c3c3c;
+    background: url(../images/index-icon.png) no-repeat 0px -552px;
+    padding-left: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -moz-binding: url("ellipsis.xml#ellipsis");
+    width: 272px;
+    display: block;
+    float: left;
+    font-size: 14px;
+}
+
+.college-news-box .news-list li a {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -moz-binding: url("ellipsis.xml#ellipsis");
+    width: 65%;
+    display: block;
+    background: url(../images/index-icon.png) no-repeat 0px -552px;
+    float: left;
+}
+
+.college-news-box li a:hover,
+.news-box-left .news-list li a:hover {
+    color: #2275c3;
+}
+
+.college-time {
+    color: #3c3c3c;
+    float: right;
+}
+
+
+/*college-notice*/
+
+.college-notice .college-news-notice ul {
+    padding: 8px 16px;
+}
+
+.college-news-notice ul li {
+    line-height: 38px;
+    border-bottom: 1px dashed #b6b6b6;
+}
+
+
+/*college-icon-link*/
+
+.college-icon-link {
+    background: #fff;
+    border: 1px solid #dadada;
+    height: 304px;
+}
+
+.college-icon-link ul {
+    padding: 15px 19px;
+}
+
+.college-icon-link ul li {
+    height: 52px;
+    background: #f4f4f4;
+    border-bottom: 1px solid #dcdcdc;
+    padding-left: 81px;
+    margin-bottom: 2px;
+    line-height: 52px;
+}
+
+.college-icon-link ul li a {
+    font-size: 16px;
+    color: #000;
+    display: block;
+    background: url(../images/index-icon.png) no-repeat 0px -241px;
+    padding-left: 20px;
+}
+
+.college-icon-link ul li a:hover {
+    color: #2291e1;
+}
+
+.college-first {
+    border-left: 4px solid #f17e3f;
+}
+
+.college-second {
+    border-left: 4px solid #fbab10;
+    font-size: 12px;
+}
+
+.college-third {
+    border-left: 4px solid #94d03f;
+}
+
+.college-fourth {
+    border-left: 4px solid #50ac3b;
+}
+
+.college-fifth {
+    border-left: 4px solid #8371f0;
+}
+
+.college-sixth {
+    border-left: 4px solid #f577c1;
+}
+
+
+/*college-pic-link*/
+
+.college-pic-link {
+    margin-top: 8px;
+}
+
+
+/*footer*/
+
+.footer {
+    background: url(../images/footer.jpg) repeat-x 0px 0px;
+    height: 91px;
+    color: #8f9297;
+}
+
+.footer .footer-inner {
+    height: 91px;
+    line-height: 91px;
+}
+
+.footer .footer-inner .footer-right {
+    float: right;
+}
+
+.footer .footer-inner .footer-right a {
+    color: #8f9297;
+}
+
+.footer .footer-inner .footer-right a:hover {
+    color: #f8f8f8;
+}
+
+
+/*news-box*/
+
+.college-news-box .news-box-left {
+    margin: 12px 15px 0px 15px;
+    width: 398px;
+    float: left;
+}
+
+.college-news-box .news-first {
+    height: 74px;
+    position: relative;
+}
+
+.college-news-box .news-first img {
+    float: left;
+    margin-right: 12px;
+}
+
+.college-news-box .news-first-infor {
+    height: 74px;
+}
+
+.college-news-box .news-first-infor h3 {
+    color: #222;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.college-news-box .news-first-infor p {
+    line-height: 25px;
+    font-size: 14px;
+    color: #686868;
+}
+
+.college-news-box .news-box-left .news-list li {
+    line-height: 35px;
+    border-bottom: 1px dashed #b6b6b6;
+}
+
+.college-news-box .news-list {
+    margin-top: 12px;
+}
+
+
+/*news-box-right*/
+
+.news-box-right {
+    float: left;
+    margin-top: 12px;
+    width: 338px;
+    height: 232px;
+}
+
+.first-details {
+    color: #2393e2;
+}
+
+.first-details:hover {
+    text-decoration: underline;
+}
+
+
+/*幻灯区*/
+
+.slide {
+    width: 338px;
+    height: 232px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #ddd;
+}
+
+.FocusPic {
+    zoom: 1;
+    position: relative;
+    overflow: hidden
+}
+
+.FocusPic .content {
+    overflow: hidden
+}
+
+.FocusPic .changeDiv a {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+
+.FocusPic .title-bg,
+.FocusPic .title {
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+    text-align: left;
+    width: 370px;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden
+}
+
+.FocusPic .title-bg {
+    background: #000;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+
+.FocusPic .title a {
+    display: block;
+    padding-left: 15px;
+    color: #fff;
+    font-size: 14px;
+    width: 262px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.FocusPic .change {
+    bottom: 4px;
+    height: 20px;
+    right: 3px;
+    *right: 5px;
+    _right: 4px;
+    position: absolute;
+    text-align: right;
+    z-index: 9999;
+}
+
+.FocusPic .change i {
+    background: #666;
+    color: #FFF;
+    cursor: pointer;
+    line-height: 15px;
+    margin-right: 2px;
+    padding: 2px 6px;
+    font-style: normal;
+    height: 15px;
+    display: inline-block;
+    display: -moz-inline-stack;
+    zoom: 1;
+    *display: inline;
+}
+
+.FocusPic .change i.cur {
+    background: #50a7ea;
+}
+
+
+/*暂无数据*/
+
+.no-data {
+    display: block;
+    padding: 30% 0 0 42%;
+    font-size: 14px;
+    color: #999;
+}
+
+.no-content {
+    background: url(../images/no-content.png) no-repeat;
+    width: 239px;
+    height: 232px;
+    margin: 100px auto 0;
+}
+
+
+/*column*/
+
+.berkeley-container,
+.container {
+    position: relative;
+}
+
+.column {
+    background: #fff;
+    border: 1px solid #e3e3e3;
+    margin-bottom: 20px;
+    position: absolute;
+    left: 0px;
+    width: 240px;
+    top: 0px;
+    min-height: 670px;
+}
+
+.column ul {
+    padding-top: 11px;
+}
+
+.column ul li {
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+    margin: 1px 0px;
+}
+
+.column ul li a {
+    display: block;
+    color: #000;
+    border-left: 6px solid #fff;
+}
+
+.column ul li a:hover,
+.column ul li a.act {
+    display: block;
+    border-left: 6px solid #fff;
+    background: #dff0ff;
+    border-left: 6px solid #2994f7;
+}
+
+
+/*article-list*/
+
+.article-list {
+    background: #fff;
+    border: 1px solid #e3e3e3;
+    margin: 20px 0px 20px 257px;
+    min-height: 900px;
+}
+
+.article-list .title h3 {
+    color: #000;
+    font-size: 18px;
+    float: left;
+}
+
+.article-list .title .location {
+    float: right;
+    color: #343434;
+    font-size: 14px;
+    background: url(../images/index-icon.png) no-repeat 0px -455px;
+    padding-left: 17px;
+}
+
+.article-list .title .location a {
+    color: #343434;
+    font-size: 14px;
+}
+
+.article-list .title .location span,
+.article-list .title .location a:hover {
+    color: #1485ec;
+}
+
+.article-list .title {
+    border-bottom: 3px solid #1e8df4;
+    line-height: 47px;
+    padding: 16px 25px 0px 25px;
+}
+
+.article-list .list-box li {
+    border-bottom: 1px dashed #b8b8b8;
+    line-height: 45px;
+    margin: 0px 28px;
+}
+
+.article-list .list-box li a {
+    color: #515251;
+    font-size: 14px;
+    background: url(../images/index-icon.png) no-repeat 0px -75px;
+    padding-left: 11px;
+}
+
+.article-list .list-box li a:hover {
+    color: #0075e2;
+}
+
+.article-list .list-box li span {
+    color: #515251;
+    font-size: 14px;
+    float: right;
+}
+
+.list-box {
+    margin-bottom: 65px;
+}
+
+
+/*paging*/
+
+.paging {
+    text-align: center;
+    margin-right: 17px;
+    float: right;
+}
+
+.paging ul li {
+    float: left;
+}
+
+.paging ul li a,
+.paging ul li span {
+    display: block;
+    width: 27px;
+    height: 27px;
+    text-align: center;
+    line-height: 27px;
+    color: #505050;
+    border: 1px solid #dddddd;
+    margin-right: 11px;
+}
+
+.paging ul li a.home-page,
+.paging ul li a.last-page {
+    width: 52px;
+    height: 27px;
+    line-height: 27px;
+    margin-right: 11px;
+    color: #505050;
+    border: 1px solid #dddddd;
+}
+
+.paging ul li span,
+.paging ul li a:hover {
+    color: #fff;
+    background: #2994f7;
+    border: 1px solid #2994f7;
+}
+
+
+/*article-details*/
+
+.detail-title,
+.article-details .detail-title {
+    color: #0075e2;
+    font-size: 24px;
+    text-align: center;
+    margin: 55px 0px 37px 0px;
+}
+
+.article-details .detail-tools {
+    margin: 0px 30px;
+    border: 1px dashed #a0a0a0;
+    line-height: 34px;
+    height: 34px;
+    padding: 0px 15px;
+    margin-bottom: 26px;
+}
+
+.article-details .detail-time {
+    float: left;
+}
+
+.article-details .detail-tools span {
+    padding-right: 20px;
+}
+
+.article-details .detail-share {
+    float: right;
+}
+
+.article-details p {
+    line-height: 35px;
+    color: #000;
+    margin: 0px 30px;
+    text-indent: 2em;
+}
+
+.bdshare-button-style0-16 {
+    zoom: 1;
+    float: right;
+    margin-top: 3px;
+}
+
+.detail-time em {
+    color: #1383eb;
+}
+
+.details-box .detail-info {
+    padding: 0 20px;
+    line-height: 200%;
+}
+
+.details-box table tr td {
+    border: 1px solid #ddd !important;
+    padding: 8px !important;
+}
+
+.details-box table tr td p {
+    margin: 0;
+    text-indent: 0;
+}
+
+.details-box table {
+    margin: 0 auto;
+}
+
+
+/*首页快速导航*/
+
+.quick-nav-box {
+    width: 1200px;
+}
+
+.quick-nav-box ul {
+    background: #fff;
+    border: 1px solid #e3e3e3;
+    margin: 10px 0;
+}
+
+.quick-nav-box ul li {
+    width: 279px;
+    height: 95px;
+    float: left;
+    text-align: center;
+    line-height: 95px;
+    margin: 0 10px;
+}
+
+.quick-nav-box ul li a {
+    display: block;
+    font-size: 16px;
+    color: #489aff;
+}
+
+.quick-nav-box ul li i {
+    color: #fff;
+    font-size: 36px;
+    font-weight: normal;
+    background: #ddd;
+    border-radius: 50%;
+    padding: 14px 16px;
+    width: 60px;
+    height: 60px;
+}
+
+.quick-nav-box ul li span {
+    vertical-align: top;
+    margin-right: 10px;
+}
+
+.quick-nav-box ul li i.icon-OAXT {
+    background: url(../images/OAXT.png) no-repeat 0px 0px;
+    display: inline-block;
+    width: 68px;
+    height: 67px;
+    padding: 0px;
+    margin-top: 14px;
+}
+
+.quick-nav-box ul li i.icon-FLFG {
+    background: #4ad0b8;
+}
+
+.quick-nav-box ul li i.icon-XZZQ {
+    background: #59b4ee;
+}
+
+.quick-nav-box ul li i.icon-LXWM {
+    background: #e182ec;
+}
+
+.quick-nav-box ul li i.icon-FWPT {
+    background: #4ad087;
+}
+
+
+/*列表左侧*/
+
+.left-menu {
+    padding-top: 0 !important;
+}
+
+.left-menu-title {
+    background-color: #2994f7;
+    color: #fff;
+}
+
+.office-pic-news .office-title h3 {
+    background: url(../images/index-icon.png) no-repeat 0px -343px;
+    color: #636262;
+    font-size: 14px;
+}
