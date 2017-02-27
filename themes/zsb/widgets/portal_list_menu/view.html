@@ -2,6 +2,11 @@
     <li class="left-menu-title">{{data.parent}}</li>
     {{each data.list as item i}}
     <li><a href="{{if item.title == '快速导航'}}category?id=b-wlaeomt4jdcldnqkjbiq
+    {{else if item.title == '学生工作'}}category?id=njslaeompzdggfcvdl-dcw
+    {{else if item.title == '思政园地'}}http://wwww.ahtvu.ah.cn/zsxy/szjy/new/default.asp
+    {{else if item.title == '学生资助'}}http://xszz.ahtvu.ah.cn/
+    {{else if item.title == '就业指导'}}http://wwww.ahtvu.ah.cn/jyzd/
+    {{else if item.title == '心理健康'}}http://wwww.ahtvu.ah.cn/xlw/
         {{else}}{{item.href}}
         {{/if}}" data-id="{{item.id}}" target="_blank">{{item.title}}</a></li>
     {{/each}}
