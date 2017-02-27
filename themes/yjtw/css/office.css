@@ -131,8 +131,8 @@ body {
 .nav .sub-nav ul li a i {
     border: 1px solid #a6a6a6;
     border-radius: 100px;
-    font-size: 67px;
-    padding: 18px;
+    font-size: 50px;
+    padding: 12px;
 }
 
 .sub-nav a:hover {
@@ -141,7 +141,7 @@ body {
 
 .sub-nav-twoshow ul li {
     float: left;
-    margin: 51px 11px 20px 0px;
+    margin: 45px 30px 20px 0px;
     text-align: center;
 }
 
