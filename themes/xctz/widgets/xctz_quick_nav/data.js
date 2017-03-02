@@ -5,19 +5,17 @@ module.exports = function (req, res, utils) {
     var deferred = Promise.defer();
 
     utils.request({
-        url: 'open/get_posts_by_category',
+        url: 'open/get_categories_by_parent',
         method: 'POST',
         qs: {
             siteId: req.app.site.id,
-            categoryId: 'o7v1anqms4rd5xuydjxtfg',
-            pageSize: ''
+            parentId: 'xianasmnjzji6orafgpodq',
+            sort: 'sortOrder'
         }
     }, function (result) {
-
         var data = {
-            category: {},
-            list: [],
-            imgNew:[]
+            id: {},
+            list: []
         };
 
         if (result.code != 200) {
@@ -27,24 +25,16 @@ module.exports = function (req, res, utils) {
         };
 
         result.body = JSON.parse(result.body);
-        data.category = { href: util.format('category?id=%s', result.body.category.id) };
 
         result.body.data.forEach(function (e) {
 
             data.list.push({
+                id: e.id,
                 title: e.title,
-                image: e.image_url,
-                href: util.format('detail?id=%s', e.id)
+                url: e.url,
+                href: util.format('category?id=%s', e.id)
             });
 
-            var imageAll = e.image_url;
-            if (imageAll) {
-                data.imgNew.push({
-                    title: e.title,
-                    image: e.image_url,
-                    href: util.format('detail?id=%s', e.id)
-                });
-            }
         }, this);
 
         deferred.resolve({ data: data });
