@@ -1,0 +1,7 @@
+<ul class="list-box clefix">
+    {{if data.list.length > 0 }} {{each data.list as item i}}
+    <li><a href="{{item.href}}" target="_blank" title="{{item.ori_title}}">{{item.title}}</a></li>
+    {{/each}} {{else}}
+    <p class="no-data">暂无数据</p>
+    {{/if}}
+</ul>

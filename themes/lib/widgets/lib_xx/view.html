@@ -1,0 +1,17 @@
+
+<div id="slideshow" rel="auto-play">
+    <div class="img">
+        {{if data.list.length > 0 }}
+        <span>
+            {{each data.list as item i}}
+            <a href="{{item.href}}" target="_blank" title="{{item.ori_title}}"><img src="{{item.image}}" alt="{{item.title}}" width="1200" height="342"/></a>
+            {{/each}}
+        </span>
+        {{else}}
+            <p class="no-content"></p> 
+            {{/if}}
+        <div class="s_paging pattern"></div>
+        <div class="s_paging subpattern"></div>
+    </div>
+</div>
+<script src="js/jquery.slider.js"></script>
