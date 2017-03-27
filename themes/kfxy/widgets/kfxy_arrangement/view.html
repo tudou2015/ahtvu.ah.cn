@@ -1,0 +1,15 @@
+<div class="news-tab-content" style="display: none;">
+    {{if data.list.length > 0 }}
+    <ul class="news-tab-list clearfix">
+        {{each data.list as item i}}
+            <li>
+                <a href="{{item.href}}" target="_blank" title="{{item.title}}">{{item.title}}</a>
+                <span>[{{item.date | dateFormat:'MM-DD'}}]</span>
+            </li>
+        {{/each}}
+    </ul>
+    <p class="more-box"><a href="{{data.category.href}}" class="more" target="_blank">查看更多&gt;&gt;</a></p>
+    {{else}}
+    <span class="no-data" style=" padding: 23% 0 20% 45%;">暂无数据</span> 
+    {{/if}}
+</div>

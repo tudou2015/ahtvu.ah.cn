@@ -9,16 +9,15 @@ module.exports = function (req, res, utils) {
         method: 'POST',
         qs: {
             siteId: req.app.site.id,
-            categoryId: 'jvcdaiemvatf1if6usvhjq',
-            withChildren: false,
-            page: req.query.page || 1
+            categoryId: 'u0o2adgnvlvbrawfibnrka',
+            pageSize: 5
         }
     }, function (result) {
 
         var data = {
             category: {},
-            paging: {},
-            list: []
+            list: [],
+            first: undefined
         };
 
         if (result.code != 200) {
@@ -29,23 +28,25 @@ module.exports = function (req, res, utils) {
 
         result.body = JSON.parse(result.body);
 
-        data.category = result.body.category;
-        data.paging = JSON.stringify(result.body.paging);
-
+        data.category = {
+            href: util.format('category?id=%s', result.body.category.id),
+            title: result.body.category.title
+        };
         result.body.data.forEach(function (e) {
 
-            var props = JSON.parse(e.props);
-
             data.list.push({
-                title: e.title,
-                image: e.image_url,
+                ori_title: e.title,
+                title: utils.subString(e.title, 30),
                 date: e.date_published,
-                href: props.href || 'javascript:void(0);',
+                summary: e.summary,
+                href: util.format('detail?id=%s', e.id)
             });
 
         }, this);
 
-        deferred.resolve({ data: data });
+        deferred.resolve({
+            data: data
+        });
     });
 
     return deferred.promise;

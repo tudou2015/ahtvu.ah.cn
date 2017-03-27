@@ -1,0 +1,12 @@
+<div class="quick-nav-box clearfix">
+	<ul class="clearfix">
+		{{each data.list as item i}}
+		<li>
+			<a href="{{if item.title == '我要报名'}}http://bm.ahtvu.ah.cn/{{else}}{{item.href}}{{/if}}" target="_blank">
+				<i class="iconfont icon-{{item.url}}"></i>
+                <span>{{item.title}}</span>
+			</a>
+		</li>
+		{{/each}}
+	</ul>
+</div>

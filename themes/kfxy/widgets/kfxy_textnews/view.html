@@ -1,0 +1,11 @@
+<div class="news-box-left">
+    {{if data.list.length > 0}}
+    <ul class="news-list">
+        {{each data.list as item i}}
+        <li class="clearfix"><a href="{{item.href}}" title="{{item.ori_title}}">{{item.title}}</a><span>[{{item.date | dateFormat:'MM-DD'}}]</span></li>
+        {{/each}}
+    </ul>
+    {{else}}
+    <span class="no-data">暂无数据</span>
+    {{/if}}
+</div>

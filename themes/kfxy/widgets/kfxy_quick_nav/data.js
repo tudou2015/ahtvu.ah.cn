@@ -5,19 +5,16 @@ module.exports = function (req, res, utils) {
     var deferred = Promise.defer();
 
     utils.request({
-        url: 'open/get_posts_by_category',
+        url: 'open/get_categories_by_parent',
         method: 'POST',
         qs: {
             siteId: req.app.site.id,
-            categoryId: 'jvcdaiemvatf1if6usvhjq',
-            withChildren: false,
-            page: req.query.page || 1
+            parentId: 'p8gsaecnophmqpnypwptrw',
+            sort: 'sortOrder'
         }
     }, function (result) {
-
         var data = {
-            category: {},
-            paging: {},
+            id: {},
             list: []
         };
 
@@ -29,18 +26,13 @@ module.exports = function (req, res, utils) {
 
         result.body = JSON.parse(result.body);
 
-        data.category = result.body.category;
-        data.paging = JSON.stringify(result.body.paging);
-
         result.body.data.forEach(function (e) {
 
-            var props = JSON.parse(e.props);
-
             data.list.push({
+                id: e.id,
                 title: e.title,
-                image: e.image_url,
-                date: e.date_published,
-                href: props.href || 'javascript:void(0);',
+                url: e.url,
+                href: util.format('category?id=%s', e.id)
             });
 
         }, this);

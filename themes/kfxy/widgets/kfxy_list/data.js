@@ -9,8 +9,7 @@ module.exports = function (req, res, utils) {
         method: 'POST',
         qs: {
             siteId: req.app.site.id,
-            categoryId: 'jvcdaiemvatf1if6usvhjq',
-            withChildren: false,
+            categoryId: req.query.id,
             page: req.query.page || 1
         }
     }, function (result) {
@@ -34,13 +33,10 @@ module.exports = function (req, res, utils) {
 
         result.body.data.forEach(function (e) {
 
-            var props = JSON.parse(e.props);
-
             data.list.push({
                 title: e.title,
-                image: e.image_url,
                 date: e.date_published,
-                href: props.href || 'javascript:void(0);',
+                href: util.format('detail?id=%s', e.id)
             });
 
         }, this);
