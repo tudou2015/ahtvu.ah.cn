@@ -27,6 +27,9 @@ module.exports = function (req, res, utils) {
         data.parent = result.body.parent.title;
 
         result.body.categories.forEach(function (e) {
+            if (e.title == '招生宣传图' || e.title == '登录入口'|| e.title == '快速导航') {
+                return;
+            };
 
             data.list.push({
                 id: e.id,
@@ -34,9 +37,8 @@ module.exports = function (req, res, utils) {
                 url: e.url,
                 href: util.format('category?id=%s', e.id)
             });
-            if (e.title == '招生宣传图' || e.title == '登录入口') {
-                return;
-            };
+
+
 
         }, this);
 
