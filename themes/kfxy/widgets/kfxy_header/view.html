@@ -37,12 +37,12 @@
                 <li><a href="/kfxy" class="act">学院首页</a></li>
                 {{each data.list as item i}}
                     <li>
-                        <a href="{{item.href}}" target="_blank">{{item.title}}</a>
+                        <a href="{{item.href}}" target="_self">{{item.title}}</a>
                         {{if item.children.length > 0}}
                         <ul>
                             {{each item.children as child i}}
                                 <li>
-                                    <a href="{{child.href}}" target="_blank">{{child.title}}
+                                    <a href="{{child.href}}" target="_self">{{child.title}}
                                     </a>
                                 </li>
                             {{/each}}
