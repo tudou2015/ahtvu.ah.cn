@@ -7,4 +7,5 @@ $(function () {
         _self.addClass('current');
         _self.parents('.list-tab').children('.news-tab-content:eq(' + index + ')').show().siblings('.news-tab-content').hide();
     });
+
 });

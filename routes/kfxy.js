@@ -51,16 +51,15 @@ router.get('/info', function (req, res, next) {
     next();
 });
 
-//人员概况
-router.get('/rygk', function (req, res, next) {
+//搜索列表
+router.get('/search', function (req, res, next) {
 
     //set render html with widget
     res.context = {};
 
     res.context._r_widget = true
-    res.context._r_widget_skin = 'rygk.html';
+    res.context._r_widget_skin = 'search.html';
 
     next();
 });
-
 module.exports = router;

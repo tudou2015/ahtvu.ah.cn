@@ -1,37 +1,12 @@
 <div class="left-info">
     <div class="left-title one">
-        <a href="#" target="_blank"><span class="enter-icon"></span>省校共享资源</a>
+        <a href="{{data.category.href}}" target="_blank"><span class="enter-icon"></span>{{data.category.title}}</a>
     </div>
     <ul class="left-list">
+        {{each data.list as item i}}
         <li>
-            <a href="#" target="_blank" title="sdfsdf">安徽高校图书情报工作委员会</a>
+            <a href="{{item.href}}" target="_blank" title="{{item.title}}">{{item.title}}</a>
         </li>
-        <li>
-            <a href="#" target="_blank" title="sdfsdf">全国电大教学资源协作会</a>
-        </li>
-        <li>
-            <a href="#" target="_blank" title="sdfsdf">中央电大时讯 </a>
-        </li>
-        <li>
-            <a href="#" target="_blank" title="sdfsdf">全国电大图工委</a>
-        </li>
-        <li>
-            <a href="#" target="_blank" title="sdfsdf">《世纪中国》</a>
-        </li>
-        <li>
-            <a href="#" target="_blank" title="sdfsdf">中华文史资料数据库</a>
-        </li>
-        <li>
-            <a href="#" target="_blank" title="sdfsdf">安徽高校图书情报工作委员会</a>
-        </li>
-        <li>
-            <a href="#" target="_blank" title="sdfsdf">全国电大教学资源协作会</a>
-        </li>
-        <li>
-            <a href="#" target="_blank" title="sdfsdf">中央电大时讯 </a>
-        </li>
-        <li>
-            <a href="#" target="_blank" title="sdfsdf">全国电大图工委</a>
-        </li>
+        {{/each}}
     </ul>
 </div>

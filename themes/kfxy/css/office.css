@@ -70,7 +70,7 @@ body {
 }
 /*college-nav*/
 .college-nav { background: url(../images/college-nav.jpg) repeat-x 0px 0px; height: 50px; margin-bottom: 20px; }
-.nav>li { float:left; margin:0 2px; width:128px; text-align:center; line-height:50px; position: relative; }
+.nav>li { float:left; margin:0 2px; width:106px; text-align:center; line-height:50px; position: relative; }
 .nav>li>a { display:block; color:#fff; font-size: 18px;}
 .nav>li>a:hover,
 .nav>li>a.current { background-color:#0069ca; color:#ffff00; }
@@ -78,6 +78,10 @@ ul.nav>li>ul { display:none; z-index: 200; position: absolute; width: 100%; }
 ul.nav>li>ul>li { height: 45px; line-height: 45px; border-bottom:1px solid #bcdfff; background:rgba(0, 105, 202, 0.6)}
 ul.nav>li>ul>li a { color: #fff; font-size: 16px; }
 ul.nav>li>ul>li a:hover { display:block; color:#ffff00;}
+/*college-nav => search*/
+.search-box { width: 200px; float: right; margin-top: 11px; position: relative; }
+.search-box input { padding-left:24px; height: 30px; line-height: 30px; background-color: #fff; border:1px solid #2a93ff;}
+.search-box .icon-search { position: absolute; left: 4px; top: 7px;font-size: 18px; color: #888; }
 
 /*login-entry*/
 .login-box {
@@ -489,16 +493,15 @@ ul.news-tab-list li span { float:right; color:#909090;}
 .article-list-center { margin: 0 0 20px; }
 
 /*详情页中表格样式*/
-.details-box table tr td {
-    border: 1px solid #ddd !important;
-    padding: 8px !important;
-}
-    
-.details-box table tr td p {
-    margin: 0;
-    text-indent: 0;
-}
+.details-box table tr td { border: 1px solid #ddd !important; padding: 8px !important;}   
+.details-box table tr td p { margin: 0; text-indent: 0;}
+.details-box table { margin: 0 auto;}
 
-.details-box table {
-    margin: 0 auto;
-}
+/*搜索相关结果*/
+ul.search-list { margin:20px;}
+ul.search-list li { margin-bottom: 15px; padding: 10px 0 20px; font-size: 16px; color: #515251; border-bottom: 1px dashed #ddd; }
+ul.search-list h4 { font-weight: bold; margin-bottom: 15px; }
+ul.search-list h4 span { float:right; font-weight: normal; }
+ul.search-list h4 a {color:#515251; width:680px; display: block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+ul.search-list h4 a:hover { color:#0075e2; }
+ul.search-list p { line-height: 180%; font-weight: normal; font-size:14px; }

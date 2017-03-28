@@ -37,7 +37,7 @@ a:hover { color: #006acc;}
     height: 50px;
 }
 ul.menu li { height: 50px; line-height: 50px; float: left; color: #fff; font-size: 18px;}
-ul.menu li a { color: #fff;font-size: 18px; padding: 0px 20px;}
+ul.menu li a { color: #fff;font-size: 18px; padding: 0px 26px;}
 ul.menu li  a.act, .menu li a:hover { color: #ffff00; }
 
 /*content*/
