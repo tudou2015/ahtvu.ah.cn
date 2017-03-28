@@ -1,0 +1,14 @@
+ {{if data.list.length > 0}}
+<div class="adbox">
+    <div id="focus">
+        <ul>
+            {{each data.list as item i}}
+            <li>
+                <a href="{{item.href}}" target="_blank"><img src="{{item.image}}" alt="{{item.title}}" /></a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
+{{/if}}
+<script src="js/simplefoucs.js"></script>

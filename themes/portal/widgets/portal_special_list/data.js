@@ -39,6 +39,7 @@ module.exports = function (req, res, utils) {
             data.list.push({
                 title: e.title,
                 image: e.image_url,
+                date: e.date_published,
                 href: props.href || 'javascript:void(0);',
             });
 
