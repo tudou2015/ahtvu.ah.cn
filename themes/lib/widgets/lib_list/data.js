@@ -33,15 +33,19 @@ module.exports = function (req, res, utils) {
 
         result.body.data.forEach(function (e) {
 
+            var props = JSON.parse(e.props);
+
             data.list.push({
                 title: e.title,
                 date: e.date_published,
-                href: util.format('detail?id=%s', e.id),
+                href: props.href || util.format('detail?id=%s', e.id),
             });
 
         }, this);
 
-        deferred.resolve({ data: data });
+        deferred.resolve({
+            data: data
+        });
     });
 
     return deferred.promise;

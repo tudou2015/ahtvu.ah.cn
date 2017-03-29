@@ -1,12 +1,7 @@
 <ul class="left-menu">
     <li class="left-menu-title">{{data.parent}}</li>
     {{each data.list as item i}}
-        <li><a href="{{if item.title == '教育网资源'}}http://lib.ahtvu.ah.cn/cernet/share.html?formAction=getWebList
-                    {{else if item.title == '国开资源'}}http://library.crtvu.edu.cn/
-                    {{else if item.title=='安徽高校资源'}}http://ahadl.org/
-                    {{else if item.title=='国家开放大学共享资源'}}category?id=g8byadkndqtps-5rx0qbrw
-                    {{else if item.title=='全省高校共建资源'}}category?id=rvtyadkno5zlzbfechjmkw
-                    {{else}}{{item.href}}{{/if}}" data-id="{{item.id}}" target="_blank">{{item.title}}</a></li>
+        <li><a href="{{item.href}}" data-id="{{item.id}}" target="_blank">{{item.title}}</a></li>
     {{/each}}
 </ul>
 <script type="text/javascript" src="{{_widget_path}}/view.js"></script>

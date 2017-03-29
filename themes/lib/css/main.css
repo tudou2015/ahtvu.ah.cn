@@ -83,6 +83,8 @@ ul.menu li  a.act, .menu li a:hover { color: #ffff00; }
 .content-right { width: 230px; height: 307px; background-color: #fff; padding:5px; overflow: hidden;}
 .right-inner { width:100%; height:307px; background-color: #f8fcfe; overflow: hidden;}
 .right-inner h3 { height: 41px; line-height: 41px; color:#fff; font-size: 14px; padding-left:20px; background:url(../images/r-title-bg.jpg); border:1px solid #489eeb; }
+.right-inner h3 a { color:#fff;}
+.right-inner h3 a:hover { color:#fff; text-decoration: underline;}
 ul.right-list { padding: 10px 20px 0;}
 ul.right-list li { line-height: 40px; font-size: 14px;}
 

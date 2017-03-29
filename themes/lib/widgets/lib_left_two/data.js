@@ -9,7 +9,7 @@ module.exports = function (req, res, utils) {
         method: 'POST',
         qs: {
             siteId: req.app.site.id,
-            categoryId: 'yog2adgnqrzjkv5xb3pzmg',
+            categoryId: 'mso2adgnvz9afc1l5vuvoq',
             pageSize: 10
         }
     }, function (result) {
@@ -27,10 +27,6 @@ module.exports = function (req, res, utils) {
 
         result.body = JSON.parse(result.body);
 
-        data.category = {
-            href: util.format('category?id=%s', result.body.category.id),
-            title: result.body.category.title
-        };
         result.body.data.forEach(function (e) {
 
             var props = JSON.parse(e.props);
