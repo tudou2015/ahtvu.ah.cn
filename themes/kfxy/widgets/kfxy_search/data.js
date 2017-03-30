@@ -5,17 +5,16 @@ module.exports = function (req, res, utils) {
     var deferred = Promise.defer();
 
     utils.request({
-        url: 'open/get_posts_by_category',
+        url: 'open/search',
         method: 'POST',
         qs: {
             siteId: req.app.site.id,
-            categoryId: req.query.id,
+            search: req.query.search,
             page: req.query.page || 1
         }
     }, function (result) {
 
         var data = {
-            category: {},
             paging: {},
             list: []
         };
@@ -28,24 +27,22 @@ module.exports = function (req, res, utils) {
 
         result.body = JSON.parse(result.body);
 
-        data.category = result.body.category;
         data.paging = JSON.stringify(result.body.paging);
 
+        var search = req.query.search;
         result.body.data.forEach(function (e) {
 
-            var props = JSON.parse(e.props);
-
             data.list.push({
-                title: e.title,
+                ori_title: e.title,
+                title: e.title.replace(new RegExp(search, 'g'), '<b style="color:red;">' + search + '</b>'),
                 date: e.date_published,
-                href: props.href || util.format('detail?id=%s', e.id),
+                text: utils.subString(e.text, 220).replace(new RegExp(search, 'g'), '<b style="color:red;">' + search + '</b>'),
+                href: util.format('detail?id=%s', e.id),
             });
 
         }, this);
 
-        deferred.resolve({
-            data: data
-        });
+        deferred.resolve({ data: data });
     });
 
     return deferred.promise;

@@ -56,17 +56,21 @@ $(function () {
         $('#current_time').data('ticks', date.ticks).html(time);
     }, 1000);
 
-    var li = $('.nav li');
-
-    li.mouseover(function () {
-
-        $(this).find('a:first').addClass("act");
-        $(this).find('.sub-nav:first').show();
+    // nav
+    $("ul.nav>li").hover(function () {
+        $(this).children("ul").stop( true, true ).show(200);
+    }, function () {
+        $(this).children("ul").stop( true, true ).hide(200);
     });
+    
+    $('#sub').on('click', function () {
 
-    li.mouseleave(function () {
+        var keyword = $("input[name='search']").val();
 
-        $(this).find('a:first').removeClass("act");
-        $(this).find('.sub-nav:first').hide();
-    });
+        if (!keyword) {
+            alert('请输入关键字！');
+            $("input[name='search']").focus();
+            return false;
+        }
+    })
 });

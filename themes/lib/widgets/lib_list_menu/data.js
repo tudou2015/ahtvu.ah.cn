@@ -9,7 +9,8 @@ module.exports = function (req, res, utils) {
         method: 'POST',
         qs: {
             siteId: req.app.site.id,
-            categoryId: req.query.id
+            categoryId: req.query.id,
+            sort: 'sortOrder',
         }
     }, function (result) {
         var data = {

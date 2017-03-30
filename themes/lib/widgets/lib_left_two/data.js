@@ -9,15 +9,15 @@ module.exports = function (req, res, utils) {
         method: 'POST',
         qs: {
             siteId: req.app.site.id,
-            categoryId: 'u0o2adgnvlvbrawfibnrka',
-            pageSize: 5
+            categoryId: 'mso2adgnvz9afc1l5vuvoq',
+            sort: 'sortOrder',
+            pageSize: 10
         }
     }, function (result) {
 
         var data = {
             category: {},
-            list: [],
-            first: undefined
+            list: []
         };
 
         if (result.code != 200) {
@@ -28,18 +28,14 @@ module.exports = function (req, res, utils) {
 
         result.body = JSON.parse(result.body);
 
-        data.category = {
-            href: util.format('category?id=%s', result.body.category.id),
-            title: result.body.category.title
-        };
         result.body.data.forEach(function (e) {
 
+            var props = JSON.parse(e.props);
+
             data.list.push({
-                ori_title: e.title,
-                title: utils.subString(e.title, 30),
+                title: e.title,
                 date: e.date_published,
-                summary: e.summary,
-                href: util.format('detail?id=%s', e.id)
+                href: props.href || 'javascript:void(0);',
             });
 
         }, this);

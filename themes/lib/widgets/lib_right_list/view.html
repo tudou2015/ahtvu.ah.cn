@@ -1,23 +1,14 @@
 <div class="right-inner">
-    <h3>安徽省高校数字图书馆</h3>
+    <h3><a href="{{data.category.href}}" target="_blank">{{data.category.title}}</a></h3>
     <ul class="right-list">
+        {{if data.list.length > 0}}
+        {{each data.list as item i}}
         <li>
-            <a href="#" target="_blank" title="sdfsdf">安徽高校图书情报工作委员会</a>
+            <a href="{{item.href}}" target="_blank" title="{{item.title}}">{{item.title}}</a>
         </li>
-        <li>
-            <a href="#" target="_blank" title="sdfsdf">全国电大教学资源协作会</a>
-        </li>
-        <li>
-            <a href="#" target="_blank" title="sdfsdf">中央电大时讯 </a>
-        </li>
-        <li>
-            <a href="#" target="_blank" title="sdfsdf">全国电大图工委</a>
-        </li>
-        <li>
-            <a href="#" target="_blank" title="sdfsdf">《世纪中国》</a>
-        </li>
-        <li>
-            <a href="#" target="_blank" title="sdfsdf">中华文史资料数据库</a>
-        </li>
+        {{/each}}
+        {{else}}
+        <span style="padding: 118px 0 0 75px; display: block; color: #666;">暂无数据</span>
+        {{/if}}
     </ul>
 </div>

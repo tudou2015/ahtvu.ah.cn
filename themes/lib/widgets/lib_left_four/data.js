@@ -9,15 +9,15 @@ module.exports = function (req, res, utils) {
         method: 'POST',
         qs: {
             siteId: req.app.site.id,
-            categoryId: 'u0o2adgnvlvbrawfibnrka',
-            pageSize: 5
+            categoryId: '7be2adgncajhmfzg4lqklw',
+            sort: 'sortOrder',
+            pageSize: 10
         }
     }, function (result) {
 
         var data = {
             category: {},
-            list: [],
-            first: undefined
+            list: []
         };
 
         if (result.code != 200) {
@@ -34,12 +34,12 @@ module.exports = function (req, res, utils) {
         };
         result.body.data.forEach(function (e) {
 
+            var props = JSON.parse(e.props);
+
             data.list.push({
-                ori_title: e.title,
-                title: utils.subString(e.title, 30),
+                title: e.title,
                 date: e.date_published,
-                summary: e.summary,
-                href: util.format('detail?id=%s', e.id)
+                href: props.href || 'javascript:void(0);',
             });
 
         }, this);
