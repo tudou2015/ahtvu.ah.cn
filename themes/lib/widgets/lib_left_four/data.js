@@ -10,6 +10,7 @@ module.exports = function (req, res, utils) {
         qs: {
             siteId: req.app.site.id,
             categoryId: '7be2adgncajhmfzg4lqklw',
+            sort: 'sortOrder',
             pageSize: 10
         }
     }, function (result) {
