@@ -837,20 +837,21 @@ strong, b {
 /*footer-code*/
 
 .footer-code ul li {
-    width: 68px;
+    width: 90px;
     float: left;
-    margin-right: 20px;
+    margin-right: 30px;
 }
 
 .footer-code ul li img {
-    width: 64px;
-    height: 64px;
+    width: 90px;
+    height: 90px;
 }
 
 .footer-code ul li h4 {
     color: #fff;
     font-size: 12px;
-    margin-top: 12px;
+    text-align: center;
+    margin-top: 5px;
 }
 
 
