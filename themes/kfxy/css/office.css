@@ -80,8 +80,10 @@ ul.nav>li>ul>li a { color: #fff; font-size: 16px; }
 ul.nav>li>ul>li a:hover { display:block; color:#ffff00;}
 /*college-nav => search*/
 .search-box { width: 200px; float: right; margin-top: 11px; position: relative; }
-.search-box input { padding-left:24px; height: 30px; line-height: 30px; background-color: #fff; border:1px solid #2a93ff;}
+.search-box .search-input { width: 126px; padding-left:24px; height: 30px; line-height: 30px; background-color: #fff; border:1px solid #2a93ff;}
 .search-box .icon-search { position: absolute; left: 4px; top: 7px;font-size: 18px; color: #888; }
+.search-box .search-btn {height: 32px; cursor: pointer; vertical-align: middle; margin-top: -2px; background: #b4d5f1; border: none;}
+.search-box .search-btn:hover { background: #9ecdf5;}
 
 /*login-entry*/
 .login-box {
