@@ -101,7 +101,8 @@ ul.nav>li>ul>li a:hover { display:block; color:#ffff00;}
     text-align: center;
     line-height: 64px;
     color: #fff;
-    font-size: 14px;
+    font-size: 16px;
+    text-shadow: 1px 1px 2px #000;
 }
 .login-one a { background: url(../images/login-01.jpg); border: 1px solid #01ba5d;}
 .login-two a { background: url(../images/login-02.jpg); border: 1px solid #51aafc;}
@@ -287,6 +288,8 @@ ul.news-tab-list li span { float:right; color:#909090;}
     font-size: 12px;
     color: #949495;
 }
+.footer-siteinfo ul li a { color: #949495; }
+.footer-siteinfo ul li a:hover {color: #f8f8f8;}
 
 /*column*/
 .column {
@@ -461,6 +464,10 @@ ul.news-tab-list li span { float:right; color:#909090;}
 
 .article-details .detail-share {
     float: right;
+}
+
+.article-details .detail-share a {
+   color:#666;
 }
 
 .article-details .detail-inner { color: #000; margin: 0 30px; font-size:14px; line-height: 200%;}
