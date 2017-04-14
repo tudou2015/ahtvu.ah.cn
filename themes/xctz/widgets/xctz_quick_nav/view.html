@@ -2,7 +2,7 @@
 	<ul class="clearfix">
 		{{each data.list as item i}}
 		<li>
-			<a href="{{if item.title == '文明在线'}}http://d.ahwmw.cn/swjygw/ahgbds/{{else if item.title == '思政工作'}}http://wwww.ahtvu.ah.cn/zsxy/szjy/new/default.asp{{else if item.title == '学雷锋志愿服务'}}http://wwww.ahtvu.ah.cn/lf/{{else}}{{item.href}}{{/if}}">
+			<a href="{{if item.title == '文明在线'}}http://d.ahwmw.cn/swjygw/ahgbds/{{else if item.title == '思政工作'}}http://wwww.ahtvu.ah.cn/zsxy/szjy/new/default.asp{{else if item.title == '学雷锋志愿服务'}}http://wwww.ahtvu.ah.cn/lf/{{else}}{{item.href}}{{/if}}" target="_blank">
 				<i class="iconfont icon-{{item.url}}"></i>
                 <span>{{item.title}}</span>
 			</a>
