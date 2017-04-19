@@ -1,7 +1,7 @@
 <ul class="left-menu">
     <li class="left-menu-title">{{data.parent}}</li>
     {{each data.list as item i}}
-    <li><a href="{{if item.title == '快速导航'}}category?id=fseyaucnxb5fliu6yaukta{{else}}{{item.href}}{{/if}}" data-id="{{item.id}}">{{item.title}}</a></li>
+    <li><a href="{{if item.title == '快速导航'}}category?id=fseyaucnxb5fliu6yaukta{{else if item.title == '教务动态'}}category?id=h1oraecn4rtcihzi0wnc0a{{else if item.title == '教学动态'}}category?id=wwu5afwnnrhij5wrt3vgtw{{else}}{{item.href}}{{/if}}" data-id="{{item.id}}">{{item.title}}</a></li>
     {{/each}}
 </ul>
 <script type="text/javascript" src="{{_widget_path}}/view.js"></script>

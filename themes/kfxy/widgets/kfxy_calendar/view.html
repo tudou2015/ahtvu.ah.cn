@@ -2,7 +2,7 @@
     {{if data.list.length > 0 }}
     <ul class="news-tab-list clearfix">
         {{each data.list as item i}}
-            <li>
+            <li class="clearfix">
                 <a href="{{item.href}}" target="_blank" title="{{item.title}}">{{item.title}}</a>
                 <span>[{{item.date | dateFormat:'MM-DD'}}]</span>
             </li>

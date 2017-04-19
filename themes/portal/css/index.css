@@ -670,7 +670,9 @@ strong, b {
 
 .nav-xxgk-left ul li {
     float: left;
-    margin-right: 40px;
+    margin-right: 20px;
+    height: 32px;
+    line-height: 32px;
 }
 
 .nav-xxgk-left ul li a {
@@ -706,7 +708,7 @@ strong, b {
 .nav-xxgk-right ul li a i {
     font-size: 57px;
     color: #878787;
-    margin-left: 57px;
+    margin-left: 20px;
 }
 
 .nav-xxgk-right ul li a:hover i,.nav-xxgk-right ul li a:hover p {
