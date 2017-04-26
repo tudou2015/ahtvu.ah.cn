@@ -1,6 +1,7 @@
 /*college common style css*/
 
 body { background: #f4f4f4;}
+strong, b { font-weight: bold;} 
 .mt10 { margin-top: 10px;}
 .mb10 { margin-bottom:10px;}
 .fl { float:left;}

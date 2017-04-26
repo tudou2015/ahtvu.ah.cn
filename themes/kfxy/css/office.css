@@ -3,6 +3,7 @@
 body {
     background: #f4f4f4;
 }
+strong, b { font-weight: bold;}
 
 [class*='col-'] {
     float: left;
@@ -502,9 +503,10 @@ ul.news-tab-list li span { float:right; color:#909090;}
 .article-list-center { margin: 0 0 20px; }
 
 /*详情页中表格样式*/
-.details-box table tr td { border: 1px solid #ddd !important; padding: 8px !important;}   
+.details-box table tr td { border: 1px solid #ddd !important; padding: 0px 4px !important;}   
 .details-box table tr td p { margin: 0; text-indent: 0;}
 .details-box table { margin: 0 auto;}
+
 
 /*搜索相关结果*/
 ul.search-list { margin:20px;}

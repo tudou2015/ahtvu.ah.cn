@@ -3,6 +3,7 @@
 body {
     background: #f4f4f4;
 }
+strong, b { font-weight: bold;}
 
 [class*='col-'] {
     float: left;
