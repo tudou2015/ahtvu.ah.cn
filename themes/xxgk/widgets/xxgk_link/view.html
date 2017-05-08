@@ -1,0 +1,10 @@
+<div class="link-box">
+    <ul class="link-list">
+        <li class="title-bg">{{data.category.title}}</li>
+        {{each data.list as item i}}
+        <li>
+            <a href="{{item.href}}" target="_blank" title="{{item.title}}">{{item.title}}</a>
+        </li>
+        {{/each}}
+    </ul>
+</div>

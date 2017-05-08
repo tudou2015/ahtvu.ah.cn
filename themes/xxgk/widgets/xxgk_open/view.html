@@ -1,0 +1,17 @@
+<div class="home-list">
+    <div class="home-list-title">
+        <h3><i class="iconfont icon-xinxigongkai"></i>{{data.category.title}}</h3>
+        <a href="{{data.category.href}}" class="home-more" target="_blank">MORE</a>
+    </div>
+    <div class="home-list-box">
+        <ul class="clefix">
+             {{if data.list.length > 0 }} {{each data.list as item i}}
+            <li>
+                <a href="{{item.href}}" target="_blank" title="{{item.ori_title}}">{{item.title}}</a>
+                <span class="home-time">{{item.date | dateFormat:'YYYY-MM-DD'}}</span>
+            </li>
+            {{/each}} {{else}}
+            <span class="no-data">暂无数据</span> {{/if}}
+        </ul>
+    </div>
+</div>
