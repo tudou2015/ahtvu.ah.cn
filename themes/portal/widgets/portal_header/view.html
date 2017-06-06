@@ -19,9 +19,21 @@
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/base.js"></script>
+    <script src="js/float.js"></script>
+    <style>  
+        .floadAd { position: absolute;z-index: 999900; display: none; }  
+        .floadAd .item { display: block; }  
+        .floadAd .item img { vertical-align: bottom; }
+        .floadAd .close { padding: 2px 5px; background: #ad0509; color:#fff; float:right; } 
+</style>
 </head>
 
 <body>
+    <div id="floadAD" class="floadAd">  
+        <a class="close" href="javascript:void();">×</a>  
+        <a class="item" title='安徽电大四个专项治理举报电话' href="javascript:void();" target="_blank">  
+            <img src="/portal/images/float-sgzl.jpg" alt="安徽电大四个专项治理举报电话" /></a>  
+    </div>
     <div class="minTop">
         <div class="minTop-inner grid width-inner">
             <div class="curtime float-left">您好,欢迎来到安徽广播电视大学！今天是：<span id="current_time" data-ticks="{{time.ticks}}">{{time.value}}</span></div>
@@ -278,9 +290,7 @@
                     </div>
                     <!--以上是 系统建设-->
                 </li>
-                <li>
-                    <a href="http://wwww.ahtvu.ah.cn/bgs/xxgk/" target="_blank">信息公开</a>
-                </li>
+                <li><a href="/xxgk" target="_blank">信息公开</a></li>
                 <li><a href="category?id=9j-aajymbivipbi3i-swuq" target="_blank">学分银行</a></li>
                 <li><a href="http://www.ahtvu.ah.cn/lib/" target="_blank">数字图书馆</a></li>
             </ul>

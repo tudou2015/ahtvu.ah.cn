@@ -545,12 +545,11 @@ ul.nav>li>ul>li a:hover { display:block; color:#ffff00;}
     margin:10px 0;
 }
 .quick-nav-box ul li {
-    width: 225px;
     height: 95px;
     float: left;
     text-align: center;
     line-height: 95px;
-    margin: 0 6px;
+    margin: 0 20px;
 }
 
 .quick-nav-box ul li i {
@@ -564,11 +563,12 @@ ul.nav>li>ul>li a:hover { display:block; color:#ffff00;}
     height: 60px;
 }
 .quick-nav-box ul li span {vertical-align: top; }
-.quick-nav-box ul li i.icon-YJYJ { background: #4ad087; }
-.quick-nav-box ul li i.icon-KYFFZXPX { background: #4ad0b8; font-size:45px; padding: 10px 13px; }
+.quick-nav-box ul li i.icon-YJYJ { background: #4ad0b8; }
+.quick-nav-box ul li i.icon-KYFFZXPX { background:#f7a247 }
 .quick-nav-box ul li i.icon-YJZD { background: #59b4ee; }
 .quick-nav-box ul li i.icon-JYXW {background: #a0a4ff;}
 .quick-nav-box ul li i.icon-XGLJ { background: #e182ec; }
+.quick-nav-box ul li i.icon-SDSF { background:#4ad087; }
 .quick-nav-box ul li a {
     display: block;
     font-size: 18px;

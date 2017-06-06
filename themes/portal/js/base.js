@@ -47,4 +47,6 @@ $(function () {
             return false;
         }
     })
+
+    FloatAd("#floadAD");//调用  
 });
