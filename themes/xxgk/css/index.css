@@ -43,11 +43,13 @@ ul.menu li{height: 50px;
     line-height: 50px;
     float: left;
     color: #fff;
-    font-size: 18px;}
+    font-size: 18px;
+    position: relative;
+}
 ul.menu li a { color: #fff;font-size: 18px; padding: 0px 20px;}
 ul.menu li  a.act, ul.menu li a:hover { color: #ffff00; }
 ul.menu>li>ul { display:none; z-index: 200; position: absolute; width: 100%; }
-ul.menu>li>ul>li { height: 45px; line-height: 45px; border-bottom:1px solid #bcdfff; background:rgba(0, 105, 202, 0.6)}
+ul.menu>li>ul>li { height: auto; line-height: 28px; padding: 6px 0; border-bottom:1px solid #bcdfff; background:rgba(0, 105, 202, 0.6)}
 ul.menu>li>ul>li a { color: #fff; font-size: 16px; }
 ul.menu>li>ul>li a:hover { display:block; color:#ffff00;}
 

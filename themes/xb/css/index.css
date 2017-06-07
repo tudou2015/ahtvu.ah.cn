@@ -44,16 +44,17 @@ strong, b { font-weight: bold;}
     float: left;
     color: #fff;
     font-size: 18px;
+    position:relative;
     
 }
 .nav-inner { width: 1200px; margin: 0 auto;}
 ul.menu li a { color: #fff;font-size: 18px; padding: 0px 20px; border-right:2px solid #fff;}
 ul.menu li:last-child a { border-right: none;}
 ul.menu li  a.act, ul.menu li a:hover { color: #ffff00; }
-ul.menu>li>ul { display:none; z-index: 200; position: absolute; width: 100%; }
+ul.menu>li>ul { display:none; z-index: 200; position: absolute; width: 310px; }
 ul.menu>li>ul>li { height: 45px; line-height: 45px; border-bottom:1px solid #bcdfff; background:rgba(0, 105, 202, 0.6)}
-ul.menu>li>ul>li a { color: #fff; font-size: 16px; }
-ul.menu>li>ul>li a:hover { display:block; color:#ffff00;}
+ul.menu>li>ul>li a { color: #fff; font-size: 16px; display: block; border-right:none;}
+ul.menu>li>ul>li a:hover { display:block; color:#ffff00; }
 
 .nav-notice { width: 300px; float: right; height: 50px; line-height: 50px; font-size: 18px; color: #fff; }
 .nav-notice i { margin-right: 10px; display: inline-block; vertical-align: top;}
