@@ -50,7 +50,7 @@ ul.menu li a { color: #fff;font-size: 18px; padding: 0px 20px;}
 ul.menu li  a.act, ul.menu li a:hover { color: #ffff00; }
 ul.menu>li>ul { display:none; z-index: 200; position: absolute; width: 100%; }
 ul.menu>li>ul>li { height: auto; line-height: 28px; padding: 6px 0; border-bottom:1px solid #bcdfff; background:rgba(0, 105, 202, 0.6)}
-ul.menu>li>ul>li a { color: #fff; font-size: 16px; }
+ul.menu>li>ul>li a { color: #fff; font-size: 16px; display: block; }
 ul.menu>li>ul>li a:hover { display:block; color:#ffff00;}
 
 /*college-nav => search*/

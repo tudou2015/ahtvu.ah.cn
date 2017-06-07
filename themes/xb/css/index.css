@@ -177,13 +177,12 @@ ul.menu>li>ul>li a:hover { display:block; color:#ffff00; }
     float:left;
 }
 .column ul.left-menu li {
-    height: 60px;
-    line-height: 60px;
+    line-height: 28px;
     font-size: 18px;
     text-align: center;
     margin: 1px 0px;
 }
-.column ul.left-menu li a { display: block; color: #000; border-left: 6px solid #fff;}
+.column ul.left-menu li a { padding: 5px 0; display: block; color: #000; border-left: 6px solid #fff;}
 .column ul.left-menu li a:hover,
 .column ul.left-menu li a.act {
     display: block;
@@ -192,7 +191,7 @@ ul.menu>li>ul>li a:hover { display:block; color:#ffff00; }
     border-left: 6px solid #2994f7;
 }
 
-.left-menu-title { background-color: #2994f7; color:#fff;}
+.left-menu-title { height: 60px; line-height: 60px !important; background-color: #2994f7; color:#fff;}
 .office-pic-news .office-title h3 {
     background: url(../images/index-icon.png) no-repeat 0px -343px;
     color: #636262;
