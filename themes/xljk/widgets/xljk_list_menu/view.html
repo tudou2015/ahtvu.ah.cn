@@ -1,0 +1,7 @@
+<ul class="left-menu">
+    <li class="left-menu-title">{{data.parent}}</li>
+    {{each data.list as item i}}
+        <li><a href="{{item.href}}" data-id="{{item.id}}" target="_blank">{{item.title}}</a></li>
+    {{/each}}                                                                                        
+</ul>
+<script type="text/javascript" src="{{_widget_path}}/view.js"></script>

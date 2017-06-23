@@ -1355,9 +1355,18 @@ ul.search-list p { line-height: 180%; font-weight: normal; font-size:14px; }
 #slideshow .btns s.prev{left: 0px}
 #slideshow .btns s.prev i{top: -65px}
 #slideshow .btns s.next{right: 0px}
-.slideshow-hover#slideshow .btns s{display: block}
+.slideshow-hover #slideshow .btns s{display: block}
 #slideshow .s_paging{opacity: 0.5;filter: alpha(opacity=50);-moz-opacity: 0.5;-khtml-opacity: 0.5;height: 342px;position: absolute;background: #000;overflow: hidden}
 #slideshow .wtit .info,.wtit .tit{float: left;}
 #slideshow .wtit .info{padding: 35px 0 0 20px;color: #989898;}
 #slideshow .wtit .info span{margin: 0 8px;}
 #slideshow .no-content {position: absolute; padding: 0; left: 42%; margin: 60px auto 0;}
+
+/*底部弹出广告*/
+#pop{background:#32a8f3;width:200px; height:120px;font-size:12px; border:1px solid #32a8f3; position:fixed;right:0;bottom:0;} 
+#popHead{line-height:32px;background:#fcfcfe;border-bottom:1px solid #e0e0e0;font-size:12px; 
+padding-left:10px;} 
+#popHead h2{font-size:14px;color:#666;line-height:32px;height:32px;} 
+#popHead #popClose{position:absolute;right:10px;top:1px;} 
+#popHead a#popClose:hover{color:#f00;cursor:pointer;} 
+#popContent p { text-align: center; margin-top: 20px; color:#fff; font-size: 16px;}

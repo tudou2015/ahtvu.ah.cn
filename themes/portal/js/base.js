@@ -48,5 +48,6 @@ $(function () {
         }
     })
 
-    FloatAd("#floadAD");//调用  
+    FloatAd("#floatAD");//调用  
+    FloatAding("#floatKH");//调用  
 });
