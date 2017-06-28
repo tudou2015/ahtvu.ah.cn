@@ -48,6 +48,6 @@ $(function () {
         }
     })
 
-    //FloatAd("#floatAD");//停止调用  
+    FloatAd("#floatAD");//调用  
     //FloatAding("#floatKH");//停止调用  
 });
