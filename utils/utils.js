@@ -32,13 +32,13 @@ module.exports = {
 
             //default date format
             if (!format) return date.format('YYYY-MM-DD HH:mm:ss');
-           
+
             return date.format(format);
 
         } catch (error) {
 
             console.error('format date error: %s \r\n', error.stack);
-            
+
             return 'error date';
         }
     },
@@ -65,7 +65,7 @@ module.exports = {
      * @callback 请求结束后的回调函数
      * @author leonard
      */
-    request: function (params, callback) {
+    request: function (params, callback, deferred) {
 
         if (!params) {
 
@@ -85,20 +85,34 @@ module.exports = {
             if (!!error) {
 
                 console.error('request but an error was occurred: %s', error.stack);
+                /*
+                                callback && callback.apply(this, [{
+                                    code: response.statusCode || -1,
+                                    response: response,
+                                    body: body
+                                }]);
+                                */
 
-                callback && callback.apply(this, [{
-                    code: response.statusCode || -1,
-                    response: response,
-                    body: body
-                }]);
+                if (deferred) {
+                    deferred.reject(error);
+                }
+
                 return;
             }
 
-            callback && callback.apply(this, [{
-                code: response.statusCode,
-                response: response,
-                body: body
-            }]);
+            try {
+                callback && callback.apply(this, [{
+                    code: response.statusCode,
+                    response: response,
+                    body: body
+                }]);
+            } catch (e) {
+                if (deferred) {
+                    deferred.reject(e)
+                } else {
+                    console.log(e);
+                }
+            }
         });
     }
 };

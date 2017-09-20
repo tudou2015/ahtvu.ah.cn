@@ -56,7 +56,7 @@ var widget = {
 
                 if (body.code < 0) {
 
-                    console.log(body.msg);
+                    console.log(req.path + ',' + domain + ',' + body.msg);
                     next();
                     return;
                 }
