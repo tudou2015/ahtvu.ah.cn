@@ -1,0 +1,13 @@
+<div class="college-news-line1">
+    <div class="bannerbox">
+        <div id="focus">
+            <ul>
+                {{each data.list as item i}}
+                <li><a href="{{item.href}}" target="_blank" title="{{item.ori_title}}">
+                    <img src="{{item.image}}" alt="{{item.title}}" width="790" height="300" /></a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>

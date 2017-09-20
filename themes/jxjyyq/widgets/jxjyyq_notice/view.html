@@ -1,0 +1,17 @@
+<div class="college-notice">
+    <div class="college-title">
+        <h3><span>{{data.category.title}}</span></h3>
+        <a href="{{data.category.href}}" target="_blank" class="college-more">MORE</a>
+    </div>
+    <div class="college-news-notice college-news-box" style="height: 257px;">
+        <ul>
+            {{if data.list.length > 0 }} {{each data.list as item i}}
+            <li class="clearfix">
+                <a href="{{item.href}}" target="_blank" title="{{item.ori_title}}">{{item.title}}</a>
+                <span class="college-time">{{item.date | dateFormat:'YYYY-MM-DD'}}</span>
+            </li>
+            {{/each}} {{else}}
+            <span class="no-data">暂无数据</span> {{/if}}
+        </ul>
+    </div>
+</div>

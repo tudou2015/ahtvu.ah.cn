@@ -1,0 +1,12 @@
+<div class="college-notice clearfix" style="width:1197px;">
+	<div class="college-title">
+		<h3><span>友情链接</span></h3>
+	</div>
+	<ul class="link-box clearfix">
+		{{each data.list as item i}}
+		<li>
+			<a href="{{item.href}}" target="_blank">{{item.title}}</a>
+		</li>
+		{{/each}}
+	</ul>
+</div>
