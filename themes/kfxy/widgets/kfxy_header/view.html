@@ -15,13 +15,24 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.sgallery.js"></script>
     <script src="js/mytab.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/float.js"></script>
     <style type="text/css">
         iframe { top:40% !important;}
+        .floatAD { position: absolute;z-index: 999900; display: none; }  
+        .floatAD .item{ display: block; }  
+        .floatAD .item img { vertical-align: bottom; }
+        .floatAD .close { padding: 2px 5px; background: #ad0509; color:#fff; float:right; } 
     </style>
 </head>
 
 <body>
-    <div class="minTop">
+    <div id="floatAD" class="floatAD">  
+        <a class="close" href="javascript:void();">×</a>  
+        <a class="item" title='大力推广普通话' href="javascript:void();" target="_blank">  
+            <img src="/kfxy/images/pth.gif" alt="大力推广普通话" /></a>   
+    </div>
+        <div class="minTop">
         <div class="minTop-inner grid width-inner">
             <div class="curtime float-left">您好,欢迎来到安徽广播电视大学 - {{site.title}}！今天是：<span id="current_time" data-ticks="{{time.ticks}}">{{time.value}}</span></div>
             <div class="minTop-pageViews push-right">
