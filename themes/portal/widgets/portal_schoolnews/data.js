@@ -47,7 +47,7 @@ module.exports = function (req, res, utils) {
 
         deferred.resolve({ data: mylist});
 
-    });
+    },deferred);
 
     return deferred.promise;
 }

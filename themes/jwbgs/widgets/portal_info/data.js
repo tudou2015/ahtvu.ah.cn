@@ -39,7 +39,7 @@ module.exports = function (req, res, utils) {
         data.id = result.body.post.id;
 
         deferred.resolve(data);
-    });
+    },deferred);
 
     return deferred.promise;
 }

@@ -21,7 +21,7 @@ module.exports = function (req, res, utils) {
         }
 
        deferred.resolve(JSON.parse(result.body));
-    });
+    },deferred);
 
     return deferred.promise;
 }

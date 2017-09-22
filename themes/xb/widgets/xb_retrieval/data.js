@@ -72,6 +72,6 @@ module.exports = function (req, res, utils) {
                 data: data
             });
         });
-    });
+    },deferred);
     return deferred.promise;
 }

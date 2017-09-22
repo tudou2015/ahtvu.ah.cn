@@ -200,18 +200,18 @@ var widget = {
                                     var content = template.renderFile(_w_html, r);
                                     //传给回调更多参数，方便处理
                                     callback(null, {
-                                        error: '',
+                                        error: content == '{Template Error}'?content:'',
                                         holder: e.holder,
                                         content: content
                                     });
                                 }).catch(function (error) {
 
-                                    console.log(error.stack);
+                                    //console.log(error.stack);
                                     //传给回调更多参数，方便处理
                                     callback(null, {
-                                        error: 'data.js execute error',
+                                        error: error.message,
                                         holder: e.holder,
-                                        content: '{data.js execute error}'
+                                        content: error.message
                                     });
                                 });
 
@@ -222,7 +222,7 @@ var widget = {
                                 callback(null, {
                                     error: 'data.js parse error',
                                     holder: e.holder,
-                                    content: '{data.js parse error}'
+                                    content: error.message
                                 });
                             }
 
@@ -238,6 +238,7 @@ var widget = {
                                 if (e.error) { //出错，输出url，方便跟踪调试
                                     console.log(req.url + ',' + e.error);
                                 }
+                                
                                 //替换占位符
                                 data = data.replace(e.holder, e.content);
                             }

@@ -9,7 +9,7 @@ module.exports = function () {
             ticks: moment()._d.getTime(),
             value: moment().format('YYYY年MM月DD日 HH:mm:ss')
         }
-    });
+    },deferred);
 
     return deferred.promise;
 }

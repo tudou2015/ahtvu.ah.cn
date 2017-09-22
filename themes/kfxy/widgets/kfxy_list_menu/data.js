@@ -47,7 +47,7 @@ module.exports = function (req, res, utils) {
         });
 
 
-    });
+    },deferred);
 
     return deferred.promise;
 }

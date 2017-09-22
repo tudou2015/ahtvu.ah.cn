@@ -59,7 +59,7 @@ module.exports = function (req, res, utils) {
                 value: moment().format('YYYY年MM月DD日 HH:mm:ss')
             }
         });
-    });
+    },deferred);
 
     return deferred.promise;
 }

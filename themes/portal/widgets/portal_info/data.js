@@ -37,7 +37,7 @@ module.exports = function (req, res, utils) {
         data.content = result.body.post.content;
 
         deferred.resolve(data);
-    });
+    },deferred);
 
     return deferred.promise;
 }

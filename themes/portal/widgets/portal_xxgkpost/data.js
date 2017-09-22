@@ -38,7 +38,7 @@ module.exports = function (req, res, utils) {
         data.category = { title: result.body.post.category.title };
 
         deferred.resolve(data);
-    });
+    },deferred);
 
     return deferred.promise;
 }
