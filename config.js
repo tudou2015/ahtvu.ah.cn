@@ -2,8 +2,8 @@ const util = require('util');
 
 var config = {
     cms: {
-        host: '172.16.0.245', // 内网 cms 接口地址
-        port: 86, // 内网 cms 接口地址的端口
+        host: '10.1.10.2', // 内网 cms 接口地址
+        port: 80, // 内网 cms 接口地址的端口
         _origin: '',
         origin: function () {
 
@@ -15,7 +15,8 @@ var config = {
 
             return this._origin;
         }
-    }
+    },
+    debug: true
 };
 
 module.exports = config;

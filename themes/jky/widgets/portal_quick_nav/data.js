@@ -8,7 +8,7 @@ module.exports = function (req, res, utils) {
         url: 'open/get_categories_by_parent',
         method: 'POST',
         qs: {
-            siteId: req.app.site.id,
+            siteId: req.site.id,
             parentId: 'bddsamamqrfbaeyrff8hxw',
             sort: 'sortOrder'
         }

@@ -106,7 +106,7 @@ module.exports = {
                 }
                 
                 var body2 = JSON.parse(body);
-                if(body2.code < 0){
+                if(body2.code != 1){
                     throw new Error(body2.msg);
                 }
 
@@ -119,7 +119,7 @@ module.exports = {
                 if (deferred) {
                     deferred.reject(e)
                 } else {
-                    console.log(e);
+                    console.error(e);
                 }
             }
         });

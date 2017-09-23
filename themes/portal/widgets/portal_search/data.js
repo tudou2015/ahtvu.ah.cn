@@ -8,7 +8,7 @@ module.exports = function (req, res, utils) {
         url: 'open/search',
         method: 'POST',
         qs: {
-            siteId: req.app.site.id,
+            siteId: req.site.id,
             search: req.query.search,
             page: req.query.page || 1
         }

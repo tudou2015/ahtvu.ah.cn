@@ -8,7 +8,7 @@ module.exports = function (req, res, utils) {
         url: 'open/get_posts_by_category',
         method: 'POST',
         qs: {
-            siteId: req.app.site.id,
+            siteId: req.site.id,
             categoryId: 'lg2mad-nsk1b1vjdcc57pa',
             withChildren: true,
             sort: 'sortOrder',

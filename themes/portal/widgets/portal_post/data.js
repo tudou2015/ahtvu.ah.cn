@@ -8,7 +8,7 @@ module.exports = function (req, res, utils) {
         url: 'open/get_post_info',
         method: 'POST',
         qs: {
-            siteId: req.app.site.id,
+            siteId: req.site.id,
             postId: req.query.id
         }
     }, function (result) {
