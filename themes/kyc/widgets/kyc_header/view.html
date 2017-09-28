@@ -42,7 +42,7 @@
                 <li><a href="/kyc">部门首页</a></li>
                 {{each data.list as item i}}
                     <li>
-                        <a href="{{if item.title=='电大学报'}}/xb{{else}}{{item.href}}{{/if}}" target="_blank">{{item.title}}</a>
+                        <a href="{{if item.title=='电大学报'}}/xb{{else}}{{item.href}}{{/if}}" >{{item.title}}</a>
                         {{if item.children.length > 0}}
                         <ul>
                             {{each item.children as child i}}
