@@ -7,7 +7,7 @@ module.exports = function (req, res, utils) {
         url: 'open/get_same_level_categories',
         method: 'POST',
         qs: {
-            siteId: req.app.site.id,
+            siteId: req.site.id,
             categoryId: req.query.id
         }
     }, function (result) {
@@ -38,7 +38,7 @@ module.exports = function (req, res, utils) {
         }, this);
 
         deferred.resolve({ data: data });
-    });
+    },deferred);
 
     return deferred.promise;
 }

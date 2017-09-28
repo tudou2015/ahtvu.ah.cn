@@ -8,7 +8,7 @@ module.exports = function (req, res, utils) {
         url: 'open/get_categories_by_parent',
         method: 'POST',
         qs: {
-            siteId: req.app.site.id,
+            siteId: req.site.id,
             parentId:'ktqfaxgmjrbhw1rs1839gw'
         }
     }, function (result) {
@@ -37,7 +37,7 @@ module.exports = function (req, res, utils) {
         }, this);
 
         deferred.resolve({ data: data });
-    });
+    },deferred);
 
     return deferred.promise;
 }

@@ -8,7 +8,7 @@ module.exports = function (req, res, utils) {
         url: 'open/get_post_info',
         method: 'POST',
         qs: {
-            siteId: req.app.site.id,
+            siteId: req.site.id,
             postId: 't4y3acmnto9i-0b6g6sp6w'
         }
     }, function (result) {
@@ -21,7 +21,7 @@ module.exports = function (req, res, utils) {
         }
 
         deferred.resolve(JSON.parse(result.body));
-    });
+    },deferred);
 
     return deferred.promise;
 }

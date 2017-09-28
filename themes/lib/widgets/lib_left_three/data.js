@@ -8,7 +8,7 @@ module.exports = function (req, res, utils) {
         url: 'open/get_posts_by_category',
         method: 'POST',
         qs: {
-            siteId: req.app.site.id,
+            siteId: req.site.id,
             categoryId: 'qao2adgng4bpbc76usamma',
             sort: 'sortOrder',
             pageSize: 10
@@ -47,7 +47,7 @@ module.exports = function (req, res, utils) {
         deferred.resolve({
             data: data
         });
-    });
+    },deferred);
 
     return deferred.promise;
 }

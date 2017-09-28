@@ -101,6 +101,15 @@ module.exports = {
             }
 
             try {
+                if(response.statusCode != 200){
+                    throw new Error('statusCode ' + response.statusCode  + ': request failed!');
+                }
+                
+                var body2 = JSON.parse(body);
+                if(body2.code != 1){
+                    throw new Error(body2.msg);
+                }
+
                 callback && callback.apply(this, [{
                     code: response.statusCode,
                     response: response,
@@ -110,7 +119,7 @@ module.exports = {
                 if (deferred) {
                     deferred.reject(e)
                 } else {
-                    console.log(e);
+                    console.error(e);
                 }
             }
         });

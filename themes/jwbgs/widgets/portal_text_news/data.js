@@ -8,7 +8,7 @@ module.exports = function (req, res, utils) {
         url: 'open/get_posts_by_category',
         method: 'POST',
         qs: {
-            siteId: req.app.site.id,
+            siteId: req.site.id,
             categoryId: 'susdanwmf4pckzxn7w24jw',
             pageSize: 5
         }
@@ -57,7 +57,7 @@ module.exports = function (req, res, utils) {
         }, this);
 
         deferred.resolve({ data: data });
-    });
+    },deferred);
 
     return deferred.promise;
 }

@@ -8,7 +8,7 @@ module.exports = function (req, res, utils) {
         url: 'open/get_first_post_by_category',
         method: 'POST',
         qs: {
-            siteId: req.app.site.id,
+            siteId: req.site.id,
             categoryId: req.query.id
         }
     }, function (result) {
@@ -38,7 +38,7 @@ module.exports = function (req, res, utils) {
         data.category = { title: result.body.post.category.title };
 
         deferred.resolve(data);
-    });
+    },deferred);
 
     return deferred.promise;
 }

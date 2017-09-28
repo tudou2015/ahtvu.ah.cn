@@ -5,7 +5,7 @@ module.exports = function (req, res, utils) {
         url: 'open/get_first_category',
         method: 'POST',
         qs: {
-            siteId: req.app.site.id,
+            siteId: req.site.id,
             parentId: 'q9b9apemm7terljaxfvrng'
         }
     }, function (result) {
@@ -39,7 +39,7 @@ module.exports = function (req, res, utils) {
             url: 'open/get_posts_by_category',
             method: 'POST',
             qs: {
-                siteId: req.app.site.id,
+                siteId: req.site.id,
                 categoryId: data.category.id,
                 pageSize: 100
             }
@@ -72,6 +72,6 @@ module.exports = function (req, res, utils) {
                 data: data
             });
         });
-    });
+    },deferred);
     return deferred.promise;
 }

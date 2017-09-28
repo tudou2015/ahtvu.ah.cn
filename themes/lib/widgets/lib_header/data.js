@@ -9,7 +9,7 @@ module.exports = function (req, res, utils) {
         url: 'open/get_categories',
         method: 'POST',
         qs: {
-            siteId: req.app.site.id
+            siteId: req.site.id
         }
     }, function (result) {
         var data = {
@@ -59,7 +59,7 @@ module.exports = function (req, res, utils) {
                 value: moment().format('YYYY年MM月DD日 HH:mm:ss')
             }
         });
-    });
+    },deferred);
 
     return deferred.promise;
 }
