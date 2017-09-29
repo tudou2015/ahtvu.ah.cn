@@ -16,6 +16,21 @@ var logger = require('tracer').console({
     }
 });
 
+//node v8 升级,defer函数被废弃，为此打补丁
+if (!Promise.defer) {
+    Promise.defer = function () {
+        var deferred = {};
+        deferred.resolve = null;
+        deferred.reject = null;
+        deferred.promise = new Promise(function (resolve, reject) {
+            this.resolve = resolve;
+            this.reject = reject;
+        }.bind(deferred));
+        Object.freeze(deferred);
+        return deferred;
+    }    
+}
+
 var app = express();
 
 app.set('port', 3000);
