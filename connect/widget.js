@@ -68,7 +68,7 @@ var widget = {
                 //get current site info
                 body = JSON.parse(body);
 
-                if (body.code !=1 ) {
+                if (body.code != 1) {
 
                     if (config.debug) { //调试时输出
                         console.error(req.url + ',' + body.msg);
@@ -184,14 +184,14 @@ var widget = {
 
                                     //data = data.replace(e.holder, template.renderFile(_w_html, result));
                                     var content = template.renderFile(_w_html, result);
-/*
-//调试随机小概率模版错时增加的代码
-                                    if (content == '{Template Error}') {
-                                        console.error(req.url + ',' +
-                                            req.method + ',' + _w_js + ',' + error.message);
-                                        console.error(JSON.stringify(req.site));
-                                    }
-*/
+                                    /*
+                                    //调试随机小概率模版错时增加的代码
+                                                                        if (content == '{Template Error}') {
+                                                                            console.error(req.url + ',' +
+                                                                                req.method + ',' + _w_js + ',' + error.message);
+                                                                            console.error(JSON.stringify(req.site));
+                                                                        }
+                                    */
                                     callback(null, {
                                         error: content == '{Template Error}' ? content : '',
                                         js: _w_html,
@@ -209,6 +209,17 @@ var widget = {
                                 }
 
                                 require(_w_js)(req, res, utils).then(function (r) {
+                                    //在category下只有一篇文章时，直接显示该文章
+                                    if (req.route.path == "/category" && r.data && r.data.paging && JSON.parse(r.data.paging).total_count == 1) {
+                                        callback(null, {
+                                            error: '',
+                                            js: _w_js,
+                                            holder: e.holder,
+                                            content: '',
+                                            href: r.data.list[0].href
+                                        });
+                                        return;
+                                    }
 
                                     r.site = req.site;
                                     r._widget_name = result._widget_name;
@@ -262,11 +273,16 @@ var widget = {
                         //res.send(template(skin, data)({}));
                         //处理错误
                         var $error = 0;
+                        var $href = '';
                         result.forEach(function (e) {
                                 if (e.error) { //出错，输出url，方便跟踪调试
                                     console.error(req.url + ',' + req.method + ',' +
                                         e.js + ',' + e.error);
                                     $error++;
+                                }
+
+                                if (e.href) {
+                                    $href = '<script>location.href="' + e.href + '";</script>';
                                 }
 
                                 //替换占位符
@@ -278,7 +294,12 @@ var widget = {
                             console.error('---------------------------------------------------------------------');
                         }
                         //发送最终结果
-                        res.send(data);
+                        if ($href) {
+                            res.send($href);
+                        } else {
+                            res.send(data);
+                        }
+
                         next();
                     });
                 });
