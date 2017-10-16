@@ -35,15 +35,14 @@
     <div class="college-nav">
         <div class="grid clearfix">
             <ul class=" nav">
-                <li><a href="/xgxy" class="act">部门首页</a></li>
+                <li><a href="/xgxy" class="act">学院首页</a></li>
                 {{each data.list as item i}}
                 <li>
                     <a href="{{item.href}}" target="_blank">{{item.title}}</a> {{if item.children.length> 0}}
                     <ul>
                         {{each item.children as child i}}
                         <li>
-                            <a href="{{if child.title == '学院简介'}}school?id=cwebaekmx7lhzbjktwdhkq
-                            {{else}}{{child.href}}{{/if}}" target="_blank">{{child.title}}</a>
+                            <a href="{{child.href}}" target="_blank">{{child.title}}</a>
                         </li>
                         {{/each}}
                     </ul>
